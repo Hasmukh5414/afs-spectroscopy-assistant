@@ -1,0 +1,849 @@
+{
+  "question": "We have a liquid process that occasionally goes off specification. We suspect\ncontamination, but we cannot yet name the contaminant or the affected quality\nvariable. We would like you to recommend the best spectroscopy method and\nexact sensor configuration immediately. What information and first experiment\nshould come before that decision?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:44:52.849285+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "A specific sensor configuration cannot responsibly be recommended yet, because the contaminant and the affected quality variable are not defined. The inspected table rates NIR transmission or transflection probes for liquid and colloidal samples with average cost, selectivity and sensitivity [1]. It rates ATR probes for liquid, paste and soft samples as high selectivity, average sensitivity and high cost [2] [3]. It rates Raman probes for liquid, powder and solid samples as high selectivity, average sensitivity and high cost [4]. These are qualitative ratings, not measured accuracy for this process. NIR spectra cover 780-2500 nm and carry overtone and combination bands of groups such as -OH and -CH3 [5]. Mid-IR spectroscopy covers 4000-400 cm-1 and ATR fiber probes are described for liquid analysis [6]. Raman shifts are expressed in cm-1 relative to the excitation wavelength, which is a separate quantity [7].",
+        "evidence_ids": [
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+          "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+          "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc",
+          "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+          "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+          "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+          "S01_d22389591926789e513aa9a15558dec78c27d513"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "Complex multicomponent process media and process turbulence can overlap absorption, scattering and fluorescence, so a single method may be insufficient and a combination may be needed [8]. A combination is only an optional hypothesis to test if the single-method screen shows added value.",
+        "evidence_ids": [
+          "S01_368fd3134306f1cbc7e80b82ab344d986784dc00"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "UV/Visible ATR probes are rated low selectivity and low sensitivity for liquids [9], so they are deferred from the first screen.",
+        "evidence_ids": [
+          "AFS_TABLE_8436abcc6ef3c5bb2aa5f45407ea841d8df21763"
+        ]
+      },
+      {
+        "kind": "proposal",
+        "text": "First, define the contaminant or quality variable and its reference method. Collect historical in-spec and off-spec samples with paired reference results across normal process variation. Then run a side-by-side screen of NIR transmission or transflection, mid-IR ATR and Raman on the same retained samples, using representative flow or immersion conditions. Fit any models on training batches and validate on independent held-out batches.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "question",
+        "text": "Missing before selection: the contaminant or quality variable and its reference method and uncertainty; the acceptable error and response delay; process fluid conditions such as solids, bubbles, temperature and turbulence; and access, cleaning and budget constraints.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "gap",
+        "text": "The S02 slides are company marketing material describing a modular multispectral fiber system. Their flattened text cannot establish range endpoints, coverage or performance, so they are not used for those points [10] [11].",
+        "evidence_ids": [
+          "S02_e556165b530cafb5dc524d5013a1d312bee346e7",
+          "S02_8680fd99f1fc0d5d823e1c07d7ecb79f237dcee1"
+        ]
+      }
+    ],
+    "schema_version": 3,
+    "citations": [
+      {
+        "field": "assessment.candidates[0].limitations[0]",
+        "evidence_ids": [
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].limitations[0]",
+        "evidence_ids": [
+          "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2"
+        ]
+      },
+      {
+        "field": "assessment.candidates[2].limitations[0]",
+        "evidence_ids": [
+          "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9"
+        ]
+      },
+      {
+        "field": "assessment.gaps[2]",
+        "evidence_ids": [
+          "S02_e556165b530cafb5dc524d5013a1d312bee346e7",
+          "S02_8680fd99f1fc0d5d823e1c07d7ecb79f237dcee1"
+        ]
+      }
+    ],
+    "intent": "assessment",
+    "assessment": {
+      "status": "awaiting_clarification",
+      "summary": "Provisional assessment only. The contaminant and affected quality variable are not yet named, so no exact sensor configuration should be selected now. Three methods are worth a paired first screen on the same material: NIR transmission or transflection probing, mid-IR ATR probing and Raman probing. Each has a different trade-off between cost, selectivity and sensitivity and a different sampling geometry. UV/Visible ATR is deferred on its low ratings. Before any choice, the target variable, reference method, process conditions and acceptable error must be defined, and paired in-spec and off-spec samples should be collected. The result will show whether any single method meets the agreed requirement, and whether a simpler option is adequate before a combination is considered.",
+      "candidates": [
+        {
+          "name": "NIR transmission or transflection probe",
+          "claims": [
+            {
+              "text": "Transmission and transflection probes are rated for liquid and colloidal samples with average cost, selectivity and sensitivity.",
+              "evidence_ids": [
+                "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+              ]
+            },
+            {
+              "text": "NIR is described as the most common online analysis method performed with fiber optic probes.",
+              "evidence_ids": [
+                "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The contaminant or quality variable produces NIR-active bands that can be separated from the process matrix, to be confirmed on representative samples."
+          ],
+          "limitations": [
+            "Selectivity and sensitivity are only rated average, so a low-level or chemically similar contaminant may be difficult to resolve."
+          ],
+          "evidence_ids": [
+            "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+          ],
+          "measurement_concept": "In-line transmission or transflection probe in a flow or immersion geometry, with a 1-10 mm optical path as sampling geometry. Installation depends on unconfirmed process compatibility, so start with representative laboratory or at-line screening.",
+          "spectral_range": "780-2500 nm (nominal, from the NIR method description)"
+        },
+        {
+          "name": "Mid-IR ATR probe",
+          "claims": [
+            {
+              "text": "ATR probes are rated high selectivity for liquid, paste and soft samples, with high cost and average sensitivity.",
+              "evidence_ids": [
+                "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+                "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc"
+              ]
+            },
+            {
+              "text": "Mid-IR vibrational spectroscopy is described as one of the most informative chemical analysis methods, and ATR fiber probes are described for liquid analysis using specialized mid-IR fiber optics.",
+              "evidence_ids": [
+                "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The process fluid does not foul or damage the ATR surface, to be confirmed."
+          ],
+          "limitations": [
+            "Specialized mid-IR probing is needed, as the source describes, and the high cost rating applies."
+          ],
+          "evidence_ids": [
+            "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+            "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc",
+            "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2"
+          ],
+          "measurement_concept": "ATR probe in contact with the liquid, with a 1-6 um optical path as sampling geometry. Installation depends on unconfirmed process compatibility, so start with representative laboratory or at-line screening.",
+          "spectral_range": "4000-400 cm-1 (nominal, from the mid-IR method description)"
+        },
+        {
+          "name": "Raman probe",
+          "claims": [
+            {
+              "text": "Raman probes are rated high selectivity for liquid, powder and solid samples, with high cost and average sensitivity.",
+              "evidence_ids": [
+                "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9"
+              ]
+            },
+            {
+              "text": "Raman signals are recorded as Raman shift in cm-1 from a laser or high-power LED, typically in the visible range.",
+              "evidence_ids": [
+                "S01_d22389591926789e513aa9a15558dec78c27d513"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The process matrix does not produce fluorescence strong enough to mask the Raman signal, to be confirmed on representative samples."
+          ],
+          "limitations": [
+            "The high cost rating and average sensitivity distinguish this option from the NIR candidate."
+          ],
+          "evidence_ids": [
+            "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+            "S01_d22389591926789e513aa9a15558dec78c27d513"
+          ],
+          "measurement_concept": "Raman probe immersed in or viewing the liquid, with a 2-5 mm sampling depth as geometry. Installation depends on unconfirmed process compatibility, so start with representative laboratory or at-line screening.",
+          "spectral_range": ""
+        }
+      ],
+      "questions": [
+        {
+          "field": "target",
+          "question": "Which contaminant or quality variable is the target, and what reference method and uncertainty will confirm it?",
+          "affects": "Which method can detect or predict the target and what validation reference is needed."
+        },
+        {
+          "field": "conditions",
+          "question": "What process conditions vary, such as solids, bubbles, temperature, turbulence, and flow or immersion access, and what cleaning constraints apply?",
+          "affects": "Whether any probe geometry is compatible with the process and how representative the screening samples must be."
+        },
+        {
+          "field": "requirements",
+          "question": "What acceptable error, response delay and budget should be agreed for detecting off-specification events?",
+          "affects": "Whether a simpler option is adequate or whether a higher-cost method is justified."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide whether any of the three candidate methods can detect or predict the customer-defined contaminant or quality variable within the agreed error, and whether a simpler option is adequate before any sensor configuration is chosen.",
+        "steps": [
+          "Define the target variable, reference method and acceptable error with the customer.",
+          "Collect historical in-spec and off-spec samples across normal process variation, with paired reference results and sampling times.",
+          "Measure the same retained samples with NIR transmission or transflection, mid-IR ATR and Raman under representative conditions.",
+          "Fit any models on training batches only, then validate on independent held-out batches.",
+          "Compare candidates on equivalent material and conditions, starting with single-method baselines before any combination."
+        ],
+        "criteria_to_confirm": [
+          "Whether any single method meets the agreed error and response requirements on held-out batches.",
+          "Whether a simpler, lower-cost adequate option is sufficient before any combination is considered.",
+          "Whether an inconclusive or no-gain result is reported as such, without treating statistical significance alone as practical usefulness.",
+          "Whether installation is compatible with process, access and cleaning requirements before any in-line configuration is proposed."
+        ]
+      },
+      "gaps": [
+        "Qualitative table ratings are not measured prediction accuracy for this process, and no candidate has demonstrated performance on this liquid process.",
+        "No exact sensor configuration can be recommended until the target variable, reference method and process conditions are known.",
+        "Source slides and company claims are not technical validation of the stated range or performance."
+      ],
+      "requirements": [
+        {
+          "statement": "The customer's process is liquid.",
+          "user_quote": "We have a liquid process that occasionally goes off specification."
+        },
+        {
+          "statement": "The customer suspects contamination but has not identified the contaminant or the affected quality variable.",
+          "user_quote": "We suspect contamination, but we cannot yet name the contaminant or the affected quality variable."
+        }
+      ],
+      "unknowns": [
+        "The contaminant or the affected quality variable.",
+        "The reference method and its uncertainty.",
+        "Process fluid composition and variation, including solids, bubbles, temperature and turbulence.",
+        "Acceptable error and response delay.",
+        "Access, cleaning, installation and budget constraints."
+      ]
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f": {
+      "evidence_id": "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: transmission or transflection probe\nphysical_phenomenon: transmission\nsample_type: liquid, colloidal\noptical_path_or_depth: 1-10 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A8:I8"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-8"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A8:I8",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "transmission or transflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "1-10 mm",
+        "physical_phenomenon": "transmission",
+        "sample_type": "liquid, colloidal",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6": {
+      "evidence_id": "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 1\nmethod: IR spectroscopy\nmeasurement_technique: ATR probe*\nphysical_phenomenon: absorption\nsample_type: liquid, paste, soft\noptical_path_or_depth: 1-6 um\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A3:I3"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-3"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A3:I3",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "ATR probe*",
+        "method": "IR spectroscopy",
+        "method_no": 1,
+        "optical_path_or_depth": "1-6 um",
+        "physical_phenomenon": "absorption",
+        "sample_type": "liquid, paste, soft",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc": {
+      "evidence_id": "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 1\nmethod: IR spectroscopy\nmeasurement_technique: ATR platform\nphysical_phenomenon: absorption\nsample_type: liquid, paste, soft\noptical_path_or_depth: 1-6 um\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A2:I2"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-2"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A2:I2",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "ATR platform",
+        "method": "IR spectroscopy",
+        "method_no": 1,
+        "optical_path_or_depth": "1-6 um",
+        "physical_phenomenon": "absorption",
+        "sample_type": "liquid, paste, soft",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9": {
+      "evidence_id": "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 3\nmethod: Raman spectroscopy\nmeasurement_technique: Raman probe\nphysical_phenomenon: Raman scattering (emission)\nsample_type: liquid, powder, solid\noptical_path_or_depth: 2-5 mm\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A13:I13"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-13"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A13:I13",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "Raman probe",
+        "method": "Raman spectroscopy",
+        "method_no": 3,
+        "optical_path_or_depth": "2-5 mm",
+        "physical_phenomenon": "Raman scattering (emission)",
+        "sample_type": "liquid, powder, solid",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f": {
+      "evidence_id": "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.2.\nNear-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes.\nNIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc.,\nfound in many organic and inorganic compounds.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/128",
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            441.327,
+            522.2129999999999,
+            417.32466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2": {
+      "evidence_id": "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.1.\nMid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)\nVibrational spectroscopy in the mid-IR range (4000-400 cm-1) is one of the most informative methods of chemical analysis.\nDue to the high extinction coefficients of various molecules in this region, the method is highly sensitive and can be used to analyze a wide variety of samples: solids, liquids, and gases.\nATR fiber probes (Fig.1) enable the analysis of liquids and solid elastic samples, such as biological tissue, using specialized probes utilizing high-transmission fiber optics in the Mid-IR region.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 9–10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/119",
+        "#/texts/120",
+        "#/texts/122",
+        "#/texts/123",
+        "#/texts/126"
+      ],
+      "provenance": [
+        {
+          "page": 9,
+          "bbox": [
+            72.025,
+            156.49700000000007,
+            439.254,
+            147.24466666666672
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 9,
+          "bbox": [
+            72.025,
+            141.923,
+            506.865,
+            88.42700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            181.66666666666666,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            55.666666666666664,
+            814.3333333333334,
+            107.0,
+            786.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            522.6840000000002,
+            678.8520000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_39ace4398b9bc276b76b1c06510de669",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)\n\nVibrational spectroscopy in the mid-IR range (4000-400 cm-1) is one of the most informative methods of chemical analysis. Due to the high extinction coefficients of various molecules in this region, the method is highly sensitive and can be used to analyze a wide variety of samples: solids, liquids, and gases.\n\nPHOTONICS\n\nMR\n\nATR fiber probes (Fig.1) enable the analysis of liquids and solid elastic samples, such as biological tissue, using specialized probes utilizing high-transmission fiber optics in the Mid-IR region. These immersion probes operate on the ATR principle but allow analysis at a significant distance from the spectrometer, without the need for sampling. Probe-based analysis is gaining widespread use in online analysis, such as in-line, in-process (chemical, biotechnological, natural) environments, as well as in-situ measurements, such as for field testing or for spectral diagnostics during surgery.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_d22389591926789e513aa9a15558dec78c27d513": {
+      "evidence_id": "S01_d22389591926789e513aa9a15558dec78c27d513",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.3.\nRaman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)\nMeasurement of the Raman scattering (RS) effect, is also a type of vibrational spectroscopy.\nRaman spectroscopy is based on recording weak radiation signals observed when a sample is irradiated by a laser or high-power LED, typically in the visible light range.\nSome of these signals are observed with a shift toward longer wavelengths compared to the excitation wavelength (Stokes shift).\nThe difference between the observed frequencies and the laser frequency is called the Raman shift, expressed in units of frequency-wavenumbers (cm-1).",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 11"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/135",
+        "#/texts/136"
+      ],
+      "provenance": [
+        {
+          "page": 11,
+          "bbox": [
+            72.025,
+            531.597,
+            513.8180000000001,
+            522.3446666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 11,
+          "bbox": [
+            72.025,
+            517.273,
+            523.151,
+            170.702
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)"
+      ],
+      "parent_context_id": "S01_ctx_a6154306915ed585eaa1e8a805562b77",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)\n\nMeasurement of the Raman scattering (RS) effect, is also a type of vibrational spectroscopy. Raman spectroscopy is based on recording weak radiation signals observed when a sample is irradiated by a laser or high-power LED, typically in the visible light range. Some of these signals are observed with a shift toward longer wavelengths compared to the excitation wavelength (Stokes shift). The difference between the observed frequencies and the laser frequency is called the Raman shift, expressed in units of frequency-wavenumbers (cm-1). The Raman shift is used as the horizontal (spectral) axis in Raman spectroscopy, while the vertical axis shows the absolute intensity of the recorded signals (photon counts). Because Raman spectroscopy reflects energy transitions between vibrational levels of molecules and groups of atoms, peaks of the same fundamental frequencies in IR and Raman spectra are located at the same positions on the wavenumber scale. However, their intensities can differ significantly, to the point that some bands may not appear in one of the spectra (symmetry prohibition). This property makes mid-IR and Raman spectra complementary, that is, they complement each other. Therefore, using these methods in tandem provides more structural information about the molecules being studied than either method alone. From a technical standpoint, measuring Raman spectra is hampered by the low intensity of Raman signals, which are several orders of magnitude weaker than IR absorption peaks in the IR range (when these spectra are compared in the original photon count units). Furthermore, observing Raman bands is often complicated by light scattering from the illuminating laser, and for many organic compounds, by the superposition of luminescence (fluorescence), which has a significantly higher intensity. These effects can be eliminated by using specialized optical filters and probes of a special design. The Raman spectrometer detector must be highly sensitive and have a wide dynamic range. Because of these characteristics, a Raman spectrometer has significant design differences from a spectrometer for recording absorption spectra, which operates in the same spectral region (400-1100 nm) of visible and shortwave NIR radiation.\n\nThe Raman spectrometer supplied with this multispectral laboratory is designed to record Raman spectra of various samples, such as liquid mixtures containing organic and inorganic substances, biological tissue, powdered materials of various origins, etc. The resulting spectra can be used for both qualitative and quantitative analysis of mixtures. Measuring the IR and Raman spectra of the same sample can be helpful in interpreting complex organic molecules. The Raman signal's PHOTONICS\n\nMiR?\n\ndependence on concentration is linear over a wide range of intensities. Therefore, Raman spectra (as well as IR absorption spectra) can be used to construct chemometric models-calibration or classification ones.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_368fd3134306f1cbc7e80b82ab344d986784dc00": {
+      "evidence_id": "S01_368fd3134306f1cbc7e80b82ab344d986784dc00",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "The information provided by a particular optical spectral method may be insufficient when analyzing real samples.\nThese include complex multicomponent mixtures, most often of natural origin, such as oil, milk, process media, fermentation media, and biological tissue.\nAnalysis of such samples is often complicated by the overlap of several phenomena: absorption, Rayleigh and Raman scattering, and fluorescence.\nMorphological factors, such as sample inhomogeneity (e.g.,\nbiological tissue) or process turbulence, must also be considered when selecting a measurement technique.\nThe analysis of such systems may require a combination of two or even more spectral methods.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 7"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/91"
+      ],
+      "provenance": [
+        {
+          "page": 7,
+          "bbox": [
+            72.025,
+            376.223,
+            522.4310000000003,
+            220.23199999999997
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.2. Synergy of Combining Spectral Methods"
+      ],
+      "parent_context_id": "S01_ctx_6c2fa83c59b61e31e9af0d56ea607d24",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.2. Synergy of Combining Spectral Methods\n\n[Uncaptioned image; pixels not interpreted]\n\nThe information provided by a particular optical spectral method may be insufficient when analyzing real samples. These include complex multicomponent mixtures, most often of natural origin, such as oil, milk, process media, fermentation media, and biological tissue. Analysis of such samples is often complicated by the overlap of several phenomena: absorption, Rayleigh and Raman scattering, and fluorescence. Morphological factors, such as sample inhomogeneity (e.g., biological tissue) or process turbulence, must also be considered when selecting a measurement technique. The analysis of such systems may require a combination of two or even more spectral methods. This often provides a synergistic effect, allowing one to solve a problem that either method alone cannot handle or only partially. Thus, the combination of NIR spectroscopy with fluorescence spectroscopy demonstrated the possibility of more accurately determining the biomass content during yeast fermentation, as well as distinguishing between their intra- and extracellular metabolites.\n\nThe combination of NIR and IR spectroscopy showed benefits in determining tumor boundaries in medical diagnostics. The combination of fluorescence and IR spectroscopy also proved necessary for classifying biological tissues. Online analysis of the pellet coating process in a fluidized bed showed the best results with the simultaneous use of NIR and Raman spectroscopy. There are many other examples of the successful combination of various spectral methods in the problems of quantitative determination or classification of objects. This approach is called multispectral optical analysis, and it is finding increasing application in practice. The basis of the synergetic effect observed when using these two or more methods is the combination of heterogeneous information about the object. This may be chemical information of various kinds, such as in the combination of complementary PHOTONICS\n\nMiR?\n\nvibrational IR and Raman spectra of molecules. It may also be morphological information about the sizes of scattering particles, as in milk analysis. Information can also be obtained from various depths, as in the analysis of biological tissue samples using Mid-IR and NIR spectroscopy with fiber-optic probes.",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_8436abcc6ef3c5bb2aa5f45407ea841d8df21763": {
+      "evidence_id": "AFS_TABLE_8436abcc6ef3c5bb2aa5f45407ea841d8df21763",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 4\nmethod: UV/Visible spectroscopy\nmeasurement_technique: ATR probe\nphysical_phenomenon: absorption\nsample_type: liquid\noptical_path_or_depth: 0.1-1 um\nsensitivity: low\nselectivity: low\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A15:I15"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-15"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A15:I15",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "ATR probe",
+        "method": "UV/Visible spectroscopy",
+        "method_no": 4,
+        "optical_path_or_depth": "0.1-1 um",
+        "physical_phenomenon": "absorption",
+        "sample_type": "liquid",
+        "selectivity": "low",
+        "sensitivity": "low"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S02_e556165b530cafb5dc524d5013a1d312bee346e7": {
+      "evidence_id": "S02_e556165b530cafb5dc524d5013a1d312bee346e7",
+      "source_id": "S02",
+      "source_version": "f273a85e771c8907d6560a31ea6f7c9915d8ba8bae95cac06d751cc0ca843cee",
+      "title": "AFS Process Control Slides",
+      "text": "Slide 3: Choice of optimal System & Method for proces: contrc i line\nChoice of optimal System & Method for proces: contrc i line\nLinkedIn post from 9'25 from Andrew Anderson\naLAPtFibeFSystems\nFLEXIBLE.\nLIGHT.\nSOLUTIONS.\nBUY OUR\nBUY OUR\nINVEST IN\nMulti-Spectral Fiber Systems\nModular System\nNIR!\nRAMAN!\nOUR PRODUCT!)\nallow to test 4 spectroscopy\nMultispectral\nmethods in 0.3-16μm range\nFiber\nRaman\nFTIR\nusing robust fiber probes for\nremote monitoring of chemical\nreaction in-line.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 3"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "page-3-heading",
+        "page-3-ocr"
+      ],
+      "provenance": [
+        {
+          "page": 3,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Slide 3: Choice of optimal System & Method for proces: contrc i line"
+      ],
+      "parent_context_id": "S02_ctx_b16b157124ed3d4392aaa58ee18c0a82",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "Slide 3: Choice of optimal System & Method for proces: contrc i line\n\nChoice of optimal System & Method for proces: contrc i line\nLinkedIn post from 9'25 from Andrew Anderson\nwww.afs.art\naLAPtFibeFSystems\nFLEXIBLE. LIGHT. SOLUTIONS.\nBUY OUR\nBUY OUR\nINVEST IN\nMulti-Spectral Fiber Systems\nModular System\nNIR!\nRAMAN!\nOUR PRODUCT!)\nallow to test 4 spectroscopy\nMultispectral\nmethods in 0.3-16μm range\nFiber\nRaman\nFTIR\nusing robust fiber probes for\nremote monitoring of chemical\nreaction in-line. Comparison\nFluorescence\nNIR\nof spectral data for customer\nprocess enables to select the\nChemometric\nbest process-control solution\nanalysis of\ndata fusion\nFeedback\nMultispectral\nDiamond ATR\nfiber probe of\ncustomised\nRaman\nstructure\nTransFlex\nFIBER PROBES\nCOMPATIBLE\nWITH ANY\nReflex\nSPECTROMETER\nATR-Loop\nFluorescence\n\nComplete slide 3: Choice of optimal System & Method for proces: contrc i line\nChoice of optimal System & Method for proces: contrc i line\nLinkedIn post from 9'25 from Andrew Anderson\nwww.afs.art\naLAPtFibeFSystems\nFLEXIBLE. LIGHT. SOLUTIONS.\nBUY OUR\nBUY OUR\nINVEST IN\nMulti-Spectral Fiber Systems\nModular System\nNIR!\nRAMAN!\nOUR PRODUCT!)\nallow to test 4 spectroscopy\nMultispectral\nmethods in 0.3-16μm range\nFiber\nRaman\nFTIR\nusing robust fiber probes for\nremote monitoring of chemical\nreaction in-line. Comparison\nFluorescence\nNIR\nof spectral data for customer\nprocess enables to select the\nChemometric\nbest process-control solution\nanalysis of\ndata fusion\nFeedback\nMultispectral\nDiamond ATR\nfiber probe of\ncustomised\nRaman\nstructure\nTransFlex\nFIBER PROBES\nCOMPATIBLE\nWITH ANY\nReflex\nSPECTROMETER\nATR-Loop\nFluorescence",
+      "parent_truncated": false
+    },
+    "S02_8680fd99f1fc0d5d823e1c07d7ecb79f237dcee1": {
+      "evidence_id": "S02_8680fd99f1fc0d5d823e1c07d7ecb79f237dcee1",
+      "source_id": "S02",
+      "source_version": "f273a85e771c8907d6560a31ea6f7c9915d8ba8bae95cac06d751cc0ca843cee",
+      "title": "AFS Process Control Slides",
+      "text": "Comparison\nFluorescence\nNIR\nof spectral data for customer\nprocess enables to select the\nChemometric\nbest process-control solution\nanalysis of\ndata fusion\nFeedback\nMultispectral\nDiamond ATR\nfiber probe of\ncustomised\nRaman\nstructure\nTransFlex\nFIBER PROBES\nCOMPATIBLE\nWITH ANY\nReflex\nSPECTROMETER\nATR-Loop\nFluorescence",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 3"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "page-3-ocr"
+      ],
+      "provenance": [
+        {
+          "page": 3,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Slide 3: Choice of optimal System & Method for proces: contrc i line"
+      ],
+      "parent_context_id": "S02_ctx_b16b157124ed3d4392aaa58ee18c0a82",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "Slide 3: Choice of optimal System & Method for proces: contrc i line\n\nChoice of optimal System & Method for proces: contrc i line\nLinkedIn post from 9'25 from Andrew Anderson\nwww.afs.art\naLAPtFibeFSystems\nFLEXIBLE. LIGHT. SOLUTIONS.\nBUY OUR\nBUY OUR\nINVEST IN\nMulti-Spectral Fiber Systems\nModular System\nNIR!\nRAMAN!\nOUR PRODUCT!)\nallow to test 4 spectroscopy\nMultispectral\nmethods in 0.3-16μm range\nFiber\nRaman\nFTIR\nusing robust fiber probes for\nremote monitoring of chemical\nreaction in-line. Comparison\nFluorescence\nNIR\nof spectral data for customer\nprocess enables to select the\nChemometric\nbest process-control solution\nanalysis of\ndata fusion\nFeedback\nMultispectral\nDiamond ATR\nfiber probe of\ncustomised\nRaman\nstructure\nTransFlex\nFIBER PROBES\nCOMPATIBLE\nWITH ANY\nReflex\nSPECTROMETER\nATR-Loop\nFluorescence\n\nComplete slide 3: Choice of optimal System & Method for proces: contrc i line\nChoice of optimal System & Method for proces: contrc i line\nLinkedIn post from 9'25 from Andrew Anderson\nwww.afs.art\naLAPtFibeFSystems\nFLEXIBLE. LIGHT. SOLUTIONS.\nBUY OUR\nBUY OUR\nINVEST IN\nMulti-Spectral Fiber Systems\nModular System\nNIR!\nRAMAN!\nOUR PRODUCT!)\nallow to test 4 spectroscopy\nMultispectral\nmethods in 0.3-16μm range\nFiber\nRaman\nFTIR\nusing robust fiber probes for\nremote monitoring of chemical\nreaction in-line. Comparison\nFluorescence\nNIR\nof spectral data for customer\nprocess enables to select the\nChemometric\nbest process-control solution\nanalysis of\ndata fusion\nFeedback\nMultispectral\nDiamond ATR\nfiber probe of\ncustomised\nRaman\nstructure\nTransFlex\nFIBER PROBES\nCOMPATIBLE\nWITH ANY\nReflex\nSPECTROMETER\nATR-Loop\nFluorescence",
+      "parent_truncated": false
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 5,
+    "tool_calls": 1,
+    "evidence_ids": [
+      "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+      "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc",
+      "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+      "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+      "S01_d22389591926789e513aa9a15558dec78c27d513",
+      "S01_368fd3134306f1cbc7e80b82ab344d986784dc00",
+      "AFS_TABLE_8436abcc6ef3c5bb2aa5f45407ea841d8df21763",
+      "S02_e556165b530cafb5dc524d5013a1d312bee346e7",
+      "S02_8680fd99f1fc0d5d823e1c07d7ecb79f237dcee1"
+    ],
+    "timings_seconds": {
+      "routing": 2.296,
+      "investigation": 9.282,
+      "answer_and_validation": 54.953,
+      "total": 66.531
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H05",
+    "title": "An undefined off specification liquid",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "59e51eef9c1eb254dd5fb31b369b05653b6edaddc02eb8aa932128f5cc5a5ba3"
+  }
+}

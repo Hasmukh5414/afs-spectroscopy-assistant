@@ -1,0 +1,987 @@
+{
+  "question": "We read the supplied LED NIR kidney study and want to use the same concept to\nguide tumor boundary decisions during live surgery. Can we quote its findings\nas proof that the proposed sensor is ready for that use? We have no new in\nvivo data and no validation on our own setup. What assessment and next\nfeasibility steps are appropriate?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:45:59.674209+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "The supplied study reports a proof-of-concept feasibility result, not readiness for live surgery. Its authors describe the work as a feasibility study of LED-based NIR sensing aimed at in vivo applications [1]. Two prototypes were tested on in vitro clinical samples from different patients [2], and the authors state that conclusions rest on a very limited number of investigated patients [3]. The authors report that PCA and PLS-DA confirmed general applicability to kidney tumor detection [4], but they also identify very high measurement variance in cancer tissue as the main disadvantage of the present prototype [1].",
+        "evidence_ids": [
+          "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc",
+          "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+          "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+          "S03_136269420fce88ad2d3f7143ab58c7bb3709735b"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "The transcribed validation table shows that the reported sensitivity and specificity depend strongly on the validation scheme and on the dataset used [5]. For the full Series B sensor data, sensitivity is lower than for the reduced Series B set, which excludes one sample and certain measurement positions [5], so the reduced set is not a single performance estimate for the sensor. The authors recommend full, segmented and random-subset validation plus randomization tests when conclusions depend on limited material [6]. My conditional interpretation is that this spread means any tumor-boundary decision would need independent held-out patients and tissue sites before a sensitivity figure is relied on.",
+        "evidence_ids": [
+          "S03_curated_0b929384ccbdc452ccf87f92f14b29e61c6b47b0",
+          "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "Two candidates are worth assessing side by side. The LED concept is the source's approach but remains a feasibility prototype with four discrete NIR wavelengths [7]. A standard NIR diffuse reflection probe is a reasonable baseline: the method table row covers scattering media and powders with an optical path of 0.5-1 mm and qualitative average ratings [8], and NIR's high light scattering allows diffuse reflectance measurements without direct contact [9]. Whether living or resected tissue behaves adequately in that geometry is not shown by the inspected evidence.",
+        "evidence_ids": [
+          "S03_60a687b2e22eb7b9c407be364253ece62a33b558",
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+          "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a"
+        ]
+      },
+      {
+        "kind": "gap",
+        "text": "The inspected evidence does not support the claim that the sensor is ready to guide tumor boundaries in live surgery, and the study cannot be quoted as proof of readiness. Its samples were in vitro kidney specimens from a small number of patients [2] [3]. No in vivo data, own-setup validation, or intraoperative access, probe contact, cleaning or timing information was provided. Missing evidence is not proof that the approach cannot work, but a false negative at a tumor boundary is unacceptable in the source's own framing [1]. The liquid and colloidal NIR rows (cuvette and transmission or transflection probe) are deferred because their sample types are liquids rather than solid tissue [10] [11].",
+        "evidence_ids": [
+          "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+          "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+          "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc",
+          "AFS_TABLE_086bd2b0cb3d87127a094d0b888b5065a8017b0e",
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+        ]
+      },
+      {
+        "kind": "proposal",
+        "text": "Proposed first step, as a feasibility screen rather than an in vivo claim: define the target decision, acceptable error limits, tissue type and reference method first. Then collect paired tumor and normal-margin tissue ex vivo with histopathology reference, measure the LED concept and a standard NIR diffuse reflection probe on the same specimens, and validate on held-out patients or batches using full, segmented and random-subset validation [6]. Installation compatibility should be considered only if an approach meets the agreed limits with useful gain over the simpler baseline.",
+        "evidence_ids": [
+          "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856"
+        ]
+      },
+      {
+        "kind": "question",
+        "text": "Please confirm which intraoperative decision the sensor would inform, the acceptable false-negative and false-positive limits, the tissue and reference method to be used, and the access, probe contact, cleaning and timing constraints at the surgical site.",
+        "evidence_ids": []
+      }
+    ],
+    "schema_version": 3,
+    "citations": [
+      {
+        "field": "assessment.gaps[0]",
+        "evidence_ids": [
+          "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+          "S03_549df24b7db5d02aca416a098ed26fe0137307ce"
+        ]
+      },
+      {
+        "field": "assessment.gaps[2]",
+        "evidence_ids": [
+          "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc"
+        ]
+      },
+      {
+        "field": "assessment.gaps[3]",
+        "evidence_ids": [
+          "AFS_TABLE_086bd2b0cb3d87127a094d0b888b5065a8017b0e",
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+        ]
+      },
+      {
+        "field": "assessment.candidates[0].limitations[0]",
+        "evidence_ids": [
+          "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+          "S03_60a687b2e22eb7b9c407be364253ece62a33b558"
+        ]
+      },
+      {
+        "field": "assessment.candidates[0].limitations[1]",
+        "evidence_ids": [
+          "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].limitations[0]",
+        "evidence_ids": [
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].limitations[1]",
+        "evidence_ids": [
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].spectral_range",
+        "evidence_ids": [
+          "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+        ]
+      },
+      {
+        "field": "assessment.experiment.steps[4]",
+        "evidence_ids": [
+          "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856"
+        ]
+      }
+    ],
+    "intent": "assessment",
+    "assessment": {
+      "status": "awaiting_clarification",
+      "summary": "Provisional: the supplied LED NIR kidney study supports only an in vitro proof-of-concept feasibility claim with few patients and high measurement variance, so it cannot be quoted as proof that the sensor is ready to guide tumor boundary decisions in live surgery. A reasonable next step is a representative ex vivo comparison of the LED concept with a standard NIR diffuse reflection baseline on your own tissue, once the decision, error limits and reference method are defined.",
+      "candidates": [
+        {
+          "name": "LED-based multi-wavelength NIR sensor (concept from the supplied study)",
+          "claims": [
+            {
+              "text": "In the source, four theoretically chosen NIR LEDs were used as discrete wavelengths rather than a full spectrum.",
+              "evidence_ids": [
+                "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+                "S03_60a687b2e22eb7b9c407be364253ece62a33b558"
+              ]
+            },
+            {
+              "text": "The source's tests used in vitro kidney samples from different patients, a very limited number of investigated patients, framed as a proof-of-concept feasibility study.",
+              "evidence_ids": [
+                "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+                "S03_549df24b7db5d02aca416a098ed26fe0137307ce"
+              ]
+            },
+            {
+              "text": "The authors conclude the approach can discriminate tumor from healthy tissue in these samples and call the Series B result a reasonably good first estimate of real-life applicability.",
+              "evidence_ids": [
+                "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The selected LED wavelengths and fiber geometry transfer to the customer's tissue and surgical access.",
+            "Histopathology tumor and normal labels can be linked to each measured site."
+          ],
+          "limitations": [
+            "Prototype with four discrete LEDs and an in vitro validation on a very limited number of patients; generalization to other tissue or patient mixes is untested.",
+            "The source names high measurement variance in cancer tissue as the main disadvantage and an improvement in accuracy and specificity as the main requirement."
+          ],
+          "evidence_ids": [
+            "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc",
+            "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+            "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+            "S03_136269420fce88ad2d3f7143ab58c7bb3709735b",
+            "S03_curated_0b929384ccbdc452ccf87f92f14b29e61c6b47b0",
+            "S03_60a687b2e22eb7b9c407be364253ece62a33b558",
+            "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856"
+          ],
+          "measurement_concept": "Discrete-wavelength NIR LED illumination with fiber-coupled detection on tissue; the source's fiber link and LED set are examples, not confirmed customer hardware, and installation depends on unconfirmed process and cleaning compatibility.",
+          "spectral_range": ""
+        },
+        {
+          "name": "Standard NIR spectroscopy with diffuse reflection probe (baseline)",
+          "claims": [
+            {
+              "text": "The method table row for NIR with diffuse reflection probe lists scattering media and powder samples, an optical path of 0.5-1 mm, and average qualitative cost, selectivity and sensitivity ratings.",
+              "evidence_ids": [
+                "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+              ]
+            },
+            {
+              "text": "NIR's high light scattering in solid samples enables diffuse reflectance measurements without direct contact, at a distance.",
+              "evidence_ids": [
+                "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a"
+              ]
+            },
+            {
+              "text": "NIR can penetrate up to several millimetres into dense solid samples, which the source links to fiber-optic probe use.",
+              "evidence_ids": [
+                "S01_be1b48ada76809217eeb7f49e552284fdfc98e47"
+              ]
+            }
+          ],
+          "assumptions": [
+            "Tissue responds to diffuse reflectance measurement in a way that supports discrimination at the probe site.",
+            "Chemometric models trained on representative patients can separate tumor from normal tissue."
+          ],
+          "limitations": [
+            "The table row describes scattering media and powders, not tissue, so tissue suitability is unvalidated for this method.",
+            "Qualitative table ratings are not measured tumor discrimination performance."
+          ],
+          "evidence_ids": [
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+            "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a",
+            "S01_be1b48ada76809217eeb7f49e552284fdfc98e47",
+            "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+          ],
+          "measurement_concept": "Standard diffuse reflection NIR probe placed in contact with or at a short distance from the tissue surface, used as a baseline on identical specimens; probe model and contact arrangement are unconfirmed.",
+          "spectral_range": "780-2500 nm nominal NIR region from the general NIR description, not confirmed for any specific instrument"
+        }
+      ],
+      "questions": [
+        {
+          "field": "target",
+          "question": "Which intraoperative decision would the sensor inform (tumor versus normal at the resection margin, and for which organ), and what false-negative and false-positive limits are acceptable?",
+          "affects": "Sets the sample design, validation metrics and whether any option can be tested against the required accuracy."
+        },
+        {
+          "field": "matrix",
+          "question": "What tissue will be measured (in vivo surface, ex vivo specimen or resected tissue), and how will the reference histopathology margin label be assigned?",
+          "affects": "Determines sampling geometry, the number of patients needed and the reference method."
+        },
+        {
+          "field": "conditions",
+          "question": "What access, probe contact, cleaning, sterility and time-per-measurement constraints apply at the surgical site?",
+          "affects": "Decides whether any probe could be considered for later installation or whether only laboratory or ex vivo screening is possible."
+        },
+        {
+          "field": "requirements",
+          "question": "Which physical and biological variation should the study cover (patients, tumor types, tissue heterogeneity, blood, lighting)?",
+          "affects": "Defines the held-out patient or batch structure and the robustness testing."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide whether the LED concept, or a standard NIR diffuse reflection baseline, can meet your agreed tumor-boundary accuracy on your own representative tissue before any in vivo use; the source study's result is not assumed to transfer.",
+        "steps": [
+          "Gather the missing information first: the decision, acceptable error limits, tissue type and reference method.",
+          "Collect paired tumor and normal margin tissue ex vivo from representative patients, with histopathology as reference, recording patient and site identifiers.",
+          "Measure the same specimens with the LED concept and with a standard NIR diffuse reflection probe, using the same reference and sampling times.",
+          "Fit preprocessing and classification models on a training set of patients, then validate on held-out patients or batches rather than only random splits.",
+          "Report sensitivity, specificity and uncertainty using full, segmented and random-subset validation, plus a randomization check.",
+          "Add a repeat measurement or handling-stability check to cover tissue condition variation."
+        ],
+        "criteria_to_confirm": [
+          "Whether each approach meets the customer-agreed error limits on held-out patients.",
+          "Whether the LED concept gives a useful gain over the standard NIR baseline on identical samples; if not, the simpler adequate option is preferred.",
+          "Whether results are inconclusive given sample numbers, in which case no in vivo claim is made.",
+          "Whether access, cleaning and timing conditions are compatible; unknown compatibility keeps the study at laboratory or at-line screening.",
+          "Statistical significance alone does not justify added complexity."
+        ]
+      },
+      "gaps": [
+        "The supplied study is a proof-of-concept in vitro kidney study conducted on a very limited number of patients, so it does not establish readiness for live surgery.",
+        "No in vivo data, own-setup validation, or intraoperative access, probe contact, cleaning or timing information was provided.",
+        "A false negative at a tumor boundary is unacceptable in the source's own framing, so accuracy requirements must be set before choosing any option.",
+        "The liquid and colloidal NIR rows (cuvette and transmission or transflection probe) are deferred because their sample types are liquids rather than solid tissue.",
+        "No inspected passage provides tissue-specific performance for any NIR diffuse reflection probe; this absence is not proof that the approach fails."
+      ],
+      "requirements": [
+        {
+          "statement": "Intends to use the same LED NIR concept to guide tumor boundary decisions during live surgery.",
+          "user_quote": "We read the supplied LED NIR kidney study and want to use the same concept to\nguide tumor boundary decisions during live surgery."
+        },
+        {
+          "statement": "Has no new in vivo data and no validation on its own setup.",
+          "user_quote": "We have no new in\nvivo data and no validation on our own setup."
+        }
+      ],
+      "unknowns": [
+        "Whether any ex vivo or laboratory tissue data from the customer's own setup exist."
+      ]
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc": {
+      "evidence_id": "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "The main disadvantage of the LED-based sensor in its present form is a very high measurement variance in cancer tissue samples (Figure 9).\nThe main requirement for the sensor improvement is therefore to increase the accuracy and specificity of detection, as FN are unacceptable outcomes in oncological diagnostics.\nAlthough the sensor performance demonstrated by the present prototype should be further improved, the results reported here can be considered as a successful feasibility study of an LED-based NIR sensor for cancer diagnostics aimed at in vivo applications.\nThe sensor's general sensitivity to the kidney tumors, illustrated here, provides the necessary motivation for further development of the method.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 14"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/560"
+      ],
+      "provenance": [
+        {
+          "page": 14,
+          "bbox": [
+            76.256,
+            235.28784000000007,
+            519.1415726890398,
+            131.27869709497202
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Discussion and Conclusions"
+      ],
+      "parent_context_id": "S03_ctx_177967e8b3b89cc124d693596339b0be",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Discussion and Conclusions\n\nLED-based optical sensor technology has already been shown to be suitable for the production of miniaturized chemical sensors and optical diagnostic devices (e.g., pulse oximetry and detection of oral cancer [43]). The presented combination of LEDs with simple photodiode detection provides a good alternative to full-sized spectroscopic devices and allows for a fine tuning of the analysis to the requirements of a particular practical task. Another method advantage is the possibility of miniaturization, which is especially important in the context of real-time medical diagnostics. Distinguishing between tumor and non-tumor tissues using LED-based sensors is a new approach, and much work remains to be done. A significant technical simplification of the LED-based sensing, compared to the conventional full-range spectroscopy, should result in a dramatic reduction of the device's purchase and maintenance prices. Additionally, LED sensors are portable and do not require the permanent availability of a computer and power supply. The appearance of a budget tool for cancer diagnostics, and hence, the growing total number of analyses are expected to have a positive impact on human health worldwide. The choice between a spectrometer and an LED-based sensor does not necessarily indicate a trade-off between the analysis price and reliability. Using a limited number of wavelengths rather than the full spectrummakes it easier to focus on the most informative signals, therefore avoiding the areas of noise and irrelevant variance. This concept is particularly useful for the investigation of complex biological objects.\n\nThis study provides a proof-of-concept demonstration of the LED-based sensor for tumor discrimination. Only four LEDs with emission wavelengths in the NIR range were employed. Further dedicated studies are needed to yield the next sensor prototype. For example, examinations of various organs, the selection of optimal wavelengths, and data processing methods must be addressed. The presented technology of diffuse reflectance NIR sensing for tumor diagnostics can be extended to other tissue and cancer types. To provide the optimal sensor performance, the working LED set, that is, the LED number and wavelengths, should be adapted to each case individually to take respective biomarkers and optical properties of the tissue into account. The experimental and data analysis approaches suggested here can be used to minimize the number of clinical measurements during the development stage.\n\nThe main disadvantage of the LED-based sensor in its present form is a very high measurement variance in cancer tissue samples (Figure 9). The main requirement for the sensor improvement is therefore to increase the accuracy and specificity of detection, as FN are unacceptable outcomes in oncological diagnostics. Although the sensor performance demonstrated by the present prototype should be further improved, the results reported here can be considered as a successful feasibility study of an LED-based NIR sensor for cancer diagnostics aimed at in vivo applications. The sensor's general sensitivity to the kidney tumors, illustrated here, provides the necessary motivation for further development of the method.\n\nThe directions for the further improvement of the sensor are (1) LED number and wavelength optimization, (2) optimization of the measurement conditions (distance, angle, light intensity, spectral reference, probe construction, elimination of environmental effects, etc.), and (3) data processing optimization. These improvements represent an important part of the future work.\n\nAcknowledgments: Funding of this project by the European Union and European Regional Development Fund (Grant 10155837) is gratefully acknowledged. The Russian Ministry of Education and Science supported this work within the framework of the basic part of the state task on the following theme: \"Adaptive technologies of analytical control based on optical sensors\" (Project No. 4.7001.2017/BP). D.K. thanks DAAD for financial support during his research stay in Berlin (award #50015559).\n\nAuthor Contributions: Andrey Bogomolov, Urszula Zabarylo, and Dmitry Kirsanov conceived, designed and performed the experiments and wrote the paper; Vladimir Ageev designed and built the LED sensor; Iskander Usenov and Georgy Danielyan designed and produced the fiber-optic probes; Valeria Belikova and Vladislav Galyanin analyzed the data; Olaf Minet, Tatiana Sakharova, Elena Feliksberger, and Viacheslav Artyushenko managed and supervised the project.\n\nConflicts of Interest: The authors declare no conflict of interest.\n\n[Uncaptioned image; pixels not interpreted]\n\n© 2017 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).\n\nMDPY\n\nholder\nLAM\n\nReflectance, %\n900\n1100\n1500\n1700\nwavelength (nm)\n0.015\n0.01\n0.005\nArbitary\n-0.005\n-0.01\n-0.015\n-0.02\n-0.025\n-0.0360\n1100\n1500\n170d\nwavelength (nm)\n0.00075\n0.0005\nPLS regression coefficient\n0.00025\n-0.00025\n-0.0005\n-0.00075\n900\n1100\n1500\n1700\nwavelength (nm)\n\n190\n1.25\n1.25\n0.75\n0.75\n194\n°194\n°194\n°194\n0.25\n0.25\n194\n°194\n\n0.2\n0.15\nExpl. var. in X 1.71%\n°194\nExpl. var, in X: 1.9%\n0.3\n198\n°198\n158\n0.05\n0.2\n-0.05\n°198\n°194\n198\n°194\n194\n135\n194\n-0.15\nLV/2\n1610\n-0.2\n°194\n-0.2\n\"194\n-0.25\n198\n194\n-0.3\n\"194\n194\n0.2\n-0.3\n202\n0.2\nLV 1 score. Expl. var. in X: 98.21%\nLV 1 seoore. Expl. var. in X: 97.81%\n\n1.5\n1.5\n0.5\n0.5\n0.94 μm (U4)\n1.17 μm (U3)\nsensor channels\n1.30 μm (U1)\n1.44 μm (U2)\n0.94 μm (14)\n1.17 μm (U3)\n1.30 μrs (U1)\n1.46 μm (U2)\nsensar channels\n1.5\n1.5\n0.5\n0.5\n0.54jm (U4)\n1.17 μm (U3)\n1.30 μm (U1)\n1.44 μm (U2)\n0.94μm (Ui)\n1.17 μm (U3)\n1.30 μm (U1)\n1.44 μm (U2)\nsensar channels\nsenser channels\n\n0.3\n°149\n°149\n0.2\n090\nExpl. var. in X: 3.64%\n8149\n°149\n°14B\n. var. in X: 3.64%\n160\n160\n°149\n149\ngeto\n0.05\n8188\n160\n°160\n149\n091。\n149\n481n649\n149\n149\n°149\n160\n2 score.\n109\n149\n144144\n149\n°149\n2 score.\n665061\n14914949\n°149\n°q444\n160\n-0.2\n-0.05151\n°149\n°f449。\n149\n149\n149149\n-0.3\n451\n-0.2\n0.2\n0.4\n8090\n0.3\n-0.2\nLV 1 score. Expl. var. in X: 93.98%\nLV 1 score. Expl. var. in X: 93.98%\n\nmean NMC\nmean NMC\n0.811\n0.5\n1.507",
+      "parent_truncated": false
+    },
+    "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc": {
+      "evidence_id": "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "To the best of our knowledge, the use of LED-based optical sensing for kidney cancer diagnostics has not yet been reported.\nTwo sensor prototypes were implemented and tested for kidney cancer diagnostics using seven pairs each of tumor and normal in vitro clinical samples from different patients.\nConsidering the novelty of the presented approach, the main analytical task of this study was to establish the fundamental feasibility of the LED-based optical diagnostics, that is, the sensor's capability to capture cancer-related tissue variances at a few selected wavelengths.\nThe measurements on real kidney samples are expected to be helpful for further sensor development.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 2"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/25"
+      ],
+      "provenance": [
+        {
+          "page": 2,
+          "bbox": [
+            76.1174,
+            196.93084,
+            519.1465559693369,
+            79.41269709497203
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "1. Introduction"
+      ],
+      "parent_context_id": "S03_ctx_87c372374bb22f803947771a3da77947",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "1. Introduction\n\nCancer remains one of the main causes of mortality in Germany and worldwide [1]. To improve the situation, a larger number of diagnostic analyses should be performed at different stages of cancer medical handling, from preventive screening to treatment efficiency control. The implementation of this strategy results in a high demand for easy-to-handle, cheap diagnostic devices.\n\nMalignant tumors are currently diagnosed using a number of methods, including non-invasive techniques such as computer tomography, ultrasound and X-ray scanning, as well as invasive procedures, including biopsies and diagnostic surgeries. Optical spectroscopy of the biological tissue, also called spectral histopathology [2], is a relatively new and highly promising approach to the non-invasive tumor diagnostics that has been actively investigated since the 1990s. Spectroscopic measurements are typically inexpensive and rapid, which makes the approach very well suited for diagnostic screening and routine prophylactic check-ups. As a promising method of tumor border detection, optical sensing capable of providing hundreds of real-time analyses presents a viable alternative to the traditional operative histopathology.\n\nNeoplastic processes in a tissue inevitably result in its chemical and physical modification. These changes can be captured by the spectroscopic measurement of various effects accompanying the interaction of the tissue with an incident electromagnetic wave. Recent research results have confirmed the feasibility of differentiation between malignant and healthy tissues using fluorimetry and molecular spectroscopic techniques, that is, Raman scattering and infrared absorption or diffuse reflection [3,4]. The development of diagnostic spectroscopy results in a better understanding of chemical changes related to the pathological cell malfunction. In turn, in-depth knowledge of the disease's biochemistry stimulates the development of new diagnostic methods and approaches.\n\nDiffuse reflectance near-infrared (NIR) spectroscopy is one of the most promising methods for optical tissue analysis. Delivering a mixture of the scatter and absorbance information on the light-to-tissue interaction enables the detection of both molecular (related to the functional group vibrations) and morphological (due to the cell transformation) tissue changes, which makes it particularly useful for the oncology diagnostics of tumors. Successful NIR analysis applications for cancer detection in different tissues have been illustrated for the liver [5], the breast [6-9], the cervix [10], oral cancer [11-13], the prostate [14,15], the lung [16], gastric cancer [17] and the esophagus [18]. The most popular wavelength region, from 900 to 1700 nm, covered by the majority of modern NIR spectrometers includes intensive absorption bands of fat (lipids) and water known to be bright biomarkers of some tumor types, for example, of breast cancer [19]. It is important that the NIR light penetrates into the sample by up to 3 mm [20,21]; this depth cannot be reached by suitable spectroscopic techniques in other wavelength regions. Another important advantage of the NIR diagnostics of tissue tumors, compared to traditional methods, is the measurement flexibility due to the application of fiber-based light guides and probes, which is necessary under clinical conditions (e.g., during a surgery). The literature review revealed no data on kidney cancer diagnostics using fiber-based NIR spectroscopy.\n\nRecent works have shown that high-resolution NIR spectroscopy can be replaced by optical sensing at a few specific wavelengths optimized for a particular application [22-25]. Technical downgrade does not necessarily result in an accuracy loss. Inexpensive sensors may perform as well as the respective full-scale spectroscopic techniques, or even better [20]. An inevitable loss of accuracy as a result of a much lower sensor resolution is compensated for by excluding less- and non-informative spectral regions (i.e., those containing irrelevant variance and noise) from consideration. The resulting simplification of the data and models tends to improve the model's robustness and hence the reliability of a diagnosis.\n\nIn this study, a new tumor diagnostic sensor based on light-emitting diodes (LEDs) with emission wavelengths in the region of 900-1500 nm was developed and tested. To the best of our knowledge, the use of LED-based optical sensing for kidney cancer diagnostics has not yet been reported. Two sensor prototypes were implemented and tested for kidney cancer diagnostics using seven pairs each of tumor and normal in vitro clinical samples from different patients. Considering the novelty of the presented approach, the main analytical task of this study was to establish the fundamental feasibility of the LED-based optical diagnostics, that is, the sensor's capability to capture cancer-related tissue variances at a few selected wavelengths. The measurements on real kidney samples are expected to be helpful for further sensor development.",
+      "parent_truncated": false
+    },
+    "S03_549df24b7db5d02aca416a098ed26fe0137307ce": {
+      "evidence_id": "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "2.5.\nModel Validation\nConsidering the limited availability of the biopsy material and the ethical aspects of its use, conclusions about the general suitability of the NIR sensor analysis for cancer diagnostics and, in particular, of four theoretically chosen LEDs are made on the basis of a very limited number of investigated patients.\nThe necessary pairs of healthy and tumor biopsies could only be obtained from the whole kidney after nephrectomy, which constituted only about 30% of the total operation material (in accordance with the internal statistics of Charité).\nThis was an additional complication limiting the sample availability.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 6"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/167",
+        "#/texts/168"
+      ],
+      "provenance": [
+        {
+          "page": 6,
+          "bbox": [
+            76.535,
+            312.88635899999997,
+            164.38873400000003,
+            303.48610290997226
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 6,
+          "bbox": [
+            76.535,
+            293.26984000000004,
+            520.0064771935598,
+            202.7706970949721
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "2.5. Model Validation"
+      ],
+      "parent_context_id": "S03_ctx_b29df639cce63a2a7557fcab18d2add3",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "2.5. Model Validation\n\nConsidering the limited availability of the biopsy material and the ethical aspects of its use, conclusions about the general suitability of the NIR sensor analysis for cancer diagnostics and, in particular, of four theoretically chosen LEDs are made on the basis of a very limited number of investigated patients. The necessary pairs of healthy and tumor biopsies could only be obtained from the whole kidney after nephrectomy, which constituted only about 30% of the total operation material (in accordance with the internal statistics of Charité). This was an additional complication limiting the sample availability.\n\nIn order to reduce the risk of overfitting caused by the limited experimental data volume, a thorough validation of the discrimination models was required. Three validation methods were applied to calculate the prediction statistics for each model: two types of cross-validation (CV) and a random-subset validation (RSV). The CV methods were full leave-one-out (LOO) CV and segmented CV procedures, for which the segments were formed by repeated measurements in different sample positions. (In Series A, for which arbitrary measurement positions were used, the segments were formed by six individual kidney samples.) In the third validation method, a random subset of measurements containing about 15% of the whole data set (the number of validation samples was chosen to be closest to this value) was excluded at the model building stage to be used for an independent prediction. To compensate for the random factor in the modeling statistics, the procedure was repeated 1000 times, and cumulative numbers of TP, FP, TN, and FN were used to calculate the %Sn, %Sp, and %Ac values. One-thousand iterations of the subset selection-modeling-validation cycle assured the convergence of the reported statistics to constant values independent of a particular subset. The optimal number of latent variables (LVs) to be retained in the PLS-DA models was determined on the basis of both CV methods.\n\nThe resulting discrimination models for the sensor data were additionally subjected to a permutation test (PT) [35]. The y-vector in the PT was randomized many times, before the following model building and validation. The PT passed if none of the random data arrangements resulted in better statistics than the original data. Typically, 50-100 PT trials were enough to reveal an overfitting. The average number of misclassified measurements (NMC = FP + FN) throughout all the RSV cycles was used as a PT merit function.",
+      "parent_truncated": false
+    },
+    "S03_136269420fce88ad2d3f7143ab58c7bb3709735b": {
+      "evidence_id": "S03_136269420fce88ad2d3f7143ab58c7bb3709735b",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "Statistical data evaluation using principal component analysis (PCA) and partial least-squares discriminant analysis (PLS-DA) confirmed the general applicability of the LED-based sensing approach to kidney tumor detection.\nAn additional validation of the results was performed by means of sample permutation.\nKeywords: tumor detection; kidney; fiber spectroscopy; optical sensor; near infrared; LED",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 1"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/12",
+        "#/texts/13"
+      ],
+      "provenance": [
+        {
+          "page": 1,
+          "bbox": [
+            81.816,
+            393.25383999999997,
+            518.9585594687,
+            221.6976970949721
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 1,
+          "bbox": [
+            82.205,
+            205.67584,
+            478.8095528149995,
+            196.23269709497208
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "Development and Testing of an LED-Based Near-Infrared Sensor for Human Kidney Tumor Diagnostics"
+      ],
+      "parent_context_id": "S03_ctx_d738626ff01360a24a0fec7df6f948f4",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "Development and Testing of an LED-Based Near-Infrared Sensor for Human Kidney Tumor Diagnostics\n\nAndrey Bogomolov 1,2, * ID , Urszula Zabarylo 1,3 , Dmitry Kirsanov 4 , Valeria Belikova 2 , Vladimir Ageev 1 , Iskander Usenov 1,5 , Vladislav Galyanin 2 , Olaf Minet 3 , Tatiana Sakharova 6 , Georgy Danielyan 6 , Elena Feliksberger 1 and Viacheslav Artyushenko 1\n\n1 Art Photonics GmbH, Rudower Chaussee 46, 12489 Berlin, Germany; urszula.zabarylo@charite.de (U.Z.); vladimir240@mail.ru (V.A.); usenov@tu-berlin.de (I.U.); ef@artphotonics.de (E.F.); sa@artphotonics.com (V.A.)\n\n2 Laboratory of Multivariate Analysis and Global Modeling, Samara State Technical University, Molodogvardeyskaya 244, 443100 Samara, Russia; valerya.belickova@yandex.ru (V.B.); v.galyanin@gmail.com (V.G.)\n\n3 Medical Physics &Optical Diagnostics, CC6 Campus Benjamin Franklin, Charité Universitätsmedizin Berlin, Hindenburgdamm 30, 12203 Berlin, Germany; olaf.minet@charite.de\n\n4 Institute of Chemistry, St. Petersburg State University, Universitetskaya nab. 7/9, 199034 St. Petersburg, Russia; d.kirsanov@gmail.com\n\n5 Institute of Optics and Atomic Physics, Technical University of Berlin, Straße des 17. Juni 135, 10623 Berlin, Germany\n\n6 General Physics Institute of Russian Academy of Sciences, Vavilova 38, 119991Moscow, Russia; ts@artphotonics.de (T.S.); gd@artphotonics.de (G.D.)\n\nCorrespondence: ab@globalmodelling.com; Tel.: +49-157-7176-3176\n\nReceived: 26 June 2017; Accepted: 15 August 2017; Published: 19 August 2017\n\nAbstract: Optical spectroscopy is increasingly used for cancer diagnostics. Tumor detection feasibility in human kidney samples using mid- and near-infrared (NIR) spectroscopy, fluorescence spectroscopy, and Raman spectroscopy has been reported (Artyushenko et al., Spectral fiber sensors for cancer diagnostics in vitro. In Proceedings of the European Conference on Biomedical Optics, Munich, Germany, 21-25 June 2015). In the present work, a simplification of the NIR spectroscopic analysis for cancer diagnostics was studied. The conventional high-resolution NIR spectroscopic method of kidney tumor diagnostics was replaced by a compact optical sensing device constructively represented by a set of four light-emitting diodes (LEDs) at selected wavelengths and one detecting photodiode. Two sensor prototypes were tested using 14 in vitro clinical samples of 7 different patients. Statistical data evaluation using principal component analysis (PCA) and partial least-squares discriminant analysis (PLS-DA) confirmed the general applicability of the LED-based sensing approach to kidney tumor detection. An additional validation of the results was performed by means of sample permutation.\n\nKeywords: tumor detection; kidney; fiber spectroscopy; optical sensor; near infrared; LED",
+      "parent_truncated": false
+    },
+    "S03_curated_0b929384ccbdc452ccf87f92f14b29e61c6b47b0": {
+      "evidence_id": "S03_curated_0b929384ccbdc452ccf87f92f14b29e61c6b47b0",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "S03 Table 1 (transcribed, p.9): Partial least-squares discriminant analysis (PLS-DA) calibration and validation statistics of tumor detection in Series A and B; two latent variables (LVs) were used in all models.\nColumns: Data | DQ2 | TP | FP | TN | FN | %Sn | %Sp | %Ac\nCalibration (training and validation on the full dataset):\nAn41 | 0.932 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.917 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs33 | 0.437 | 19 | 1 | 11 | 2 | 90.5 | 91.7 | 90.9\nBs170 | 0.181 | 62 | 5 | 70 | 33 | 65.3 | 93.3 | 77.6\nBs140 | 0.500 | 64 | 3 | 67 | 6 | 91.4 | 95.7 | 93.6\nFull (leave-one-out) cross-validation:\nAn41 | 0.920 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.902 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs33 | 0.358 | 18 | 1 | 11 | 3 | 85.7 | 91.7 | 87.9\nBs170 | 0.153 | 59 | 7 | 68 | 36 | 62.1 | 90.7 | 74.7\nBs140 | 0.478 | 63 | 3 | 67 | 7 | 90.0 | 95.7 | 92.9\nSegmented cross-validation (segments formed by samples in Series A, by measurement positions in Series B):\nAn41 | 0.574 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.488 | 14 | 0 | 20 | 7 | 66.7 | 100.0 | 82.9\nAs33 | 0.051 | 13 | 3 | 9 | 8 | 61.9 | 75.0 | 66.7\nBs170 | 0.068 | 51 | 7 | 68 | 44 | 53.7 | 90.7 | 70.0\nBs140 | 0.416 | 61 | 3 | 67 | 9 | 87.1 | 95.7 | 91.4\nRandom-subset validation (15% subset, 1000 iterations; DQ2, %Sn, %Sp, %Ac only):\nAn41 | 0.916 | 100.0 | 100.0 | 100.0\nAs41 | 0.899 | 100.0 | 100.0 | 100.0\nAs33 | 0.345 | 82.4 | 86.1 | 83.8\nBs170 | 0.149 | 60.2 | 91.0 | 74.8\nBs140 | 0.480 | 89.9 | 95.7 | 92.8\nData set key from the table footnotes: An41 = NIR spectra of Series A; As41 = simulated sensor data in Series A; As33 = sensor measurements in Series A; Bs170 = sensor measurements of full data in Series B; Bs140 = sensor measurements of Series B without sample T151 or positions N144_Cn and T144_Cn.\nScope: in vitro measurements on 14 samples from 7 patients; a proof-of-concept study (S03 p.1, p.14).",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 9"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "curated-S03-p9-table1-plsda"
+      ],
+      "provenance": [
+        {
+          "page": 9,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Table 1. PLS-DA calibration and validation statistics of tumor detection in Series A and B"
+      ],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null
+    },
+    "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856": {
+      "evidence_id": "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "As a general conclusion from the experimental analysis of the kidney samples, it can be stated that the LED-based sensing approach developed in the present work is capable of discriminating between tumor and healthy tissues.\nTaking into account the data diversity in Series B, it can be taken as a reasonably good first estimate of the real-life applicability of the sensor.\nThe technical quality of A thorough validation, including full, segmented and random-subset CVs, as well as randomization tests, are recommended in any cases for which important conclusions depend on calibration or discrimination models built on limited experimental material.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 13–14"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/553"
+      ],
+      "provenance": [
+        {
+          "page": 13,
+          "bbox": [
+            88.56425,
+            49.103458000000046,
+            508.7262657379997,
+            0.9571540000000596
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 14,
+          "bbox": [
+            76.535,
+            750.8168400000001,
+            518.7564480777397,
+            714.354697094972
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.3. PLS-DA of Sensor Data and Model Validation 3.3. PLS-DA of Sensor Data and Model Validation"
+      ],
+      "parent_context_id": "S03_ctx_fb8126cd791ea7ab208d4d2fc0e964aa",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.3. PLS-DA of Sensor Data and Model Validation 3.3. PLS-DA of Sensor Data and Model Validation\n\nUnlike PCA, the PLS-DA is a supervised classification method using the factor space optimized for a particular discrimination task. The calibration and validation statistics of PLS-DA models for Series B are given in Table 1. No large discrepancy between the calibration and different validation statistics is observed. As expected, the full CV was generally more optimistic, but changing the validation method to segmented CV did not result in any dramatic consequences for the models. The segmented CV with the segments formed by measurement positions in Series B was the most straightforward CV strategy in the present research. Repeated measurements in the same sample Unlike PCA, the PLS-DA is a supervised classification method using the factor space optimized for a particular discrimination task. The calibration and validation statistics of PLS-DA models for Series B\n\nare given in Table 1. No large discrepancy between the calibration and different validation statistics is observed. As expected, the full CV was generally more optimistic, but changing the validation method to segmented CV did not result in any dramatic consequences for the models. The segmented CV with the segments formed by measurement positions in Series B was the most straightforward CV strategy in the present research. Repeated measurements in the same sample position produced similar spectra or sensor data; therefore, these should always be simultaneously excluded for every CV iteration. The sample-based segmented CV was perhaps too crude because of a high risk of model bias, when one of three available tumor or normal samples was eliminated from the training dataset. Sensors 2017, 17, 1914 13 of 17\n\nRSV is another viable option to validate multivariate models built on relatively small datasets. The subset volume of 15% was a reasonable trade-off between the representativeness of the residual training set and the statistical reliability of the prediction. It has been verified that varying the subset size between 10% and 20% does not affect the modeling statistics significantly. RSV combines the advantages of independent validation (although it is not strictly independent because of the repeat-and-average approach) with efficient data use, as in CV. RSV statistics take an intermediate position between the LOO and segmented CV approaches. It is remarkable that for the most representative refined sensor model, Bs140, the RSV metrics were virtually the same as for LOO CV (Table 1). a high risk of model bias, when one of three available tumor or normal samples was eliminated from the training dataset. RSV is another viable option to validate multivariate models built on relatively small datasets. The subset volume of 15% was a reasonable trade-off between the representativeness of the residual training set and the statistical reliability of the prediction. It has been verified that varying the subset size between 10% and 20% does not affect the modeling statistics significantly. RSV combines the advantages of independent validation (although it is not strictly independent because of the repeatand-average approach) with efficient data use, as in CV. RSV statistics take an intermediate position between the LOO and segmented CV approaches. It is remarkable that for the most representative\n\nThe models for the sensor data As33 and Bs140 successfully passed PTs (Section 2.5). A large difference between the NMC statistics for the original and any randomized order of the samples in the y-vector of responses (Figure 10) additionally confirmed the predictive capabilities of the respective PLS-DA models. A high efficiency of the y-permutation test to protect against chance correlation has been illustrated in [42]. refined sensor model, Bs140, the RSV metrics were virtually the same as for LOO CV (Table 1). The models for the sensor data As33 and Bs140 successfully passed PTs (Section 2.5). A large difference between the NMC statistics for the original and any randomized order of the samples in the y-vector of responses (Figure 10) additionally confirmed the predictive capabilities of the respective PLS-DA models. A high efficiency of the y-permutation test to protect against chance correlation has been illustrated in [42].\n\nFigure 10. Permutation tests of partial least-squares discriminant analysis (PLS-DA) models for sensor measurements: (a) Series A, and (b) refined Series B (As33 and Bs140 models in Table 1, respectively). Validation with a random 15% subset at 1000 iterations was used; sorted mean number of misclassified measurements (NMC) metrics are presented. Blue bar at zero permutation number corresponds to original non-permuted data. Figure 10. Permutation tests of partial least-squares discriminant analysis (PLS-DA) models for sensor measurements: (a) Series A, and (b) refined Series B (As33 and Bs140 models in Table 1, respectively). Validation with a random 15% subset at 1000 iterations was used; sorted mean number of misclassified measurements (NMC) metrics are presented. Blue bar at zero permutation number corresponds to original non-permuted data.\n\nFigure 10. Permutation tests of partial least-squares discriminant analysis (PLS-DA) models for sensor measurements: (a) Series A, and (b) refined Series B (As33 and Bs140 models in Table 1, respectively). Validation with a random 15% subset at 1000 iterations was used; sorted mean number of misclassified measurements (NMC) metrics are presented. Blue bar at zero permutation number corresponds to original non-permuted data. Figure 10. Permutation tests of partial least-squares discriminant analysis (PLS-DA) models for sensor measurements: (a) Series A, and (b) refined Series B (As33 and Bs140 models in Table 1, respectively). Validation with a random 15% subset at 1000 iterations was used; sorted mean number of misclassified measurements (NMC) metrics are presented. Blue bar at zero permutation number corresponds to original non-permuted data.\n\nThe evident consistency of different validation and calibration statistics presented in Table 1 as well as the PT results provide convincing proof that our preliminary discrimination models reflect the real sensor capabilities of tumor diagnostics. The moderate complexity of the models (two LVs) is further evidence against any significant overfitting. A thorough validation, including full, segmented and random-subset CVs, as well as randomization tests, are recommended in any cases for which important conclusions depend on calibration or discrimination models built on limited experimental material. The evident consistency of different validation and calibration statistics presented in Table 1 as well as the PT results provide convincing proof that our preliminary discrimination models reflect the real sensor capabilities of tumor diagnostics. The moderate complexity of the models (two LVs) is further evidence against any significant overfitting.\n\nAs a general conclusion from the experimental analysis of the kidney samples, it can be stated that the LED-based sensing approach developed in the present work is capable of discriminating between tumor and healthy tissues. Taking into account the data diversity in Series B, it can be taken as a reasonably good first estimate of the real-life applicability of the sensor. The technical quality of A thorough validation, including full, segmented and random-subset CVs, as well as randomization tests, are recommended in any cases for which important conclusions depend on calibration or discrimination models built on limited experimental material.\n\nAs a general conclusion from the experimental analysis of the kidney samples, it can be stated that the LED-based sensing approach developed in the present work is capable of discriminating between tumor and healthy tissues. Taking into account the data diversity in Series B, it can be taken as a reasonably good first estimate of the real-life applicability of the sensor. The technical quality of the method is additionally confirmed by a good reproducibility of the measurements in individual samples and in particular sample sites.",
+      "parent_truncated": false
+    },
+    "S03_60a687b2e22eb7b9c407be364253ece62a33b558": {
+      "evidence_id": "S03_60a687b2e22eb7b9c407be364253ece62a33b558",
+      "source_id": "S03",
+      "source_version": "3cfb4771f150902a729f88ec4a40c90031c7a8d07e8641e653e4543157917fd4",
+      "title": "Development and Testing of an LED-Based Near-Infrared Sensor",
+      "text": "The choice between a spectrometer and an LED-based sensor does not necessarily indicate a trade-off between the analysis price and reliability.\nUsing a limited number of wavelengths rather than the full spectrummakes it easier to focus on the most informative signals, therefore avoiding the areas of noise and irrelevant variance.\nThis concept is particularly useful for the investigation of complex biological objects.\nThis study provides a proof-of-concept demonstration of the LED-based sensor for tumor discrimination.\nOnly four LEDs with emission wavelengths in the NIR range were employed.\nFurther dedicated studies are needed to yield the next sensor prototype.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 14"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/558",
+        "#/texts/559"
+      ],
+      "provenance": [
+        {
+          "page": 14,
+          "bbox": [
+            76.535,
+            600.04084,
+            520.50387585356,
+            374.44769709497206
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 14,
+          "bbox": [
+            76.226,
+            370.38184,
+            520.5039548799999,
+            239.35369709497206
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Discussion and Conclusions"
+      ],
+      "parent_context_id": "S03_ctx_177967e8b3b89cc124d693596339b0be",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Discussion and Conclusions\n\nLED-based optical sensor technology has already been shown to be suitable for the production of miniaturized chemical sensors and optical diagnostic devices (e.g., pulse oximetry and detection of oral cancer [43]). The presented combination of LEDs with simple photodiode detection provides a good alternative to full-sized spectroscopic devices and allows for a fine tuning of the analysis to the requirements of a particular practical task. Another method advantage is the possibility of miniaturization, which is especially important in the context of real-time medical diagnostics. Distinguishing between tumor and non-tumor tissues using LED-based sensors is a new approach, and much work remains to be done. A significant technical simplification of the LED-based sensing, compared to the conventional full-range spectroscopy, should result in a dramatic reduction of the device's purchase and maintenance prices. Additionally, LED sensors are portable and do not require the permanent availability of a computer and power supply. The appearance of a budget tool for cancer diagnostics, and hence, the growing total number of analyses are expected to have a positive impact on human health worldwide. The choice between a spectrometer and an LED-based sensor does not necessarily indicate a trade-off between the analysis price and reliability. Using a limited number of wavelengths rather than the full spectrummakes it easier to focus on the most informative signals, therefore avoiding the areas of noise and irrelevant variance. This concept is particularly useful for the investigation of complex biological objects.\n\nThis study provides a proof-of-concept demonstration of the LED-based sensor for tumor discrimination. Only four LEDs with emission wavelengths in the NIR range were employed. Further dedicated studies are needed to yield the next sensor prototype. For example, examinations of various organs, the selection of optimal wavelengths, and data processing methods must be addressed. The presented technology of diffuse reflectance NIR sensing for tumor diagnostics can be extended to other tissue and cancer types. To provide the optimal sensor performance, the working LED set, that is, the LED number and wavelengths, should be adapted to each case individually to take respective biomarkers and optical properties of the tissue into account. The experimental and data analysis approaches suggested here can be used to minimize the number of clinical measurements during the development stage.\n\nThe main disadvantage of the LED-based sensor in its present form is a very high measurement variance in cancer tissue samples (Figure 9). The main requirement for the sensor improvement is therefore to increase the accuracy and specificity of detection, as FN are unacceptable outcomes in oncological diagnostics. Although the sensor performance demonstrated by the present prototype should be further improved, the results reported here can be considered as a successful feasibility study of an LED-based NIR sensor for cancer diagnostics aimed at in vivo applications. The sensor's general sensitivity to the kidney tumors, illustrated here, provides the necessary motivation for further development of the method.\n\nThe directions for the further improvement of the sensor are (1) LED number and wavelength optimization, (2) optimization of the measurement conditions (distance, angle, light intensity, spectral reference, probe construction, elimination of environmental effects, etc.), and (3) data processing optimization. These improvements represent an important part of the future work.\n\nAcknowledgments: Funding of this project by the European Union and European Regional Development Fund (Grant 10155837) is gratefully acknowledged. The Russian Ministry of Education and Science supported this work within the framework of the basic part of the state task on the following theme: \"Adaptive technologies of analytical control based on optical sensors\" (Project No. 4.7001.2017/BP). D.K. thanks DAAD for financial support during his research stay in Berlin (award #50015559).\n\nAuthor Contributions: Andrey Bogomolov, Urszula Zabarylo, and Dmitry Kirsanov conceived, designed and performed the experiments and wrote the paper; Vladimir Ageev designed and built the LED sensor; Iskander Usenov and Georgy Danielyan designed and produced the fiber-optic probes; Valeria Belikova and Vladislav Galyanin analyzed the data; Olaf Minet, Tatiana Sakharova, Elena Feliksberger, and Viacheslav Artyushenko managed and supervised the project.\n\nConflicts of Interest: The authors declare no conflict of interest.\n\n[Uncaptioned image; pixels not interpreted]\n\n© 2017 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).\n\nMDPY\n\nholder\nLAM\n\nReflectance, %\n900\n1100\n1500\n1700\nwavelength (nm)\n0.015\n0.01\n0.005\nArbitary\n-0.005\n-0.01\n-0.015\n-0.02\n-0.025\n-0.0360\n1100\n1500\n170d\nwavelength (nm)\n0.00075\n0.0005\nPLS regression coefficient\n0.00025\n-0.00025\n-0.0005\n-0.00075\n900\n1100\n1500\n1700\nwavelength (nm)\n\n190\n1.25\n1.25\n0.75\n0.75\n194\n°194\n°194\n°194\n0.25\n0.25\n194\n°194\n\n0.2\n0.15\nExpl. var. in X 1.71%\n°194\nExpl. var, in X: 1.9%\n0.3\n198\n°198\n158\n0.05\n0.2\n-0.05\n°198\n°194\n198\n°194\n194\n135\n194\n-0.15\nLV/2\n1610\n-0.2\n°194\n-0.2\n\"194\n-0.25\n198\n194\n-0.3\n\"194\n194\n0.2\n-0.3\n202\n0.2\nLV 1 score. Expl. var. in X: 98.21%\nLV 1 seoore. Expl. var. in X: 97.81%\n\n1.5\n1.5\n0.5\n0.5\n0.94 μm (U4)\n1.17 μm (U3)\nsensor channels\n1.30 μm (U1)\n1.44 μm (U2)\n0.94 μm (14)\n1.17 μm (U3)\n1.30 μrs (U1)\n1.46 μm (U2)\nsensar channels\n1.5\n1.5\n0.5\n0.5\n0.54jm (U4)\n1.17 μm (U3)\n1.30 μm (U1)\n1.44 μm (U2)\n0.94μm (Ui)\n1.17 μm (U3)\n1.30 μm (U1)\n1.44 μm (U2)\nsensar channels\nsenser channels\n\n0.3\n°149\n°149\n0.2\n090\nExpl. var. in X: 3.64%\n8149\n°149\n°14B\n. var. in X: 3.64%\n160\n160\n°149\n149\ngeto\n0.05\n8188\n160\n°160\n149\n091。\n149\n481n649\n149\n149\n°149\n160\n2 score.\n109\n149\n144144\n149\n°149\n2 score.\n665061\n14914949\n°149\n°q444\n160\n-0.2\n-0.05151\n°149\n°f449。\n149\n149\n149149\n-0.3\n451\n-0.2\n0.2\n0.4\n8090\n0.3\n-0.2\nLV 1 score. Expl. var. in X: 93.98%\nLV 1 score. Expl. var. in X: 93.98%\n\nmean NMC\nmean NMC\n0.811\n0.5\n1.507",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553": {
+      "evidence_id": "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: diffuse reflection probe\nphysical_phenomenon: diffuse reflection\nsample_type: scattering media, powder\noptical_path_or_depth: 0.5-1 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A9:I9"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-9"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A9:I9",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "diffuse reflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "0.5-1 mm",
+        "physical_phenomenon": "diffuse reflection",
+        "sample_type": "scattering media, powder",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a": {
+      "evidence_id": "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance.\nThe broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_086bd2b0cb3d87127a094d0b888b5065a8017b0e": {
+      "evidence_id": "AFS_TABLE_086bd2b0cb3d87127a094d0b888b5065a8017b0e",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: cuvette\nphysical_phenomenon: transmission\nsample_type: liquid\noptical_path_or_depth: 1-5 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A7:I7"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-7"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A7:I7",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "cuvette",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "1-5 mm",
+        "physical_phenomenon": "transmission",
+        "sample_type": "liquid",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f": {
+      "evidence_id": "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: transmission or transflection probe\nphysical_phenomenon: transmission\nsample_type: liquid, colloidal\noptical_path_or_depth: 1-10 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A8:I8"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-8"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A8:I8",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "transmission or transflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "1-10 mm",
+        "physical_phenomenon": "transmission",
+        "sample_type": "liquid, colloidal",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f": {
+      "evidence_id": "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.2.\nNear-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes.\nNIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc.,\nfound in many organic and inorganic compounds.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/128",
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            441.327,
+            522.2129999999999,
+            417.32466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_be1b48ada76809217eeb7f49e552284fdfc98e47": {
+      "evidence_id": "S01_be1b48ada76809217eeb7f49e552284fdfc98e47",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "These differences in methods create natural limitations for their use, meaning that a given practical analysis task requires selecting the most optimal method and approach (technique) for its solution.\nFor example, NIR spectroscopy, with its relatively large penetration depth (up to several millimetres) even into dense solid samples due to low absorption and strong scattering, allows the use of ordinary glass for optics, as well as standard lamps as light sources, making it ideal for online applications, including remote measurements via fiber optic probes.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 4–5"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/53",
+        "#/texts/55",
+        "#/texts/58"
+      ],
+      "provenance": [
+        {
+          "page": 4,
+          "bbox": [
+            72.025,
+            209.95299999999997,
+            523.1790000000003,
+            83.17700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 5,
+          "bbox": [
+            53.666666666666664,
+            816.6666666666666,
+            183.33333333333334,
+            784.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 5,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            519.648,
+            664.1020000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.1. Information Capability of Spectral Methods"
+      ],
+      "parent_context_id": "S01_ctx_51e102c9d8a3014d4305098ce14ca3f4",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.1. Information Capability of Spectral Methods\n\nSpectral analysis provides information about the chemistry and morphology of the sample being studied: the concentrations of its components, their distribution, and particle sizes. The analytical information provided by different spectral methods can vary greatly, as it is closely related to the chemistry of the sample being studied, the nature of the physical phenomena involved, and the measurement method itself (Table 1).\n\nOne of the most informative analytical methods is molecular vibrational spectroscopy. Three spectroscopic methods are used to record energy transitions between vibrational levels of molecules: mid- or near-infrared (NIR) spectral ranges, as well as Raman spectroscopy.\n\nDespite the theoretical similarities between these methods, their practical instrumental implementation and application in analysis differ greatly. The difference in operating wavelength ranges-from 360 nm to 25,000 nm (400 cm-1)-requires the use of different light sources, optics, and detectors, and is therefore typically implemented in separate spectral instruments. Different absorption coefficients of light in NIR, Mid-IR, and Raman spectroscopy, as well as the depth of its penetration into a given dense medium (solid, liquid, or powder) also requires different measurement interfaces and techniques, such as various fiber optic probes: ATR, Transmission, Transflexion, Reflection, etc. These differences in methods create natural limitations for their use, meaning that a given practical analysis task requires selecting the most optimal method and approach (technique) for its solution.\n\nMiR PHOTONICS\n\nFor example, NIR spectroscopy, with its relatively large penetration depth (up to several millimetres) even into dense solid samples due to low absorption and strong scattering, allows the use of ordinary glass for optics, as well as standard lamps as light sources, making it ideal for online applications, including remote measurements via fiber optic probes. In contrast, strong absorption in the mid-IR region limits the corresponding spectral method to the analysis of very thin samples (usually less than 50 µm), but it opens up the possibility of using attenuated total reflectance (ATR) by connecting appropriate attachments and probes.\n\nMeasurement of the weak Raman effect requires special probes but is recorded in the visible and NIR spectral regions. Moreover, the spectra of vibrational transitions in Raman and mid-IR spectroscopy carry complementary qualitative and quantitative information about the sample's composition. UV-visible spectroscopy is based on electronic transitions between molecular energy levels. It has very high sensitivity, especially in the UV region (190-360 nm), but requires the use of special light sources and fiber optic probes. However, the strong overlap of spectral signals in UV spectra complicates the analysis of real samples and makes the use of chemometric algorithms a necessary component of qualitative mixture analysis methods. Another highly sensitive method, UV/Vis fluorimetry, is based on the secondary emission of excited molecules of certain substances, most often of biological origin. However, most chemicals do not exhibit this property.\n\nTherefore, fluorimetry is primarily used in medicine, biology, and biotechnology.\n\nSpectra from different methods vary greatly, both in their nature and in the information they contain. Mid-IR band spectra contain well-defined peaks (absorption bands), while NIR, UV, and fluorescence spectra contain broad, highly overlapping signals, forming a so-called continuous spectrum. Extracting the information necessary for quantitative and qualitative analysis from optical spectra requires special methods for analyzing multidimensional data, called the above-mentioned term chemometrics. Chemometric algorithms are implemented in specialized software that enables preliminary data preparation (preprocessing), construction, validation, and application of predictive models, specifically calibration or classification models.\n\nImmersible fiber optic probes operating in various spectral regions from UV to mid-IR are increasingly being used for measuring liquid and soft or powdered solid samples. They can be used to obtain absorption, diffuse reflectance or transmission, Raman, and ATR spectra. The use of these probes can be essential for in-situ analysis-in the field or in an ongoing process. Online measurements require high-speed spectral acquisition.\n\nOften, analytical results must be obtained in real time to be used for management decisions.\n\nAn analysis of individual spectral methods, their capabilities, and limitations, demonstrates that developing an optimal instrumental methodology for solving a given analytical problem requires considering many different factors. Thus, selecting a spectral method for a specific analytical problem is a complex task requiring specialized knowledge in chemistry, physics, and mathematics. This is especially true for equipping an entire laboratory for future needs, since the need for a particular optical analysis method is difficult to predict in advance. In the equipment package offered here, called a multispectral laboratory, experts from various fields have already worked hard to select the optimal solutions.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 5,
+    "tool_calls": 1,
+    "evidence_ids": [
+      "S03_26a658ff668aa7fea81916dd9377ba18671bc3fc",
+      "S03_781b69fd52aafef8663074dbfdc5f105a2b213cc",
+      "S03_549df24b7db5d02aca416a098ed26fe0137307ce",
+      "S03_136269420fce88ad2d3f7143ab58c7bb3709735b",
+      "S03_curated_0b929384ccbdc452ccf87f92f14b29e61c6b47b0",
+      "S03_ed55b4fe6c93c7c04acd6cfc94004de4b600c856",
+      "S03_60a687b2e22eb7b9c407be364253ece62a33b558",
+      "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "S01_ba498975e7d0b1a8ace6dffa1e8d33ce9299b13a",
+      "AFS_TABLE_086bd2b0cb3d87127a094d0b888b5065a8017b0e",
+      "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "S01_be1b48ada76809217eeb7f49e552284fdfc98e47"
+    ],
+    "timings_seconds": {
+      "routing": 2.766,
+      "investigation": 6.109,
+      "answer_and_validation": 95.625,
+      "total": 104.5
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H06",
+    "title": "A research sensor requested for immediate surgical use",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "406d7c5c55780bb8572790d4ddca97dc57ee78db25812293d0100629a2706f80"
+  }
+}

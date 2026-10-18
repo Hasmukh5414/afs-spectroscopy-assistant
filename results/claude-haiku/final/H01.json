@@ -1,0 +1,771 @@
+{
+  "question": "Our existing NIR pilot follows API concentration in one powder formulation at\nthe tablet press feed frame. We are introducing a different API and excipient\nblend and would like to reuse the calibration. A colleague suggests adding\nRaman so that the old calibration will remain valid. What should our first\ntechnical assessment and experiment be?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:40:37.913766+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "The inspected sources name NIR and Raman as the most widely implemented techniques for blend potency in the feed frame of a rotary tablet press [1]. A multispectral NIR-Raman fiber probe with an industrial-grade shaft that fits a tablet press feed frame is described [2]. One source states that combining Raman and NIR can predict API potency with higher accuracy and robustness than single-method models [3], but the cited passage gives no models, samples or measured errors.",
+        "evidence_ids": [
+          "S01_4dc1c840facafd9001a52e4b439d2a54c9b3b7c3",
+          "S01_22a6e34c9027024987c417b2d3d532de6572dc5d",
+          "S01_418331633204e5900ea797fbb9cfa63586935117"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "NIR is described as the most common online analysis method performed with fiber optic probes [4]. NIR penetration can reach several millimetres into dense solids, which suits online fiber-probe use [5].",
+        "evidence_ids": [
+          "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+          "S01_be1b48ada76809217eeb7f49e552284fdfc98e47"
+        ]
+      },
+      {
+        "kind": "gap",
+        "text": "None of the inspected passages addresses calibration transfer, or shows that adding Raman keeps an existing NIR calibration valid for a different API and excipient blend. The colleague's premise is therefore untested and should not be assumed.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "answer",
+        "text": "Conditional interpretation: a model built on one formulation may not hold for a different API and excipient blend, and a combined NIR-Raman model uses different inputs, so the old NIR-only calibration cannot be assumed to remain valid after Raman is added. NIR spectra consist mainly of overtones and combination bands of many molecular groups [4], so changing the API and excipients may shift spectral contributions; this is a concern to test, not a demonstrated failure.",
+        "evidence_ids": [
+          "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+        ]
+      },
+      {
+        "kind": "proposal",
+        "text": "Proposed first study: obtain representative new-blend samples across the agreed range and realistic feed-frame variation, and measure them with the existing NIR setup and, if access allows, a combined NIR-Raman probe at matched times, each paired with independent reference results. Apply the unchanged old calibration to establish current transfer, then fit any recalibration on a training subset and validate both NIR-only and NIR-plus-Raman models on independent held-out batches. A diffuse reflection NIR probe is listed for powder samples with a 0.5-1 mm optical path [6].",
+        "evidence_ids": [
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+        ]
+      },
+      {
+        "kind": "question",
+        "text": "Before a selection is made, please provide the identities of the new API and excipients and the target variable and range, the reference method with its uncertainty, the acceptable error limit and result timing, realistic feed-frame variation, access and cleaning constraints, and the budget for a higher-cost combined probe.",
+        "evidence_ids": []
+      }
+    ],
+    "schema_version": 3,
+    "citations": [],
+    "intent": "assessment",
+    "assessment": {
+      "status": "awaiting_clarification",
+      "summary": "Provisional assessment: the existing NIR approach is the baseline to test first, because it is a common online fiber-probe method for powders at the feed frame. Adding Raman is an optional hypothesis about added value; the sources support combined methods only in general terms and do not show that a Raman addition preserves the old calibration. The first study should establish whether the unchanged NIR calibration transfers and what NIR-only recalibration achieves on held-out batches before judging whether Raman's added value justifies its cost and complexity.",
+      "candidates": [
+        {
+          "name": "Existing NIR diffuse reflection probe (retained baseline)",
+          "claims": [
+            {
+              "text": "NIR spectra span 780-2500 nm and contain mainly overtones and combination bands of molecular groups.",
+              "evidence_ids": [
+                "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+              ]
+            },
+            {
+              "text": "NIR is described as the most common online method using fiber optic probes.",
+              "evidence_ids": [
+                "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+              ]
+            },
+            {
+              "text": "A diffuse reflection NIR probe is listed for scattering media and powder with a 0.5-1 mm optical path and average cost; these ratings are qualitative, not measured performance.",
+              "evidence_ids": [
+                "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The existing probe geometry and pilot setup at the feed frame are unchanged.",
+            "The old calibration transfers only if the new blend's spectral variation is covered by the existing calibration or by recalibration data."
+          ],
+          "limitations": [
+            "No inspected passage shows that the existing calibration remains valid for a different API and excipient blend."
+          ],
+          "evidence_ids": [
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+            "S01_be1b48ada76809217eeb7f49e552284fdfc98e47",
+            "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+          ],
+          "measurement_concept": "Diffuse reflection NIR probe at the feed frame, as in the existing pilot; the pilot's hardware is not described in the inspected evidence.",
+          "spectral_range": "Nominal NIR 780-2500 nm from the method description; not confirmed system coverage."
+        },
+        {
+          "name": "Combined NIR reflection and Raman multispectral fiber probe (optional hypothesis)",
+          "claims": [
+            {
+              "text": "The source reports that combining Raman and NIR can predict API potency with higher accuracy and robustness than single-method models; the cited passage gives no models, samples or measured errors.",
+              "evidence_ids": [
+                "S01_418331633204e5900ea797fbb9cfa63586935117"
+              ]
+            },
+            {
+              "text": "A multispectral NIR-Raman fiber probe is described as combining NIR reflection and Raman in a compact industrial-grade shaft that fits a tablet press feed frame; no performance data are given.",
+              "evidence_ids": [
+                "S01_22a6e34c9027024987c417b2d3d532de6572dc5d"
+              ]
+            },
+            {
+              "text": "Raman is an excitation-laser vibrational method reported as a Raman shift in cm-1; its signal is weak and can be complicated by laser scattering and fluorescence, which may require special probes.",
+              "evidence_ids": [
+                "S01_d22389591926789e513aa9a15558dec78c27d513",
+                "S01_559854918da5bd5bead4dbc37a4b5290ed59f107"
+              ]
+            },
+            {
+              "text": "The Raman probe row is rated high cost, with a 2-5 mm optical path and liquid, powder and solid sample types; ratings are qualitative.",
+              "evidence_ids": [
+                "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The new API and excipients give a usable Raman signal without problematic fluorescence, or the probe design can manage it.",
+            "A combined model is fitted on new-blend data for both channels and is not assumed to inherit the old NIR calibration."
+          ],
+          "limitations": [
+            "Higher cost and complexity than NIR alone; the added value for this blend is unknown.",
+            "Weak Raman signal, laser scatter and fluorescence may limit usefulness for some formulations."
+          ],
+          "evidence_ids": [
+            "S01_4dc1c840facafd9001a52e4b439d2a54c9b3b7c3",
+            "S01_418331633204e5900ea797fbb9cfa63586935117",
+            "S01_22a6e34c9027024987c417b2d3d532de6572dc5d",
+            "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+            "S01_d22389591926789e513aa9a15558dec78c27d513",
+            "S01_559854918da5bd5bead4dbc37a4b5290ed59f107"
+          ],
+          "measurement_concept": "Combined NIR reflection and Raman probe at the feed frame, as in the source's example design; installation only if process compatibility, access and cleaning are confirmed.",
+          "spectral_range": "NIR nominal 780-2500 nm from the method description; Raman shift range and excitation wavelength are not stated in the inspected evidence."
+        }
+      ],
+      "questions": [
+        {
+          "field": "target",
+          "question": "What are the identities of the new API and excipients, and what target variable, units and range must be measured in the new blend?",
+          "affects": "Whether the existing NIR calibration range covers the new blend and which validation samples are needed."
+        },
+        {
+          "field": "requirements",
+          "question": "What error or bias limit, reference method and reference uncertainty, and result timing are acceptable?",
+          "affects": "Which option is adequate and how many samples and held-out batches the study needs."
+        },
+        {
+          "field": "conditions",
+          "question": "What realistic feed-frame variation exists, such as blend moisture, particle size, fill level or throughput, and can the feed frame be accessed and the probe cleaned?",
+          "affects": "Representative sample design and whether any probe can be installed."
+        },
+        {
+          "field": "requirements",
+          "question": "What budget is available for a combined NIR-Raman probe compared with NIR alone?",
+          "affects": "Whether the higher-cost combination is worth testing against the simpler adequate option."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide whether the existing NIR calibration remains adequate for the new API and excipient blend without recalibration, whether NIR recalibration meets the agreed limits, and whether adding Raman gives enough measurable benefit to justify its cost and complexity.",
+        "steps": [
+          "Gather prerequisites first: reference method and uncertainty, agreed error and bias limits, target range and the new blend composition.",
+          "Prepare or obtain representative new-blend samples across the agreed range and realistic feed-frame variation, with paired independent reference results at matching times.",
+          "Measure all samples with the existing NIR setup and, where access allows, with a combined NIR-Raman probe on the same material and timing.",
+          "Apply the unchanged old NIR calibration to the new blend to establish current transfer performance.",
+          "Fit any NIR-only recalibration and any NIR-plus-Raman model on a training subset of batches, with preprocessing fitted only on that subset.",
+          "Validate both models on independent held-out batches against the same reference values and compare them with the unchanged calibration.",
+          "Check Raman spectra for fluorescence and laser-scatter problems before interpreting any added value."
+        ],
+        "criteria_to_confirm": [
+          "Whether the unchanged old calibration meets the customer's agreed error and bias limits on the new blend; if it does, it is the simplest adequate option.",
+          "Whether NIR-only recalibration meets the limits on held-out batches; if it does, the simpler option is preferred.",
+          "Whether the combined NIR-Raman model improves error, bias or robustness on held-out batches by a margin the customer judges practically useful given its higher cost and complexity; statistical significance alone is not sufficient.",
+          "Whether Raman spectra are usable for the new blend; if fluorescence or weak signal prevents useful results, the combined option is not adequate.",
+          "Inconclusive results or no practically useful gain are valid outcomes and would not justify adding Raman."
+        ]
+      },
+      "gaps": [
+        "The inspected sources give no prediction accuracy, sample set or feed-frame performance data for either method, so the requested certainty about transferability cannot be supported.",
+        "Ratings in the method table are qualitative and are not measured performance.",
+        "Raman alone is not a candidate here and is deferred until the NIR and combined comparison shows whether added value is needed."
+      ],
+      "requirements": [
+        {
+          "statement": "The existing NIR pilot follows API concentration in one powder formulation at the tablet press feed frame.",
+          "user_quote": "Our existing NIR pilot follows API concentration in one powder formulation at the tablet press feed frame."
+        },
+        {
+          "statement": "The customer is introducing a different API and excipient blend and would like to reuse the existing calibration.",
+          "user_quote": "We are introducing a different API and excipient blend and would like to reuse the calibration."
+        }
+      ],
+      "unknowns": [
+        "Identity of the new API and excipients and the target range in the new blend.",
+        "Reference method, its uncertainty, the acceptable error limit and result timing.",
+        "Realistic feed-frame variation, access and cleaning constraints, and budget."
+      ]
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "S01_4dc1c840facafd9001a52e4b439d2a54c9b3b7c3": {
+      "evidence_id": "S01_4dc1c840facafd9001a52e4b439d2a54c9b3b7c3",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "2.\nPharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes\nA multispectral lab can be also focused on ensuring the quality and consistency of pharmaceutical products through in-line monitoring of critical manufacturing stages, such as powder blending and pellet coating.\nThe primary objective is to determine \"blend potency\" - the precise concentration and uniformity of the Active Pharmaceutical Ingredient (API) - directly within the production line, specifically in the feed frame of a rotary tablet press.\nIn the pharmaceutical industry, the most popular PHOTONICS\nand widely implemented spectral techniques are Near-Infrared (NIR) and Raman spectroscopy.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 14–15"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/207",
+        "#/texts/208",
+        "#/texts/210",
+        "#/texts/213"
+      ],
+      "provenance": [
+        {
+          "page": 14,
+          "bbox": [
+            90.05,
+            185.74700000000007,
+            495.51600000000013,
+            161.74466666666672
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 14,
+          "bbox": [
+            72.025,
+            148.673,
+            523.5970000000001,
+            80.42700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 15,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            182.0,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 15,
+          "bbox": [
+            56.0,
+            814.6666666666666,
+            108.33333333333334,
+            786.3333333333334
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 15,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            523.601,
+            708.1020000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes"
+      ],
+      "parent_context_id": "S01_ctx_8cb9b0d0928c6adb97fcd5f46af43224",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes\n\nA multispectral lab can be also focused on ensuring the quality and consistency of pharmaceutical products through in-line monitoring of critical manufacturing stages, such as powder blending and pellet coating. The primary objective is to determine \"blend potency\" - the precise concentration and uniformity of the Active Pharmaceutical Ingredient (API) - directly within the production line, specifically in the feed frame of a rotary tablet press. In the pharmaceutical industry, the most popular PHOTONICS\n\nMiR?\n\nand widely implemented spectral techniques are Near-Infrared (NIR) and Raman spectroscopy. The combination of these techniques is particularly effective because it captures complementary chemical information: NIR detects hydrogen bonds and asymmetric polar groups, while Raman provides information on the molecular backbone and symmetrical non-polar groups.\n\nThe equipment used for such task involves next spectral systems:\n\nNIR spectrometer and light source coupled with a NIR reflection probe\n\nRaman spectrometer and Raman fiber probe for contact measurements with 785 nm excitation wavelength\n\nDuring the experimental action, the probes are inserted directly into the process environment, such as the feed frame of a rotary tablet press. As the powder blend passes the probe tip, the system captures spectra at high speeds without interrupting the production flow. This setup allows the laboratory to track dynamic changes, such as the gradual increase in coating thickness or the homogenization of a multicomponent blend, in real-time. The use of fiber optics is critical here, as it allows the sensitive spectrometers to be located safely away from the vibration and dust of the manufacturing floor.\n\nData processing for pharmaceutical tasks relies on \"low-level data fusion,\" where the synchronized NIR and Raman spectra are merged into a single augmented matrix. Then regression models, such as Partial Least Squares (PLS), are applied to these fused datasets. By combining Raman and NIR, these models can predict API potency or coating thickness with higher accuracy and robustness than single-method models.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    },
+    "S01_22a6e34c9027024987c417b2d3d532de6572dc5d": {
+      "evidence_id": "S01_22a6e34c9027024987c417b2d3d532de6572dc5d",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Fig.\n6.\nA multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 15–16"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/219",
+        "#/texts/230",
+        "#/texts/231"
+      ],
+      "provenance": [
+        {
+          "page": 15,
+          "bbox": [
+            72.025,
+            240.21399999999994,
+            519.941,
+            215.97933333333333
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 16,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            182.0,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 16,
+          "bbox": [
+            56.0,
+            814.6666666666666,
+            108.33333333333334,
+            786.3333333333334
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes"
+      ],
+      "parent_context_id": "S01_ctx_8cb9b0d0928c6adb97fcd5f46af43224",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes\n\nA multispectral lab can be also focused on ensuring the quality and consistency of pharmaceutical products through in-line monitoring of critical manufacturing stages, such as powder blending and pellet coating. The primary objective is to determine \"blend potency\" - the precise concentration and uniformity of the Active Pharmaceutical Ingredient (API) - directly within the production line, specifically in the feed frame of a rotary tablet press. In the pharmaceutical industry, the most popular PHOTONICS\n\nMiR?\n\nand widely implemented spectral techniques are Near-Infrared (NIR) and Raman spectroscopy. The combination of these techniques is particularly effective because it captures complementary chemical information: NIR detects hydrogen bonds and asymmetric polar groups, while Raman provides information on the molecular backbone and symmetrical non-polar groups.\n\nThe equipment used for such task involves next spectral systems:\n\nNIR spectrometer and light source coupled with a NIR reflection probe\n\nRaman spectrometer and Raman fiber probe for contact measurements with 785 nm excitation wavelength\n\nDuring the experimental action, the probes are inserted directly into the process environment, such as the feed frame of a rotary tablet press. As the powder blend passes the probe tip, the system captures spectra at high speeds without interrupting the production flow. This setup allows the laboratory to track dynamic changes, such as the gradual increase in coating thickness or the homogenization of a multicomponent blend, in real-time. The use of fiber optics is critical here, as it allows the sensitive spectrometers to be located safely away from the vibration and dust of the manufacturing floor.\n\nData processing for pharmaceutical tasks relies on \"low-level data fusion,\" where the synchronized NIR and Raman spectra are merged into a single augmented matrix. Then regression models, such as Partial Least Squares (PLS), are applied to these fused datasets. By combining Raman and NIR, these models can predict API potency or coating thickness with higher accuracy and robustness than single-method models.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    },
+    "S01_418331633204e5900ea797fbb9cfa63586935117": {
+      "evidence_id": "S01_418331633204e5900ea797fbb9cfa63586935117",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "By combining Raman and NIR, these models can predict API potency or coating thickness with higher accuracy and robustness than single-method models.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 15"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/218"
+      ],
+      "provenance": [
+        {
+          "page": 15,
+          "bbox": [
+            72.025,
+            522.273,
+            523.7,
+            454.282
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes"
+      ],
+      "parent_context_id": "S01_ctx_8cb9b0d0928c6adb97fcd5f46af43224",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "2. Pharmaceutical Manufacturing - In-line Monitoring of Blend Potency and Coating Processes\n\nA multispectral lab can be also focused on ensuring the quality and consistency of pharmaceutical products through in-line monitoring of critical manufacturing stages, such as powder blending and pellet coating. The primary objective is to determine \"blend potency\" - the precise concentration and uniformity of the Active Pharmaceutical Ingredient (API) - directly within the production line, specifically in the feed frame of a rotary tablet press. In the pharmaceutical industry, the most popular PHOTONICS\n\nMiR?\n\nand widely implemented spectral techniques are Near-Infrared (NIR) and Raman spectroscopy. The combination of these techniques is particularly effective because it captures complementary chemical information: NIR detects hydrogen bonds and asymmetric polar groups, while Raman provides information on the molecular backbone and symmetrical non-polar groups.\n\nThe equipment used for such task involves next spectral systems:\n\nNIR spectrometer and light source coupled with a NIR reflection probe\n\nRaman spectrometer and Raman fiber probe for contact measurements with 785 nm excitation wavelength\n\nDuring the experimental action, the probes are inserted directly into the process environment, such as the feed frame of a rotary tablet press. As the powder blend passes the probe tip, the system captures spectra at high speeds without interrupting the production flow. This setup allows the laboratory to track dynamic changes, such as the gradual increase in coating thickness or the homogenization of a multicomponent blend, in real-time. The use of fiber optics is critical here, as it allows the sensitive spectrometers to be located safely away from the vibration and dust of the manufacturing floor.\n\nData processing for pharmaceutical tasks relies on \"low-level data fusion,\" where the synchronized NIR and Raman spectra are merged into a single augmented matrix. Then regression models, such as Partial Least Squares (PLS), are applied to these fused datasets. By combining Raman and NIR, these models can predict API potency or coating thickness with higher accuracy and robustness than single-method models.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nFig. 6. A multispectral NIRaman fiber probe has industrial grade design that combines NIR reflection and Raman optical techniques in a compact shaft that fits in a tablet press feed frame.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    },
+    "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f": {
+      "evidence_id": "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.2.\nNear-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes.\nNIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc.,\nfound in many organic and inorganic compounds.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/128",
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            441.327,
+            522.2129999999999,
+            417.32466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_be1b48ada76809217eeb7f49e552284fdfc98e47": {
+      "evidence_id": "S01_be1b48ada76809217eeb7f49e552284fdfc98e47",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "These differences in methods create natural limitations for their use, meaning that a given practical analysis task requires selecting the most optimal method and approach (technique) for its solution.\nFor example, NIR spectroscopy, with its relatively large penetration depth (up to several millimetres) even into dense solid samples due to low absorption and strong scattering, allows the use of ordinary glass for optics, as well as standard lamps as light sources, making it ideal for online applications, including remote measurements via fiber optic probes.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 4–5"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/53",
+        "#/texts/55",
+        "#/texts/58"
+      ],
+      "provenance": [
+        {
+          "page": 4,
+          "bbox": [
+            72.025,
+            209.95299999999997,
+            523.1790000000003,
+            83.17700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 5,
+          "bbox": [
+            53.666666666666664,
+            816.6666666666666,
+            183.33333333333334,
+            784.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 5,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            519.648,
+            664.1020000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.1. Information Capability of Spectral Methods"
+      ],
+      "parent_context_id": "S01_ctx_51e102c9d8a3014d4305098ce14ca3f4",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.1. Information Capability of Spectral Methods\n\nSpectral analysis provides information about the chemistry and morphology of the sample being studied: the concentrations of its components, their distribution, and particle sizes. The analytical information provided by different spectral methods can vary greatly, as it is closely related to the chemistry of the sample being studied, the nature of the physical phenomena involved, and the measurement method itself (Table 1).\n\nOne of the most informative analytical methods is molecular vibrational spectroscopy. Three spectroscopic methods are used to record energy transitions between vibrational levels of molecules: mid- or near-infrared (NIR) spectral ranges, as well as Raman spectroscopy.\n\nDespite the theoretical similarities between these methods, their practical instrumental implementation and application in analysis differ greatly. The difference in operating wavelength ranges-from 360 nm to 25,000 nm (400 cm-1)-requires the use of different light sources, optics, and detectors, and is therefore typically implemented in separate spectral instruments. Different absorption coefficients of light in NIR, Mid-IR, and Raman spectroscopy, as well as the depth of its penetration into a given dense medium (solid, liquid, or powder) also requires different measurement interfaces and techniques, such as various fiber optic probes: ATR, Transmission, Transflexion, Reflection, etc. These differences in methods create natural limitations for their use, meaning that a given practical analysis task requires selecting the most optimal method and approach (technique) for its solution.\n\nMiR PHOTONICS\n\nFor example, NIR spectroscopy, with its relatively large penetration depth (up to several millimetres) even into dense solid samples due to low absorption and strong scattering, allows the use of ordinary glass for optics, as well as standard lamps as light sources, making it ideal for online applications, including remote measurements via fiber optic probes. In contrast, strong absorption in the mid-IR region limits the corresponding spectral method to the analysis of very thin samples (usually less than 50 µm), but it opens up the possibility of using attenuated total reflectance (ATR) by connecting appropriate attachments and probes.\n\nMeasurement of the weak Raman effect requires special probes but is recorded in the visible and NIR spectral regions. Moreover, the spectra of vibrational transitions in Raman and mid-IR spectroscopy carry complementary qualitative and quantitative information about the sample's composition. UV-visible spectroscopy is based on electronic transitions between molecular energy levels. It has very high sensitivity, especially in the UV region (190-360 nm), but requires the use of special light sources and fiber optic probes. However, the strong overlap of spectral signals in UV spectra complicates the analysis of real samples and makes the use of chemometric algorithms a necessary component of qualitative mixture analysis methods. Another highly sensitive method, UV/Vis fluorimetry, is based on the secondary emission of excited molecules of certain substances, most often of biological origin. However, most chemicals do not exhibit this property.\n\nTherefore, fluorimetry is primarily used in medicine, biology, and biotechnology.\n\nSpectra from different methods vary greatly, both in their nature and in the information they contain. Mid-IR band spectra contain well-defined peaks (absorption bands), while NIR, UV, and fluorescence spectra contain broad, highly overlapping signals, forming a so-called continuous spectrum. Extracting the information necessary for quantitative and qualitative analysis from optical spectra requires special methods for analyzing multidimensional data, called the above-mentioned term chemometrics. Chemometric algorithms are implemented in specialized software that enables preliminary data preparation (preprocessing), construction, validation, and application of predictive models, specifically calibration or classification models.\n\nImmersible fiber optic probes operating in various spectral regions from UV to mid-IR are increasingly being used for measuring liquid and soft or powdered solid samples. They can be used to obtain absorption, diffuse reflectance or transmission, Raman, and ATR spectra. The use of these probes can be essential for in-situ analysis-in the field or in an ongoing process. Online measurements require high-speed spectral acquisition.\n\nOften, analytical results must be obtained in real time to be used for management decisions.\n\nAn analysis of individual spectral methods, their capabilities, and limitations, demonstrates that developing an optimal instrumental methodology for solving a given analytical problem requires considering many different factors. Thus, selecting a spectral method for a specific analytical problem is a complex task requiring specialized knowledge in chemistry, physics, and mathematics. This is especially true for equipping an entire laboratory for future needs, since the need for a particular optical analysis method is difficult to predict in advance. In the equipment package offered here, called a multispectral laboratory, experts from various fields have already worked hard to select the optimal solutions.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553": {
+      "evidence_id": "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: diffuse reflection probe\nphysical_phenomenon: diffuse reflection\nsample_type: scattering media, powder\noptical_path_or_depth: 0.5-1 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A9:I9"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-9"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A9:I9",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "diffuse reflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "0.5-1 mm",
+        "physical_phenomenon": "diffuse reflection",
+        "sample_type": "scattering media, powder",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9": {
+      "evidence_id": "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 3\nmethod: Raman spectroscopy\nmeasurement_technique: Raman probe\nphysical_phenomenon: Raman scattering (emission)\nsample_type: liquid, powder, solid\noptical_path_or_depth: 2-5 mm\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A13:I13"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-13"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A13:I13",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "Raman probe",
+        "method": "Raman spectroscopy",
+        "method_no": 3,
+        "optical_path_or_depth": "2-5 mm",
+        "physical_phenomenon": "Raman scattering (emission)",
+        "sample_type": "liquid, powder, solid",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_d22389591926789e513aa9a15558dec78c27d513": {
+      "evidence_id": "S01_d22389591926789e513aa9a15558dec78c27d513",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.3.\nRaman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)\nMeasurement of the Raman scattering (RS) effect, is also a type of vibrational spectroscopy.\nRaman spectroscopy is based on recording weak radiation signals observed when a sample is irradiated by a laser or high-power LED, typically in the visible light range.\nSome of these signals are observed with a shift toward longer wavelengths compared to the excitation wavelength (Stokes shift).\nThe difference between the observed frequencies and the laser frequency is called the Raman shift, expressed in units of frequency-wavenumbers (cm-1).",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 11"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/135",
+        "#/texts/136"
+      ],
+      "provenance": [
+        {
+          "page": 11,
+          "bbox": [
+            72.025,
+            531.597,
+            513.8180000000001,
+            522.3446666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 11,
+          "bbox": [
+            72.025,
+            517.273,
+            523.151,
+            170.702
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)"
+      ],
+      "parent_context_id": "S01_ctx_a6154306915ed585eaa1e8a805562b77",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)\n\nMeasurement of the Raman scattering (RS) effect, is also a type of vibrational spectroscopy. Raman spectroscopy is based on recording weak radiation signals observed when a sample is irradiated by a laser or high-power LED, typically in the visible light range. Some of these signals are observed with a shift toward longer wavelengths compared to the excitation wavelength (Stokes shift). The difference between the observed frequencies and the laser frequency is called the Raman shift, expressed in units of frequency-wavenumbers (cm-1). The Raman shift is used as the horizontal (spectral) axis in Raman spectroscopy, while the vertical axis shows the absolute intensity of the recorded signals (photon counts). Because Raman spectroscopy reflects energy transitions between vibrational levels of molecules and groups of atoms, peaks of the same fundamental frequencies in IR and Raman spectra are located at the same positions on the wavenumber scale. However, their intensities can differ significantly, to the point that some bands may not appear in one of the spectra (symmetry prohibition). This property makes mid-IR and Raman spectra complementary, that is, they complement each other. Therefore, using these methods in tandem provides more structural information about the molecules being studied than either method alone. From a technical standpoint, measuring Raman spectra is hampered by the low intensity of Raman signals, which are several orders of magnitude weaker than IR absorption peaks in the IR range (when these spectra are compared in the original photon count units). Furthermore, observing Raman bands is often complicated by light scattering from the illuminating laser, and for many organic compounds, by the superposition of luminescence (fluorescence), which has a significantly higher intensity. These effects can be eliminated by using specialized optical filters and probes of a special design. The Raman spectrometer detector must be highly sensitive and have a wide dynamic range. Because of these characteristics, a Raman spectrometer has significant design differences from a spectrometer for recording absorption spectra, which operates in the same spectral region (400-1100 nm) of visible and shortwave NIR radiation.\n\nThe Raman spectrometer supplied with this multispectral laboratory is designed to record Raman spectra of various samples, such as liquid mixtures containing organic and inorganic substances, biological tissue, powdered materials of various origins, etc. The resulting spectra can be used for both qualitative and quantitative analysis of mixtures. Measuring the IR and Raman spectra of the same sample can be helpful in interpreting complex organic molecules. The Raman signal's PHOTONICS\n\nMiR?\n\ndependence on concentration is linear over a wide range of intensities. Therefore, Raman spectra (as well as IR absorption spectra) can be used to construct chemometric models-calibration or classification ones.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_559854918da5bd5bead4dbc37a4b5290ed59f107": {
+      "evidence_id": "S01_559854918da5bd5bead4dbc37a4b5290ed59f107",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Therefore, using these methods in tandem provides more structural information about the molecules being studied than either method alone.\nFrom a technical standpoint, measuring Raman spectra is hampered by the low intensity of Raman signals, which are several orders of magnitude weaker than IR absorption peaks in the IR range (when these spectra are compared in the original photon count units).\nFurthermore, observing Raman bands is often complicated by light scattering from the illuminating laser, and for many organic compounds, by the superposition of luminescence (fluorescence), which has a significantly higher intensity.\nThese effects can be eliminated by using specialized optical filters and probes of a special design.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 11"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/136"
+      ],
+      "provenance": [
+        {
+          "page": 11,
+          "bbox": [
+            72.025,
+            517.273,
+            523.151,
+            170.702
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)"
+      ],
+      "parent_context_id": "S01_ctx_a6154306915ed585eaa1e8a805562b77",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.3. Raman Spectroscopy (The kit includes a Raman spectrometer, laser, and Raman fiber probe.)\n\nMeasurement of the Raman scattering (RS) effect, is also a type of vibrational spectroscopy. Raman spectroscopy is based on recording weak radiation signals observed when a sample is irradiated by a laser or high-power LED, typically in the visible light range. Some of these signals are observed with a shift toward longer wavelengths compared to the excitation wavelength (Stokes shift). The difference between the observed frequencies and the laser frequency is called the Raman shift, expressed in units of frequency-wavenumbers (cm-1). The Raman shift is used as the horizontal (spectral) axis in Raman spectroscopy, while the vertical axis shows the absolute intensity of the recorded signals (photon counts). Because Raman spectroscopy reflects energy transitions between vibrational levels of molecules and groups of atoms, peaks of the same fundamental frequencies in IR and Raman spectra are located at the same positions on the wavenumber scale. However, their intensities can differ significantly, to the point that some bands may not appear in one of the spectra (symmetry prohibition). This property makes mid-IR and Raman spectra complementary, that is, they complement each other. Therefore, using these methods in tandem provides more structural information about the molecules being studied than either method alone. From a technical standpoint, measuring Raman spectra is hampered by the low intensity of Raman signals, which are several orders of magnitude weaker than IR absorption peaks in the IR range (when these spectra are compared in the original photon count units). Furthermore, observing Raman bands is often complicated by light scattering from the illuminating laser, and for many organic compounds, by the superposition of luminescence (fluorescence), which has a significantly higher intensity. These effects can be eliminated by using specialized optical filters and probes of a special design. The Raman spectrometer detector must be highly sensitive and have a wide dynamic range. Because of these characteristics, a Raman spectrometer has significant design differences from a spectrometer for recording absorption spectra, which operates in the same spectral region (400-1100 nm) of visible and shortwave NIR radiation.\n\nThe Raman spectrometer supplied with this multispectral laboratory is designed to record Raman spectra of various samples, such as liquid mixtures containing organic and inorganic substances, biological tissue, powdered materials of various origins, etc. The resulting spectra can be used for both qualitative and quantitative analysis of mixtures. Measuring the IR and Raman spectra of the same sample can be helpful in interpreting complex organic molecules. The Raman signal's PHOTONICS\n\nMiR?\n\ndependence on concentration is linear over a wide range of intensities. Therefore, Raman spectra (as well as IR absorption spectra) can be used to construct chemometric models-calibration or classification ones.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.\n\nFig.3 Raman fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 4,
+    "tool_calls": 1,
+    "evidence_ids": [
+      "S01_4dc1c840facafd9001a52e4b439d2a54c9b3b7c3",
+      "S01_22a6e34c9027024987c417b2d3d532de6572dc5d",
+      "S01_418331633204e5900ea797fbb9cfa63586935117",
+      "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "S01_be1b48ada76809217eeb7f49e552284fdfc98e47",
+      "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "AFS_TABLE_4e5dc9ac7fc4af96566a64346cf05600b0af86a9",
+      "S01_d22389591926789e513aa9a15558dec78c27d513",
+      "S01_559854918da5bd5bead4dbc37a4b5290ed59f107"
+    ],
+    "timings_seconds": {
+      "routing": 2.735,
+      "investigation": 11.937,
+      "answer_and_validation": 56.641,
+      "total": 71.313
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H01",
+    "title": "A new formulation after an existing NIR pilot",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "34a7a21e0e47cf22a0fa1034584de4bfea7ec7d84eaf3cbbb2c744be64b922ef"
+  }
+}

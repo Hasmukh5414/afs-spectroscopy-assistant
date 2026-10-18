@@ -1,0 +1,645 @@
+{
+  "question": "We want to investigate water content in a petroleum line using MIR ATR. The\nanalyzer would be in another building. We already have a silica fiber cable\nfrom a visible or NIR measurement setup and would like to reuse it. The link\nlength, routing and operating conditions have not yet been supplied. Can the\nassistant approve this concept?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:43:53.373019+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "The concept cannot be approved on the present evidence; it can only be assessed provisionally. The supplied water-in-petroleum application shows absorbance spectra for pure oil and 0.1 to 2.0 percent water over 4000 to 2000 cm-1 (2.5 to 5 µm), using ATR probes with PEEK shafts [1]. The reused silica cable is listed with a nominal transmission range of 350 to 2400 nm, which ends before that band [2]. The 100 to 300 m figure applies only to VIS-NIR silica cables and gives no length for mid-IR fibers [3].",
+        "evidence_ids": [
+          "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f",
+          "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9",
+          "S02_curated_d53ef772ff55112d092d5c5d3f76318fb897489d"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "Mid-IR ATR fiber probes are described for liquid samples using high-transmission mid-IR fiber optics [4]. Immersion ATR probes are described as allowing analysis at a significant distance from the spectrometer [5]. Nominal mid-IR fiber families include chalcogenide 1.1 to 6.5 µm and polycrystalline 3 to 17 µm [2]. On this basis a remote mid-IR ATR concept is plausible only with a mid-IR transmitting fiber link, and the link length and loss remain unestablished.",
+        "evidence_ids": [
+          "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+          "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f",
+          "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9"
+        ]
+      },
+      {
+        "kind": "gap",
+        "text": "No link length, routing, fiber specification, process temperature, pressure or cleaning data have been supplied, so the remote link cannot be assessed. The open question is therefore unresolved rather than failed.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "proposal",
+        "text": "First obtain the existing silica cable's fiber specification together with the intended link length, routing and process conditions. If the cable's mid-IR transmission cannot be confirmed by its specification, plan a mid-IR transmitting fiber link and confirm it with the fiber supplier.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "proposal",
+        "text": "Then run laboratory screening with petroleum samples at several reference water levels, measured with a mid-IR ATR probe through a short reference fiber, through the planned link length or a representative loop, and, as an empirical check of the 2.5 to 5 µm band, through the existing silica cable. Use an independent reference method agreed with the customer, such as Karl Fischer titration, and validate calibration on held-out batches.",
+        "evidence_ids": []
+      }
+    ],
+    "schema_version": 3,
+    "citations": [
+      {
+        "field": "assessment.gaps[0]",
+        "evidence_ids": [
+          "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9",
+          "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f"
+        ]
+      },
+      {
+        "field": "assessment.gaps[1]",
+        "evidence_ids": [
+          "S02_curated_d53ef772ff55112d092d5c5d3f76318fb897489d",
+          "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9"
+        ]
+      }
+    ],
+    "intent": "assessment",
+    "assessment": {
+      "status": "awaiting_clarification",
+      "summary": "Provisional assessment only: the reuse of a VIS-NIR silica cable for mid-IR ATR water measurement is not supported by the inspected nominal fiber ranges. A mid-IR ATR probe with a mid-IR transmitting fiber link to the remote analyzer is a conditional candidate, but link length, fiber specification, process conditions and error requirements must be supplied before responsible selection or validation.",
+      "candidates": [
+        {
+          "name": "Mid-IR ATR probe with mid-IR transmitting fiber link to remote analyzer",
+          "claims": [
+            {
+              "text": "A supplied slide shows absorbance spectra for pure oil and 0.1 to 2.0 percent water in petroleum over 4000 to 2000 cm-1 (2.5 to 5 µm).",
+              "evidence_ids": [
+                "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f"
+              ]
+            },
+            {
+              "text": "The same slide does not state the spectrometer, fiber type or length, probe temperature or pressure ratings, calibration model, detection limit or quantification band.",
+              "evidence_ids": [
+                "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f"
+              ]
+            },
+            {
+              "text": "Mid-IR ATR fiber probes are described for liquid and soft samples using high-transmission mid-IR fiber optics.",
+              "evidence_ids": [
+                "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2"
+              ]
+            },
+            {
+              "text": "Immersion ATR probes are described as allowing analysis at a significant distance from the spectrometer without sampling.",
+              "evidence_ids": [
+                "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f"
+              ]
+            },
+            {
+              "text": "Nominal transmission ranges are 1.1 to 6.5 µm for chalcogenide As-S fibers and 3 to 17 µm for polycrystalline fibers.",
+              "evidence_ids": [
+                "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9"
+              ]
+            },
+            {
+              "text": "Strong mid-IR absorption limits transmission measurement to very thin samples, which is why ATR attachments and probes are used.",
+              "evidence_ids": [
+                "S01_6d24649bb39e22766524e3f9cdb6f58bed320f66"
+              ]
+            },
+            {
+              "text": "The method table rates IR spectroscopy as ATR probe with high cost, high selectivity and average sensitivity; these are qualitative ratings, not measured performance.",
+              "evidence_ids": [
+                "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+                "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc"
+              ]
+            }
+          ],
+          "assumptions": [
+            "A mid-IR transmitting fiber link has acceptable loss at the unknown link length.",
+            "The ATR tip and probe materials are compatible with the petroleum line's temperature, pressure and cleaning conditions.",
+            "Calibration against an agreed reference method can be established across the customer's water range and process variation."
+          ],
+          "limitations": [
+            "No inspected source gives link loss or maximum mid-IR link length for this configuration.",
+            "The existing silica VIS-NIR cable cannot be assumed to transmit the 2.5 to 5 µm band."
+          ],
+          "evidence_ids": [
+            "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f",
+            "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+            "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f",
+            "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9",
+            "S01_6d24649bb39e22766524e3f9cdb6f58bed320f66",
+            "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+            "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc"
+          ],
+          "measurement_concept": "Mid-IR ATR tip at the petroleum line, connected by a mid-IR transmitting fiber to an analyzer in another building. The source ATR probe with PEEK shaft is a labelled example only; installation depends on confirmed process compatibility and link specification.",
+          "spectral_range": "The water bands in the cited slide span 4000 to 2000 cm-1 (2.5 to 5 µm). Nominal fiber transmission ranges (chalcogenide 1.1 to 6.5 µm, polycrystalline 3 to 17 µm) are fiber properties, not confirmed system coverage."
+        }
+      ],
+      "questions": [
+        {
+          "field": "conditions",
+          "question": "What are the link length, routing, the existing silica cable's fiber specification, and the process temperature, pressure and cleaning or access conditions at the petroleum line?",
+          "affects": "Whether a mid-IR transmitting fiber link is needed, whether link loss is adequate, and whether the probe interface can be installed and cleaned."
+        },
+        {
+          "field": "requirements",
+          "question": "What water-content range, acceptable error against the reference method, and required response time must the measurement meet?",
+          "affects": "The validation design and whether the candidate meets the stated requirement."
+        },
+        {
+          "field": "matrix",
+          "question": "Which petroleum products and water-content levels must be covered by the calibration and validation?",
+          "affects": "Sample selection, calibration scope and whether one calibration is sufficient across process variation."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide whether a mid-IR ATR probe with a mid-IR transmitting fiber link to the remote analyzer meets the customer-agreed water-content error and response requirements, and whether the existing silica cable can transmit usable spectra in the 2.5 to 5 µm band.",
+        "steps": [
+          "Gather the fiber specification, planned link length, routing and process conditions before building the test setup.",
+          "Prepare petroleum samples covering the customer-agreed water range, including pure oil, and measure reference water content with an independent method agreed by the customer, such as Karl Fischer titration.",
+          "Measure with the mid-IR ATR probe through a short reference fiber, through the planned link length or a representative loop, and through the existing silica cable as an empirical check of the 2.5 to 5 µm band.",
+          "Repeat measurements across temperatures and batches representing realistic process variation.",
+          "Fit calibration on training batches and validate on independent held-out batches; do not use reference measurements alone as validation."
+        ],
+        "criteria_to_confirm": [
+          "Whether error against the reference method at the planned link length meets the customer-agreed limit.",
+          "Whether spectra through the existing silica cable are usable in the 2.5 to 5 µm band; if not, the reuse concept is not adequate.",
+          "Whether a shorter or simpler configuration performs adequately if the remote link is not needed.",
+          "Whether results are inconclusive or no adequate candidate is found; these are valid outcomes.",
+          "Statistical significance alone does not establish practical usefulness; compare against the customer's requirements."
+        ]
+      },
+      "gaps": [
+        "The existing silica VIS-NIR cable's nominal transmission range ends at 2400 nm, below the 2.5 to 5 µm band of the water application, so its reuse for this mid-IR measurement is not supported by the inspected evidence.",
+        "No inspected source gives fiber link loss, maximum mid-IR link length or mid-IR fiber cable lengths for this application.",
+        "The source ATR probe used in microwave furnaces is company material and is not technical validation for this petroleum line."
+      ],
+      "requirements": [
+        {
+          "statement": "Investigate water content in a petroleum line using MIR ATR.",
+          "user_quote": "We want to investigate water content in a petroleum line using MIR ATR."
+        },
+        {
+          "statement": "The analyzer would be located in another building.",
+          "user_quote": "The analyzer would be in another building."
+        },
+        {
+          "statement": "The customer would like to reuse an existing silica fiber cable from a visible or NIR measurement setup.",
+          "user_quote": "from a visible or NIR measurement setup and would like to reuse it."
+        }
+      ],
+      "unknowns": [
+        "Fiber link length between probe and analyzer.",
+        "Routing of the fiber link.",
+        "Fiber specification of the existing silica cable.",
+        "Process temperature, pressure and cleaning or access conditions at the petroleum line.",
+        "Required water-content range, acceptable error and response time.",
+        "Reference method and its uncertainty.",
+        "Relevant process variation in product type and water content."
+      ]
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f": {
+      "evidence_id": "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f",
+      "source_id": "S02",
+      "source_version": "f273a85e771c8907d6560a31ea6f7c9915d8ba8bae95cac06d751cc0ca843cee",
+      "title": "AFS Process Control Slides",
+      "text": "Slide 13 (transcribed): Application: measurement of water content in petroleum.\nPrinted statement: \"ATR-Probes with ATR-tips from ZrO2 (& Diamond, etc.) sealed in PEEK-shaft and protected by PEEK-tubing can be used in microwave furnaces.\"\nA photograph shows a probe with a light-beige PEEK shaft and a small crystal tip.\nPlot: absorbance (a.u., axis 0.00-0.05) against wavenumber from 4000 to 2000 cm-1 [2.5-5 µm]. The legend lists five samples: pure oil, 0.1% water, 0.5% water, 1.0% water and 2.0% water. Pure oil stays near zero absorbance. The other curves rise in the order of their water content, across a structured broad region between about 4000 and 3200 cm-1 and at a sharp band between 2500 and 2250 cm-1.\nThe slide does not state the spectrometer, the fiber type or length, the probe temperature or pressure ratings, the calibration model, the detection limit or which band was used for quantification.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 13"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "curated-S02-p13-water-in-petroleum"
+      ],
+      "provenance": [
+        {
+          "page": 13,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Slide 13: Application: measurement of water content in petroleum"
+      ],
+      "parent_context_id": null,
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null
+    },
+    "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9": {
+      "evidence_id": "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9",
+      "source_id": "S02",
+      "source_version": "f273a85e771c8907d6560a31ea6f7c9915d8ba8bae95cac06d751cc0ca843cee",
+      "title": "AFS Process Control Slides",
+      "text": "Slide 6 (transcribed chart): Transmission for different fibers in 0.2-18 µm used for fiber probes.\nThe chart shows wavelength in nm on a scale marked 200, 400, 600, 800, 1500, 2500, 5000, 10000 and 18000 nm, divided into UV (ultraviolet radiation), VIS (visible light), NIR (near infrared) and MIR (mid infrared). Each fiber family is a bar with a printed start and end wavelength:\n- Standard UV-VIS silica fibers and Al/Cu-coated UV-VIS silica fibers: 190 nm to 1200 nm.\n- Standard VIS-NIR silica fibers and Al/Cu-coated VIS-NIR silica fibers: 350 nm to 2400 nm.\n- Chalcogenide As-S IR fibers: 1100 nm to 6500 nm [1.1-6.5 µm].\n- Polycrystalline infrared fibers: 3000 nm to 17 µm [3-17 µm].\n- Hollow glass waveguides: 2000 nm to 18 µm [2-18 µm].\n- Indium fluoride fibers (marked with an asterisk, Le Verre Fluoré logo): 300 nm to 5500 nm.\n- Zirconium fluoride fibers (marked with an asterisk, Le Verre Fluoré logo): 300 nm to 4500 nm.\nThe silica, chalcogenide, polycrystalline and hollow-waveguide bars are grouped beside the art photonics logo; the two fluoride fiber bars are grouped beside the Le Verre Fluoré Fiber Solutions logo. The asterisk is not explained on the slide.\nThe right side is headed \"Polycrystalline AgHal PIR-Fibers & Combi-Probes from art photonics\" and shows photographs of fiber probes, a combi-probe tip and its cross-section drawing, and two plots: normalized absorbance against wavenumber (1800-1500 cm-1) and normalized intensity against wavelength (500-750 nm). The plots are not labelled with a sample or application on this slide.\nThe slide gives nominal fiber transmission ranges only. It states no attenuation values, maximum link lengths or temperature ratings for these fiber families.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 6"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "curated-S02-p6-fiber-transmission"
+      ],
+      "provenance": [
+        {
+          "page": 6,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Slide 6: Transmission for Different Fibers in 0.2-18 µm used for Fiber Probes"
+      ],
+      "parent_context_id": null,
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null
+    },
+    "S02_curated_d53ef772ff55112d092d5c5d3f76318fb897489d": {
+      "evidence_id": "S02_curated_d53ef772ff55112d092d5c5d3f76318fb897489d",
+      "source_id": "S02",
+      "source_version": "f273a85e771c8907d6560a31ea6f7c9915d8ba8bae95cac06d751cc0ca843cee",
+      "title": "AFS Process Control Slides",
+      "text": "Slide 7 (transcribed): Spectral Vis-NIR cables for industrial process control.\nPrinted statement: \"Robust 100-300m cables made with Silica fibers of low OH-content (<0.1ppm OH) enable remote industrial process-control.\"\nPrinted list under \"Alu- & Cu-alloy coated fibers\": high temperature resistance; increased durability, high strength, hermetically sealed; enables soldering with connectors, bundles, plus to the hermetic inlets; free of polymer jacket fluorescence for Raman and fluorescence spectroscopy.\nChart: optical loss (dB/km, axis 0-8) against wavelength (0.7-2.0 µm) for three silica fiber generations labelled \"Early 1980's\", \"Late 1980's\" and \"Modern Fiber\", with bands marked \"First Window\", \"Second Window\", \"Third Window (The 'C'-Brand)\" and \"Third Window (The 'L'-Brand)\". Loss rises steeply towards 2.0 µm for all three curves.\nPhotographs show fiber spools, a drawing of an aluminium-coated fiber (SiO2 core, F:SiO2 cladding, aluminium coating), stacked yellow cable reels and an operator at a stainless-steel bioreactor labelled \"bioflow 5000\".\nScope: the 100-300 m statement refers to Vis-NIR silica fiber cables. The slide gives no cable length for mid-infrared fibers (chalcogenide, polycrystalline or hollow waveguide).",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 7"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "curated-S02-p7-silica-cables"
+      ],
+      "provenance": [
+        {
+          "page": 7,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Slide 7: Spectral Vis-NIR Cables for Industrial Process Control"
+      ],
+      "parent_context_id": null,
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null
+    },
+    "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2": {
+      "evidence_id": "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.1.\nMid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)\nVibrational spectroscopy in the mid-IR range (4000-400 cm-1) is one of the most informative methods of chemical analysis.\nDue to the high extinction coefficients of various molecules in this region, the method is highly sensitive and can be used to analyze a wide variety of samples: solids, liquids, and gases.\nATR fiber probes (Fig.1) enable the analysis of liquids and solid elastic samples, such as biological tissue, using specialized probes utilizing high-transmission fiber optics in the Mid-IR region.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 9–10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/119",
+        "#/texts/120",
+        "#/texts/122",
+        "#/texts/123",
+        "#/texts/126"
+      ],
+      "provenance": [
+        {
+          "page": 9,
+          "bbox": [
+            72.025,
+            156.49700000000007,
+            439.254,
+            147.24466666666672
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 9,
+          "bbox": [
+            72.025,
+            141.923,
+            506.865,
+            88.42700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            181.66666666666666,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            55.666666666666664,
+            814.3333333333334,
+            107.0,
+            786.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            522.6840000000002,
+            678.8520000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_39ace4398b9bc276b76b1c06510de669",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)\n\nVibrational spectroscopy in the mid-IR range (4000-400 cm-1) is one of the most informative methods of chemical analysis. Due to the high extinction coefficients of various molecules in this region, the method is highly sensitive and can be used to analyze a wide variety of samples: solids, liquids, and gases.\n\nPHOTONICS\n\nMR\n\nATR fiber probes (Fig.1) enable the analysis of liquids and solid elastic samples, such as biological tissue, using specialized probes utilizing high-transmission fiber optics in the Mid-IR region. These immersion probes operate on the ATR principle but allow analysis at a significant distance from the spectrometer, without the need for sampling. Probe-based analysis is gaining widespread use in online analysis, such as in-line, in-process (chemical, biotechnological, natural) environments, as well as in-situ measurements, such as for field testing or for spectral diagnostics during surgery.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f": {
+      "evidence_id": "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "These immersion probes operate on the ATR principle but allow analysis at a significant distance from the spectrometer, without the need for sampling.\nProbe-based analysis is gaining widespread use in online analysis, such as in-line, in-process (chemical, biotechnological, natural) environments, as well as in-situ measurements, such as for field testing or for spectral diagnostics during surgery.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/126"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            522.6840000000002,
+            678.8520000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_39ace4398b9bc276b76b1c06510de669",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.1. Mid-IR Spectrometry (includes FTIR Mid-IR spectrometer, ATR fiber probe)\n\nVibrational spectroscopy in the mid-IR range (4000-400 cm-1) is one of the most informative methods of chemical analysis. Due to the high extinction coefficients of various molecules in this region, the method is highly sensitive and can be used to analyze a wide variety of samples: solids, liquids, and gases.\n\nPHOTONICS\n\nMR\n\nATR fiber probes (Fig.1) enable the analysis of liquids and solid elastic samples, such as biological tissue, using specialized probes utilizing high-transmission fiber optics in the Mid-IR region. These immersion probes operate on the ATR principle but allow analysis at a significant distance from the spectrometer, without the need for sampling. Probe-based analysis is gaining widespread use in online analysis, such as in-line, in-process (chemical, biotechnological, natural) environments, as well as in-situ measurements, such as for field testing or for spectral diagnostics during surgery.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.\n\nFig.1 ATR fiber probe. Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "S01_6d24649bb39e22766524e3f9cdb6f58bed320f66": {
+      "evidence_id": "S01_6d24649bb39e22766524e3f9cdb6f58bed320f66",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "In contrast, strong absorption in the mid-IR region limits the corresponding spectral method to the analysis of very thin samples (usually less than 50 µm), but it opens up the possibility of using attenuated total reflectance (ATR) by connecting appropriate attachments and probes.\nMeasurement of the weak Raman effect requires special probes but is recorded in the visible and NIR spectral regions.\nMoreover, the spectra of vibrational transitions in Raman and mid-IR spectroscopy carry complementary qualitative and quantitative information about the sample's composition.\nUV-visible spectroscopy is based on electronic transitions between molecular energy levels.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 5"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/58",
+        "#/texts/59"
+      ],
+      "provenance": [
+        {
+          "page": 5,
+          "bbox": [
+            72.025,
+            761.5930000000001,
+            519.648,
+            664.1020000000001
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 5,
+          "bbox": [
+            72.025,
+            658.8230000000001,
+            521.7250000000003,
+            517.552
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.1. Information Capability of Spectral Methods"
+      ],
+      "parent_context_id": "S01_ctx_51e102c9d8a3014d4305098ce14ca3f4",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.1. Information Capability of Spectral Methods\n\nSpectral analysis provides information about the chemistry and morphology of the sample being studied: the concentrations of its components, their distribution, and particle sizes. The analytical information provided by different spectral methods can vary greatly, as it is closely related to the chemistry of the sample being studied, the nature of the physical phenomena involved, and the measurement method itself (Table 1).\n\nOne of the most informative analytical methods is molecular vibrational spectroscopy. Three spectroscopic methods are used to record energy transitions between vibrational levels of molecules: mid- or near-infrared (NIR) spectral ranges, as well as Raman spectroscopy.\n\nDespite the theoretical similarities between these methods, their practical instrumental implementation and application in analysis differ greatly. The difference in operating wavelength ranges-from 360 nm to 25,000 nm (400 cm-1)-requires the use of different light sources, optics, and detectors, and is therefore typically implemented in separate spectral instruments. Different absorption coefficients of light in NIR, Mid-IR, and Raman spectroscopy, as well as the depth of its penetration into a given dense medium (solid, liquid, or powder) also requires different measurement interfaces and techniques, such as various fiber optic probes: ATR, Transmission, Transflexion, Reflection, etc. These differences in methods create natural limitations for their use, meaning that a given practical analysis task requires selecting the most optimal method and approach (technique) for its solution.\n\nMiR PHOTONICS\n\nFor example, NIR spectroscopy, with its relatively large penetration depth (up to several millimetres) even into dense solid samples due to low absorption and strong scattering, allows the use of ordinary glass for optics, as well as standard lamps as light sources, making it ideal for online applications, including remote measurements via fiber optic probes. In contrast, strong absorption in the mid-IR region limits the corresponding spectral method to the analysis of very thin samples (usually less than 50 µm), but it opens up the possibility of using attenuated total reflectance (ATR) by connecting appropriate attachments and probes.\n\nMeasurement of the weak Raman effect requires special probes but is recorded in the visible and NIR spectral regions. Moreover, the spectra of vibrational transitions in Raman and mid-IR spectroscopy carry complementary qualitative and quantitative information about the sample's composition. UV-visible spectroscopy is based on electronic transitions between molecular energy levels. It has very high sensitivity, especially in the UV region (190-360 nm), but requires the use of special light sources and fiber optic probes. However, the strong overlap of spectral signals in UV spectra complicates the analysis of real samples and makes the use of chemometric algorithms a necessary component of qualitative mixture analysis methods. Another highly sensitive method, UV/Vis fluorimetry, is based on the secondary emission of excited molecules of certain substances, most often of biological origin. However, most chemicals do not exhibit this property.\n\nTherefore, fluorimetry is primarily used in medicine, biology, and biotechnology.\n\nSpectra from different methods vary greatly, both in their nature and in the information they contain. Mid-IR band spectra contain well-defined peaks (absorption bands), while NIR, UV, and fluorescence spectra contain broad, highly overlapping signals, forming a so-called continuous spectrum. Extracting the information necessary for quantitative and qualitative analysis from optical spectra requires special methods for analyzing multidimensional data, called the above-mentioned term chemometrics. Chemometric algorithms are implemented in specialized software that enables preliminary data preparation (preprocessing), construction, validation, and application of predictive models, specifically calibration or classification models.\n\nImmersible fiber optic probes operating in various spectral regions from UV to mid-IR are increasingly being used for measuring liquid and soft or powdered solid samples. They can be used to obtain absorption, diffuse reflectance or transmission, Raman, and ATR spectra. The use of these probes can be essential for in-situ analysis-in the field or in an ongoing process. Online measurements require high-speed spectral acquisition.\n\nOften, analytical results must be obtained in real time to be used for management decisions.\n\nAn analysis of individual spectral methods, their capabilities, and limitations, demonstrates that developing an optimal instrumental methodology for solving a given analytical problem requires considering many different factors. Thus, selecting a spectral method for a specific analytical problem is a complex task requiring specialized knowledge in chemistry, physics, and mathematics. This is especially true for equipping an entire laboratory for future needs, since the need for a particular optical analysis method is difficult to predict in advance. In the equipment package offered here, called a multispectral laboratory, experts from various fields have already worked hard to select the optimal solutions.\n\nPHOTONICS\n\nMiR?",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6": {
+      "evidence_id": "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 1\nmethod: IR spectroscopy\nmeasurement_technique: ATR probe*\nphysical_phenomenon: absorption\nsample_type: liquid, paste, soft\noptical_path_or_depth: 1-6 um\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A3:I3"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-3"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A3:I3",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "ATR probe*",
+        "method": "IR spectroscopy",
+        "method_no": 1,
+        "optical_path_or_depth": "1-6 um",
+        "physical_phenomenon": "absorption",
+        "sample_type": "liquid, paste, soft",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc": {
+      "evidence_id": "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 1\nmethod: IR spectroscopy\nmeasurement_technique: ATR platform\nphysical_phenomenon: absorption\nsample_type: liquid, paste, soft\noptical_path_or_depth: 1-6 um\nsensitivity: average\nselectivity: high\ncost: high",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A2:I2"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-2"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A2:I2",
+      "structured_data": {
+        "cost": "high",
+        "measurement_technique": "ATR platform",
+        "method": "IR spectroscopy",
+        "method_no": 1,
+        "optical_path_or_depth": "1-6 um",
+        "physical_phenomenon": "absorption",
+        "sample_type": "liquid, paste, soft",
+        "selectivity": "high",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 4,
+    "tool_calls": 1,
+    "evidence_ids": [
+      "S02_curated_64324e91b54a8cbf866b79864234a941a55fb16f",
+      "S02_curated_b2e729c2e61c33b371f73563521eb234d6e251c9",
+      "S02_curated_d53ef772ff55112d092d5c5d3f76318fb897489d",
+      "S01_06103ba83f4a19ff72ba50db5d5fbc7948338bd2",
+      "S01_a8f1d2e09aa88b70a835be332f732696dea1de6f",
+      "S01_6d24649bb39e22766524e3f9cdb6f58bed320f66",
+      "AFS_TABLE_ed743ebd37b24aa3df9c6c8b9ed5eb472adf33c6",
+      "AFS_TABLE_2d5d68b311881f9c90869717fd0296f9266c81fc"
+    ],
+    "timings_seconds": {
+      "routing": 2.297,
+      "investigation": 7.906,
+      "answer_and_validation": 48.969,
+      "total": 59.172
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H04",
+    "title": "Reuse of a silica link for petroleum MIR ATR",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "18dacf9baa4b6e8326aa5def94036fe27440e88a0973ea851d4f24acda5b69d4"
+  }
+}

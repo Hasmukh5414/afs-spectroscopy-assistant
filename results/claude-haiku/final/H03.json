@@ -1,0 +1,780 @@
+{
+  "question": "We already have a fluorescence spectrometer and would like to use it to report\nglucose concentration and viable biomass directly during fermentation. Our\nonly justification is that fluorescence can be very sensitive. We have not\nidentified a fluorescent target, marker or reference relationship. What should\nthe assistant tell us?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:42:45.203856+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "The inspected sources do not support using fluorescence alone to report glucose concentration directly. Fluorescence is described for highly sensitive detection of critical cofactors and amino acids such as NADH, tryptophan and riboflavin [1]. Glucose is named as a major component tracked by NIR in the millimolar range [1]. Fig. 7 lists glucose under NIR and MIR, not under fluorescence, and gives no concentration ranges, accuracy or measurement interface [2].",
+        "evidence_ids": [
+          "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139",
+          "S01_curated_2a0b66a30c9852eb7fdff075ab05f67c80323879"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "For biomass, the sources give partial support only. Combining NIR with fluorescence demonstrated more accurate biomass determination during yeast fermentation, but that is a combined-method result, not a fluorescence-only result [3]. Fig. 7 lists cell mass under fluorescence and biomass under NIR [2]. UV/Vis turbidity correlates well with cell density and is described as a low-cost biomass monitoring tool [4]. The sources do not address viable biomass specifically.",
+        "evidence_ids": [
+          "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46",
+          "S01_curated_2a0b66a30c9852eb7fdff075ab05f67c80323879",
+          "S01_0767f520f56f57f504e85585ddbb3d9040444b44"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "NIR is the most common online analysis method performed with fiber optic probes [5]. The method table lists a diffuse reflection probe for scattering media and powders with average selectivity and sensitivity [6]. NIR can track glucose at millimolar levels but may lack sensitivity to trace compounds below 0.1 percent [1]. Whether this geometry suits your liquid fermentation has not been established.",
+        "evidence_ids": [
+          "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+          "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "Raman is described as providing a molecular fingerprint for direct detection of glucose, acetate or lactate in the same reactor as UV/Vis biomass monitoring [4]. Raman is well suited to aqueous environments because it has low absorbance for water compared with infrared methods [4]. Its performance for glucose or viable biomass in your medium and sampling interface is not confirmed by the inspected sources.",
+        "evidence_ids": [
+          "S01_0767f520f56f57f504e85585ddbb3d9040444b44"
+        ]
+      },
+      {
+        "kind": "proposal",
+        "text": "First gather information: identify whether any fluorophore or metabolic marker in your medium changes in a way linked to glucose or to viable biomass. Then run representative fermentations with paired reference glucose and viable cell counts, using the existing fluorescence spectrometer alongside an NIR baseline, and Raman if process compatibility is confirmed. Fit calibrations on training batches and test them on separate held-out batches, with error and delay limits agreed by you.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "gap",
+        "text": "The sources do not show that fluorescence can report glucose or viable biomass directly, and no fluorescent target, marker or reference relationship has been identified. This does not prove fluorescence cannot work, but the requested direct reporting is unsupported by the current evidence. No source gives the accuracy, concentration ranges or interface needed for this application.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "question",
+        "text": "Which variables must be reported (glucose and viable biomass, or total biomass), in what units and over what range? Is there any known fluorescent compound in your medium that tracks either variable? What reference methods will you use, what error and response-time limits are acceptable, and what budget applies to the choice among fluorescence, NIR and Raman?",
+        "evidence_ids": []
+      }
+    ],
+    "schema_version": 3,
+    "citations": [
+      {
+        "field": "assessment.candidates[1].assumptions[0]",
+        "evidence_ids": [
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].limitations[0]",
+        "evidence_ids": [
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+        ]
+      }
+    ],
+    "intent": "assessment",
+    "assessment": {
+      "status": "awaiting_clarification",
+      "summary": "Fluorescence is sensitive but has low selectivity, and the sources do not show that it can report glucose or viable biomass directly without a fluorescent target or marker. NIR has glucose support at millimolar levels and is the common online fiber probe method. Raman is a possible glucose alternative. A paired study against reference measurements should decide whether the existing fluorescence spectrometer is adequate, with NIR or Raman as baselines.",
+      "candidates": [
+        {
+          "name": "Existing fluorescence spectrometer",
+          "claims": [
+            {
+              "text": "Fluorescence measures a broad emission signal in the UV and visible regions, with the emission peak shifted to longer wavelengths than the excitation source.",
+              "evidence_ids": [
+                "S01_cda629081d1f63ec4073139f50b564c1d777c05e",
+                "S01_1684c0cb34236e438f3caac9230455486cb0231e"
+              ]
+            }
+          ],
+          "assumptions": [
+            "A fluorescent analyte or marker that correlates with glucose or viable biomass exists in this medium and is stable over the fermentation.",
+            "Background fluorescence from the medium does not dominate the signal."
+          ],
+          "limitations": [
+            "No fluorescent target, marker or reference relationship has been identified for glucose or viable biomass.",
+            "Low selectivity means overlapping emission from other medium components is a likely interference."
+          ],
+          "evidence_ids": [
+            "S01_cda629081d1f63ec4073139f50b564c1d777c05e",
+            "S01_1684c0cb34236e438f3caac9230455486cb0231e",
+            "AFS_TABLE_cffe611cb69f43034c9f2580beb169c8bb9a3e5c",
+            "AFS_TABLE_98a67d89edcfb72fe0a649f67d2e7dc560b6215a"
+          ],
+          "measurement_concept": "",
+          "spectral_range": ""
+        },
+        {
+          "name": "NIR spectroscopy with diffuse reflection or transmission probe",
+          "claims": [
+            {
+              "text": "NIR is the most common online analysis method performed with fiber optic probes.",
+              "evidence_ids": [
+                "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+              ]
+            },
+            {
+              "text": "NIR is effective for tracking glucose in the millimolar range but may lack sensitivity for trace compounds below 0.1 percent.",
+              "evidence_ids": [
+                "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139"
+              ]
+            },
+            {
+              "text": "A combined NIR and fluorescence approach demonstrated more accurate biomass determination during yeast fermentation.",
+              "evidence_ids": [
+                "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The probe geometry is compatible with the liquid fermentation, which the table row for scattering media and powders does not establish.",
+            "Glucose concentrations fall within the millimolar range reported for NIR."
+          ],
+          "limitations": [
+            "The table rating for the diffuse reflection probe is for scattering media and powders, not confirmed for this liquid process.",
+            "Viable biomass is not established as directly measured by NIR in the inspected sources."
+          ],
+          "evidence_ids": [
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+            "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139",
+            "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46",
+            "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553"
+          ],
+          "measurement_concept": "Fiber optic NIR probe in the process, sampling geometry to be selected for the liquid medium.",
+          "spectral_range": ""
+        },
+        {
+          "name": "Raman spectroscopy",
+          "claims": [
+            {
+              "text": "Raman is described as providing a molecular fingerprint for direct detection of glucose, acetate or lactate in the same reactor.",
+              "evidence_ids": [
+                "S01_0767f520f56f57f504e85585ddbb3d9040444b44"
+              ]
+            },
+            {
+              "text": "Raman is well suited to aqueous environments because it has low absorbance for water compared with infrared methods.",
+              "evidence_ids": [
+                "S01_0767f520f56f57f504e85585ddbb3d9040444b44"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The Raman probe and sampling interface are compatible with the fermentation and its cleaning requirements.",
+            "Glucose signals are sufficiently resolved from medium components in the actual matrix."
+          ],
+          "limitations": [
+            "The inspected sources do not confirm Raman performance for glucose or viable biomass in this process."
+          ],
+          "evidence_ids": [
+            "S01_0767f520f56f57f504e85585ddbb3d9040444b44"
+          ],
+          "measurement_concept": "Raman fiber probe in the process, if process compatibility is confirmed.",
+          "spectral_range": ""
+        }
+      ],
+      "questions": [
+        {
+          "field": "target",
+          "question": "Which variables must be reported (glucose and viable biomass, or total biomass), in what units and over what range? Is there any known fluorescent compound in your medium that tracks either variable?",
+          "affects": "Whether fluorescence has any relationship to test, and which reference method and calibration design are required."
+        },
+        {
+          "field": "requirements",
+          "question": "What reference methods will you use for glucose and viable biomass, what error and response-time limits are acceptable, and what budget applies to the choice among fluorescence, NIR and Raman?",
+          "affects": "The decision criteria for adequacy and whether the added cost of an alternative is justified."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide whether the existing fluorescence spectrometer can report glucose and viable biomass in this fermentation, compared with NIR and Raman baselines, without assuming fluorescence is or is not suitable.",
+        "steps": [
+          "Gather information first: identify any fluorophore or metabolic marker in the medium and confirm the reference methods, error limits and process interface.",
+          "Run representative fermentations covering the agreed glucose and biomass range and normal process variation.",
+          "Collect paired samples at matched times for reference glucose and viable cell counts.",
+          "Measure the same samples with the existing fluorescence spectrometer, and with NIR and Raman baselines if process compatibility is confirmed.",
+          "Fit calibrations on training batches and validate on separate held-out batches.",
+          "Compare candidates on the same material and conditions."
+        ],
+        "criteria_to_confirm": [
+          "Whether each option meets the customer-agreed error and response limits for glucose and viable biomass on held-out batches.",
+          "Whether fluorescence alone is adequate, or whether a simpler or lower-cost option is adequate.",
+          "Whether any added complexity or combination gives a useful improvement over the single-method baseline.",
+          "Whether results are inconclusive or no candidate meets the agreed limits."
+        ]
+      },
+      "gaps": [],
+      "requirements": [
+        {
+          "statement": "The customer wants to use the existing fluorescence spectrometer to report glucose concentration and viable biomass directly during fermentation.",
+          "user_quote": "We already have a fluorescence spectrometer and would like to use it to report glucose concentration and viable biomass directly during fermentation."
+        },
+        {
+          "statement": "The customer's only stated justification is that fluorescence can be very sensitive. No fluorescent target, marker or reference relationship has been identified.",
+          "user_quote": "Our only justification is that fluorescence can be very sensitive. We have not identified a fluorescent target, marker or reference relationship."
+        }
+      ],
+      "unknowns": []
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139": {
+      "evidence_id": "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Precision Monitoring Across Concentration Ranges: labs equipped with both Near-Infrared (NIR) and Fluorescence spectroscopy can solve the problem of monitoring analytes at widely varying concentrations.\nNIR spectroscopy is effective for tracking major components like glucose or glycerol in the millimolar range but may lack the sensitivity to detect trace compounds below 0.1 percent.\nTo fill this gap, Fluorescence spectroscopy can be used for highsensitivity detection (down to the nM-µM range) of critical cofactors and amino acids like NADH, tryptophan, and riboflavin.\nBy using both, a researcher can maintain high-precision control over both the main carbon source and the delicate metabolic state of the cells.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 16"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/235"
+      ],
+      "provenance": [
+        {
+          "page": 16,
+          "bbox": [
+            90.05,
+            512.668,
+            523.6880000000001,
+            397.032
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3. Fiber Optic Techniques for Real-Time Monitoring of Bioprocessing."
+      ],
+      "parent_context_id": "S01_ctx_681a5be987b35b9bc3470a381ba66f7f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3. Fiber Optic Techniques for Real-Time Monitoring of Bioprocessing.\n\nHaving access to a full suite of fiber-optic spectroscopic techniques - rather than relying on a single method - allows a lab to address the diverse analytical challenges of bioprocessing, where no single sensor is universally optimal for every analyte or condition. Each technique offers distinct advantages in sensitivity, specificity, and cost-effectiveness that can be strategically combined to optimize production.\n\nMultimodal Metabolite and Biomass Tracking: a primary advantage of having multiple techniques is the ability to monitor both complex chemical structures and overall physical process trends simultaneously. For instance, UV/Vis spectroscopy can be deployed as a lowcost, robust tool for real-time biomass monitoring, as cell suspension turbidity correlates well with cell density. While UV/Vis tracks growth, Raman spectroscopy can be used in the same reactor to provide a \"molecular fingerprint\" for direct detection of specific metabolites like glucose, acetate, or lactate. This combination is practical because Raman is particularly wellsuited for aqueous environments, as it exhibits low absorbance for water molecules compared to infrared methods.\n\nPrecision Monitoring Across Concentration Ranges: labs equipped with both Near-Infrared (NIR) and Fluorescence spectroscopy can solve the problem of monitoring analytes at widely varying concentrations. NIR spectroscopy is effective for tracking major components like glucose or glycerol in the millimolar range but may lack the sensitivity to detect trace compounds below 0.1 percent. To fill this gap, Fluorescence spectroscopy can be used for highsensitivity detection (down to the nM-µM range) of critical cofactors and amino acids like NADH, tryptophan, and riboflavin. By using both, a researcher can maintain high-precision control over both the main carbon source and the delicate metabolic state of the cells.\n\nPrecision Monitoring Across Optical Density Ranges: When measuring media in the UV-Vis spectrum, the selection of an optical probe is primarily dictated by the sample's optical density (OD) and its ability to attenuate light. For highly transparent liquids with low optical density, UV-Transmission or Transflection probes are ideal; they pass light through a defined path length (typically 1 mm to 10 mm), allowing for high sensitivity and accurate quantification of lowconcentration analytes. However, as the media becomes more opaque, turbid, or highly concentrated, the signal in a standard transmission setup becomes saturated because the light cannot penetrate the bulk of the sample. In these high-OD scenarios, a UV-ATR (Attenuated Total Reflection) probe is used. Instead of passing light through the sample, ATR relies on the evanescent wave that penetrates only a few micrometers into the medium at the crystal interface, effectively creating an extremely short path length that enables the measurement of \"black\" or highly scattering fluids without dilution.\n\nEquipping a facility with both probe types significantly increases laboratory flexibility, as it allows researchers to pivot between different samples without changing instruments. This versatile analytical capability enables the lab to participate in a broader range of research projects, spanning from traditional pharmaceutical quality control to the complex monitoring required in advanced materials science and industrial process development.\n\nPHOTONICS\n\nMR\n\nFig. 7. Spectral range for bioprocess monitoring with accessible variables.\n\nFig. 7. Spectral range for bioprocess monitoring with accessible variables.",
+      "parent_truncated": false
+    },
+    "S01_curated_2a0b66a30c9852eb7fdff075ab05f67c80323879": {
+      "evidence_id": "S01_curated_2a0b66a30c9852eb7fdff075ab05f67c80323879",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Fig. 7 (transcribed diagram, S01 p.17): Spectral range for bioprocess monitoring with accessible variables.\nThe central bar is divided as printed into: UV 10 nm-400 nm; VIS 400 nm-740 nm; NIR 740 nm-1.3 µm; MIR 1.3 µm-15 µm. A \"Raman\" band is drawn above the VIS/NIR boundary and a \"Fluorescence\" band below UV/VIS.\nVariables linked by arrows (bracketed numbers are reference numbers of the figure's original publication, not supplied here):\n- From UV and VIS: BSA, celldebries [114]; toxic substances [115].\n- From Raman: glutamine; glutamat [136]; acetate; phenylalanine [119]; TCD/VCD [138].\n- From NIR: glucose; lactate [110]; glutamine [109]; ammonium [112]; pH [112]; biomass [113].\n- From MIR: glucose [103]; lactate [104]; antibodies [105]; pH [106]; fructose [107]; acetic acid [107]; ethanol [108].\n- From Fluorescence: proteins [134]; vitamins [132]; pyruvate [131]; ATP [131]; NAD(P)H [129]; cell mass [118]; ethanol / metabolic changes [117].\nThe figure lists variables reported as accessible in the literature; it does not give concentration ranges, accuracy or the measurement interface. Its region boundaries (NIR ending at 1.3 µm) differ from the NIR range of 780-2500 nm stated on S01 p.10.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 17"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "curated-S01-p17-fig7-bioprocess-ranges"
+      ],
+      "provenance": [
+        {
+          "page": 17,
+          "bbox": null,
+          "coordinate_origin": "TOPLEFT"
+        }
+      ],
+      "heading_path": [
+        "Fig. 7. Spectral range for bioprocess monitoring with accessible variables"
+      ],
+      "parent_context_id": null,
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null
+    },
+    "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46": {
+      "evidence_id": "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "This often provides a synergistic effect, allowing one to solve a problem that either method alone cannot handle or only partially.\nThus, the combination of NIR spectroscopy with fluorescence spectroscopy demonstrated the possibility of more accurately determining the biomass content during yeast fermentation, as well as distinguishing between their intra- and extracellular metabolites.\nThe combination of NIR and IR spectroscopy showed benefits in determining tumor boundaries in medical diagnostics.\nThe combination of fluorescence and IR spectroscopy also proved necessary for classifying biological tissues.\nOnline analysis of the pellet coating process in a fluidized bed showed the best results with the simultaneous use of NIR and Raman spectroscopy.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 7–8"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/91",
+        "#/texts/92"
+      ],
+      "provenance": [
+        {
+          "page": 7,
+          "bbox": [
+            72.025,
+            376.223,
+            522.4310000000003,
+            220.23199999999997
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 7,
+          "bbox": [
+            72.025,
+            200.173,
+            520.0610000000003,
+            73.42700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 8,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            182.0,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3.2. Synergy of Combining Spectral Methods"
+      ],
+      "parent_context_id": "S01_ctx_6c2fa83c59b61e31e9af0d56ea607d24",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3.2. Synergy of Combining Spectral Methods\n\n[Uncaptioned image; pixels not interpreted]\n\nThe information provided by a particular optical spectral method may be insufficient when analyzing real samples. These include complex multicomponent mixtures, most often of natural origin, such as oil, milk, process media, fermentation media, and biological tissue. Analysis of such samples is often complicated by the overlap of several phenomena: absorption, Rayleigh and Raman scattering, and fluorescence. Morphological factors, such as sample inhomogeneity (e.g., biological tissue) or process turbulence, must also be considered when selecting a measurement technique. The analysis of such systems may require a combination of two or even more spectral methods. This often provides a synergistic effect, allowing one to solve a problem that either method alone cannot handle or only partially. Thus, the combination of NIR spectroscopy with fluorescence spectroscopy demonstrated the possibility of more accurately determining the biomass content during yeast fermentation, as well as distinguishing between their intra- and extracellular metabolites.\n\nThe combination of NIR and IR spectroscopy showed benefits in determining tumor boundaries in medical diagnostics. The combination of fluorescence and IR spectroscopy also proved necessary for classifying biological tissues. Online analysis of the pellet coating process in a fluidized bed showed the best results with the simultaneous use of NIR and Raman spectroscopy. There are many other examples of the successful combination of various spectral methods in the problems of quantitative determination or classification of objects. This approach is called multispectral optical analysis, and it is finding increasing application in practice. The basis of the synergetic effect observed when using these two or more methods is the combination of heterogeneous information about the object. This may be chemical information of various kinds, such as in the combination of complementary PHOTONICS\n\nMiR?\n\nvibrational IR and Raman spectra of molecules. It may also be morphological information about the sizes of scattering particles, as in milk analysis. Information can also be obtained from various depths, as in the analysis of biological tissue samples using Mid-IR and NIR spectroscopy with fiber-optic probes.",
+      "parent_truncated": false
+    },
+    "S01_0767f520f56f57f504e85585ddbb3d9040444b44": {
+      "evidence_id": "S01_0767f520f56f57f504e85585ddbb3d9040444b44",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "For instance, UV/Vis spectroscopy can be deployed as a lowcost, robust tool for real-time biomass monitoring, as cell suspension turbidity correlates well with cell density.\nWhile UV/Vis tracks growth, Raman spectroscopy can be used in the same reactor to provide a \"molecular fingerprint\" for direct detection of specific metabolites like glucose, acetate, or lactate.\nThis combination is practical because Raman is particularly wellsuited for aqueous environments, as it exhibits low absorbance for water molecules compared to infrared methods.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 16"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/234"
+      ],
+      "provenance": [
+        {
+          "page": 16,
+          "bbox": [
+            90.05,
+            660.2180000000001,
+            523.643,
+            529.802
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "3. Fiber Optic Techniques for Real-Time Monitoring of Bioprocessing."
+      ],
+      "parent_context_id": "S01_ctx_681a5be987b35b9bc3470a381ba66f7f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "3. Fiber Optic Techniques for Real-Time Monitoring of Bioprocessing.\n\nHaving access to a full suite of fiber-optic spectroscopic techniques - rather than relying on a single method - allows a lab to address the diverse analytical challenges of bioprocessing, where no single sensor is universally optimal for every analyte or condition. Each technique offers distinct advantages in sensitivity, specificity, and cost-effectiveness that can be strategically combined to optimize production.\n\nMultimodal Metabolite and Biomass Tracking: a primary advantage of having multiple techniques is the ability to monitor both complex chemical structures and overall physical process trends simultaneously. For instance, UV/Vis spectroscopy can be deployed as a lowcost, robust tool for real-time biomass monitoring, as cell suspension turbidity correlates well with cell density. While UV/Vis tracks growth, Raman spectroscopy can be used in the same reactor to provide a \"molecular fingerprint\" for direct detection of specific metabolites like glucose, acetate, or lactate. This combination is practical because Raman is particularly wellsuited for aqueous environments, as it exhibits low absorbance for water molecules compared to infrared methods.\n\nPrecision Monitoring Across Concentration Ranges: labs equipped with both Near-Infrared (NIR) and Fluorescence spectroscopy can solve the problem of monitoring analytes at widely varying concentrations. NIR spectroscopy is effective for tracking major components like glucose or glycerol in the millimolar range but may lack the sensitivity to detect trace compounds below 0.1 percent. To fill this gap, Fluorescence spectroscopy can be used for highsensitivity detection (down to the nM-µM range) of critical cofactors and amino acids like NADH, tryptophan, and riboflavin. By using both, a researcher can maintain high-precision control over both the main carbon source and the delicate metabolic state of the cells.\n\nPrecision Monitoring Across Optical Density Ranges: When measuring media in the UV-Vis spectrum, the selection of an optical probe is primarily dictated by the sample's optical density (OD) and its ability to attenuate light. For highly transparent liquids with low optical density, UV-Transmission or Transflection probes are ideal; they pass light through a defined path length (typically 1 mm to 10 mm), allowing for high sensitivity and accurate quantification of lowconcentration analytes. However, as the media becomes more opaque, turbid, or highly concentrated, the signal in a standard transmission setup becomes saturated because the light cannot penetrate the bulk of the sample. In these high-OD scenarios, a UV-ATR (Attenuated Total Reflection) probe is used. Instead of passing light through the sample, ATR relies on the evanescent wave that penetrates only a few micrometers into the medium at the crystal interface, effectively creating an extremely short path length that enables the measurement of \"black\" or highly scattering fluids without dilution.\n\nEquipping a facility with both probe types significantly increases laboratory flexibility, as it allows researchers to pivot between different samples without changing instruments. This versatile analytical capability enables the lab to participate in a broader range of research projects, spanning from traditional pharmaceutical quality control to the complex monitoring required in advanced materials science and industrial process development.\n\nPHOTONICS\n\nMR\n\nFig. 7. Spectral range for bioprocess monitoring with accessible variables.\n\nFig. 7. Spectral range for bioprocess monitoring with accessible variables.",
+      "parent_truncated": false
+    },
+    "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f": {
+      "evidence_id": "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.2.\nNear-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes.\nNIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc.,\nfound in many organic and inorganic compounds.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/128",
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            441.327,
+            522.2129999999999,
+            417.32466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553": {
+      "evidence_id": "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: diffuse reflection probe\nphysical_phenomenon: diffuse reflection\nsample_type: scattering media, powder\noptical_path_or_depth: 0.5-1 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A9:I9"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-9"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A9:I9",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "diffuse reflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "0.5-1 mm",
+        "physical_phenomenon": "diffuse reflection",
+        "sample_type": "scattering media, powder",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_cda629081d1f63ec4073139f50b564c1d777c05e": {
+      "evidence_id": "S01_cda629081d1f63ec4073139f50b564c1d777c05e",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Image from Multispectral Laboratory.\nCaption: Fig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.\nAI-generated visual description (unreviewed): This composite photograph shows a fluorescent fiber probe.\n\nThe left side of the image displays the complete probe, consisting of a long, coiled, light-blue flexible cable.\n\nOne end of the cable terminates in a thin metallic probe tip, while the other end features two connectors, one silver and one purple.\n\nThe right side of the image contains four close-up views of the probe tip.\n\nThe top two views show the tip emitting a bright blue light.\n\nThe bottom two views show the tip in a deactivated state, revealing a small circular aperture at the end of the metallic housing.\nNearby document text (context, not visual observation): 5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)\nFluorimetry is based on measuring the broad emission signal observed upon irradiation of certain samples in the UV and visible regions. The fluorescence peak is shifted to longer wavelengths compared to the excitation radiation of the source (laser or LED). This method is frequently used in biology and biotechnology. Recently, it has become a key method for online analysis of biotechnological processes. Fluorescence spectroscopy can be used for multispectral measurements, for example, in combination with Mid-IR or NIR spectroscopy.\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 12"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [
+        "AI-generated image description is unreviewed; inspect the crop before relying on visual claims."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "#/pictures/30"
+      ],
+      "provenance": [
+        {
+          "page": 12,
+          "bbox": [
+            99.54551174816669,
+            350.4808349609375,
+            462.3778952400157,
+            188.48504638671875
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_3e2a351fff2a9a060bea3b7e896fa0c6",
+      "element_type": "image",
+      "image": {
+        "filename": "element-139.png",
+        "caption": "Fig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.",
+        "nearby_text": "5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)\nFluorimetry is based on measuring the broad emission signal observed upon irradiation of certain samples in the UV and visible regions. The fluorescence peak is shifted to longer wavelengths compared to the excitation radiation of the source (laser or LED). This method is frequently used in biology and biotechnology. Recently, it has become a key method for online analysis of biotechnological processes. Fluorescence spectroscopy can be used for multispectral measurements, for example, in combination with Mid-IR or NIR spectroscopy.\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.",
+        "interpretation": "vision_description_unreviewed",
+        "description": {
+          "text": "This composite photograph shows a fluorescent fiber probe. The left side of the image displays the complete probe, consisting of a long, coiled, light-blue flexible cable. One end of the cable terminates in a thin metallic probe tip, while the other end features two connectors, one silver and one purple.\n\nThe right side of the image contains four close-up views of the probe tip. The top two views show the tip emitting a bright blue light. The bottom two views show the tip in a deactivated state, revealing a small circular aperture at the end of the metallic housing.",
+          "model": "gemma4:31b-it-qat",
+          "prompt_sha256": "68cb8fb4bcdd516dbba7f13e8c645bb1f37d3b446a540e9657d01d380fc07370",
+          "image_sha256": "7596054bfb139f82be444648eef329052bd25493c8be4f99ecd64baa6c3ab5c2",
+          "cache_key": "a0adfd723bb0ea02d036f308b2b3ccfdc5b98a69cf87f0561fa0a716e0c6a25d",
+          "generated_at": "2026-10-16T23:16:14.898657+00:00",
+          "reasoning_effort": "",
+          "fallback_from_reasoning": null,
+          "review_status": "unreviewed"
+        },
+        "review_notes": [],
+        "classification": "unclassified"
+      },
+      "issue_ids": [],
+      "oversized": true,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)\n\nFluorimetry is based on measuring the broad emission signal observed upon irradiation of certain samples in the UV and visible regions. The fluorescence peak is shifted to longer wavelengths compared to the excitation radiation of the source (laser or LED). This method is frequently used in biology and biotechnology. Recently, it has become a key method for online analysis of biotechnological processes. Fluorescence spectroscopy can be used for multispectral measurements, for example, in combination with Mid-IR or NIR spectroscopy.\n\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.\n\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.\n\nMiR PHOTONICS",
+      "parent_truncated": false
+    },
+    "S01_1684c0cb34236e438f3caac9230455486cb0231e": {
+      "evidence_id": "S01_1684c0cb34236e438f3caac9230455486cb0231e",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.4.\nFluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)\nFluorimetry is based on measuring the broad emission signal observed upon irradiation of certain samples in the UV and visible regions.\nThe fluorescence peak is shifted to longer wavelengths compared to the excitation radiation of the source (laser or LED).\nThis method is frequently used in biology and biotechnology.\nRecently, it has become a key method for online analysis of biotechnological processes.\nFluorescence spectroscopy can be used for multispectral measurements, for example, in combination with Mid-IR or NIR spectroscopy.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 12"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/146",
+        "#/texts/147"
+      ],
+      "provenance": [
+        {
+          "page": 12,
+          "bbox": [
+            72.025,
+            478.597,
+            522.9370000000005,
+            454.82466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 12,
+          "bbox": [
+            72.025,
+            449.503,
+            512.3770000000004,
+            366.752
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_3e2a351fff2a9a060bea3b7e896fa0c6",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.4. Fluorescence Analysis (includes a fluorescence spectrometer, excitation laser, and fluorescence fiber probe)\n\nFluorimetry is based on measuring the broad emission signal observed upon irradiation of certain samples in the UV and visible regions. The fluorescence peak is shifted to longer wavelengths compared to the excitation radiation of the source (laser or LED). This method is frequently used in biology and biotechnology. Recently, it has become a key method for online analysis of biotechnological processes. Fluorescence spectroscopy can be used for multispectral measurements, for example, in combination with Mid-IR or NIR spectroscopy.\n\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.\n\nFig.4 Fluorescent fiber probe. Image courtesy of art photonics GmbH.\n\nMiR PHOTONICS",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_cffe611cb69f43034c9f2580beb169c8bb9a3e5c": {
+      "evidence_id": "AFS_TABLE_cffe611cb69f43034c9f2580beb169c8bb9a3e5c",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 5\nmethod: Fluorimetry\nmeasurement_technique: cuvette 90 deg\nphysical_phenomenon: fluorescence (emission)\nsample_type: liquid\noptical_path_or_depth: 10 mm\nsensitivity: high\nselectivity: low\ncost: low",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A19:I19"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-19"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A19:I19",
+      "structured_data": {
+        "cost": "low",
+        "measurement_technique": "cuvette 90 deg",
+        "method": "Fluorimetry",
+        "method_no": 5,
+        "optical_path_or_depth": "10 mm",
+        "physical_phenomenon": "fluorescence (emission)",
+        "sample_type": "liquid",
+        "selectivity": "low",
+        "sensitivity": "high"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_98a67d89edcfb72fe0a649f67d2e7dc560b6215a": {
+      "evidence_id": "AFS_TABLE_98a67d89edcfb72fe0a649f67d2e7dc560b6215a",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 5\nmethod: Fluorimetry\nmeasurement_technique: fluorimetric probe\nphysical_phenomenon: fluorescence (emission)\nsample_type: liquid, solid\noptical_path_or_depth: 1-5 mm\nsensitivity: high\nselectivity: low\ncost: low",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A20:I20"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-20"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A20:I20",
+      "structured_data": {
+        "cost": "low",
+        "measurement_technique": "fluorimetric probe",
+        "method": "Fluorimetry",
+        "method_no": 5,
+        "optical_path_or_depth": "1-5 mm",
+        "physical_phenomenon": "fluorescence (emission)",
+        "sample_type": "liquid, solid",
+        "selectivity": "low",
+        "sensitivity": "high"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 5,
+    "tool_calls": 1,
+    "evidence_ids": [
+      "S01_bf0ff2350c4337ac4ac69cb99d364acddccff139",
+      "S01_curated_2a0b66a30c9852eb7fdff075ab05f67c80323879",
+      "S01_435b4fc9131624acdf0f640d1bf21b3807be1a46",
+      "S01_0767f520f56f57f504e85585ddbb3d9040444b44",
+      "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "S01_cda629081d1f63ec4073139f50b564c1d777c05e",
+      "S01_1684c0cb34236e438f3caac9230455486cb0231e",
+      "AFS_TABLE_cffe611cb69f43034c9f2580beb169c8bb9a3e5c",
+      "AFS_TABLE_98a67d89edcfb72fe0a649f67d2e7dc560b6215a"
+    ],
+    "timings_seconds": {
+      "routing": 2.375,
+      "investigation": 11.812,
+      "answer_and_validation": 53.641,
+      "total": 67.828
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H03",
+    "title": "A fluorescence instrument requested for glucose and viable biomass",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "32861710fa767a3c741670b21f70f9c0530511679cc751fbdaf6179b218b8a21"
+  }
+}

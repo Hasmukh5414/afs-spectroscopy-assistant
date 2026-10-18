@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AFS / Spectroscopy assistant</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/">AFS <span>/</span> Spectroscopy assistant</a><span id="environment" class="badge">Connecting</span></header>
+  <div class="layout">
+    <aside class="sidebar">
+      <button id="new-chat" class="primary" type="button">+ New chat</button>
+      <h2>Conversations</h2><nav id="chat-list" aria-label="Saved conversations"></nav>
+      <p class="sidebar-note">Explore the documents, compare approaches, and keep asking follow-up questions.</p>
+    </aside>
+    <main>
+      <section id="welcome">
+        <div class="eyebrow">AFS DOCUMENT ASSISTANT</div>
+        <h1>Ask about your<br>spectroscopy problem.</h1>
+        <p>Get a direct answer with sources you can open and review.</p>
+        <div class="suggestions">
+          <button type="button" data-question="We want to follow API concentration changes in a powder feed frame. Which optical approaches should we compare?">Explore powder concentration monitoring</button>
+          <button type="button" data-question="Our dairy stream can become cloudy as its composition changes. What should we clarify before choosing an optical measurement setup?">Assess a changing dairy stream</button>
+        </div>
+      </section>
+      <div id="error" role="alert" hidden></div>
+      <section id="messages" aria-label="Conversation" aria-live="polite"></section>
+      <form id="composer">
+        <label for="message">Your message</label>
+        <textarea id="message" rows="3" minlength="1" maxlength="8000" required placeholder="Ask a question, describe a use case, or add a follow-up…"></textarea>
+        <div class="composer-actions"><span id="status" role="status" aria-live="polite">Answers link to the available documents.</span><button id="send" type="submit" class="primary">Send</button></div>
+      </form>
+      <p class="review-note">Technical suggestions are a starting point for expert review.</p>
+    </main>
+  </div>
+</body>
+</html>

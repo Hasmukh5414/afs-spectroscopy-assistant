@@ -1,0 +1,60 @@
+{
+  "version": "afs-curated-v1",
+  "policy": "Manual transcriptions of supplied content that OCR or table extraction cannot recover reliably. Each entry transcribes one slide, figure or table as printed; it adds no external knowledge. Values in square brackets are unit conversions added for reading convenience. Check the original page before quoting an exact value.",
+  "entries": [
+    {
+      "id": "S02-p6-fiber-transmission",
+      "source_id": "S02",
+      "page": 6,
+      "element_type": "text",
+      "title": "Slide 6: Transmission for Different Fibers in 0.2-18 µm used for Fiber Probes",
+      "replaces_element_ids": ["page-6-ocr"],
+      "text": "Slide 6 (transcribed chart): Transmission for different fibers in 0.2-18 µm used for fiber probes.\nThe chart shows wavelength in nm on a scale marked 200, 400, 600, 800, 1500, 2500, 5000, 10000 and 18000 nm, divided into UV (ultraviolet radiation), VIS (visible light), NIR (near infrared) and MIR (mid infrared). Each fiber family is a bar with a printed start and end wavelength:\n- Standard UV-VIS silica fibers and Al/Cu-coated UV-VIS silica fibers: 190 nm to 1200 nm.\n- Standard VIS-NIR silica fibers and Al/Cu-coated VIS-NIR silica fibers: 350 nm to 2400 nm.\n- Chalcogenide As-S IR fibers: 1100 nm to 6500 nm [1.1-6.5 µm].\n- Polycrystalline infrared fibers: 3000 nm to 17 µm [3-17 µm].\n- Hollow glass waveguides: 2000 nm to 18 µm [2-18 µm].\n- Indium fluoride fibers (marked with an asterisk, Le Verre Fluoré logo): 300 nm to 5500 nm.\n- Zirconium fluoride fibers (marked with an asterisk, Le Verre Fluoré logo): 300 nm to 4500 nm.\nThe silica, chalcogenide, polycrystalline and hollow-waveguide bars are grouped beside the art photonics logo; the two fluoride fiber bars are grouped beside the Le Verre Fluoré Fiber Solutions logo. The asterisk is not explained on the slide.\nThe right side is headed \"Polycrystalline AgHal PIR-Fibers & Combi-Probes from art photonics\" and shows photographs of fiber probes, a combi-probe tip and its cross-section drawing, and two plots: normalized absorbance against wavenumber (1800-1500 cm-1) and normalized intensity against wavelength (500-750 nm). The plots are not labelled with a sample or application on this slide.\nThe slide gives nominal fiber transmission ranges only. It states no attenuation values, maximum link lengths or temperature ratings for these fiber families."
+    },
+    {
+      "id": "S02-p7-silica-cables",
+      "source_id": "S02",
+      "page": 7,
+      "element_type": "text",
+      "title": "Slide 7: Spectral Vis-NIR Cables for Industrial Process Control",
+      "replaces_element_ids": ["page-7-ocr"],
+      "text": "Slide 7 (transcribed): Spectral Vis-NIR cables for industrial process control.\nPrinted statement: \"Robust 100-300m cables made with Silica fibers of low OH-content (<0.1ppm OH) enable remote industrial process-control.\"\nPrinted list under \"Alu- & Cu-alloy coated fibers\": high temperature resistance; increased durability, high strength, hermetically sealed; enables soldering with connectors, bundles, plus to the hermetic inlets; free of polymer jacket fluorescence for Raman and fluorescence spectroscopy.\nChart: optical loss (dB/km, axis 0-8) against wavelength (0.7-2.0 µm) for three silica fiber generations labelled \"Early 1980's\", \"Late 1980's\" and \"Modern Fiber\", with bands marked \"First Window\", \"Second Window\", \"Third Window (The 'C'-Brand)\" and \"Third Window (The 'L'-Brand)\". Loss rises steeply towards 2.0 µm for all three curves.\nPhotographs show fiber spools, a drawing of an aluminium-coated fiber (SiO2 core, F:SiO2 cladding, aluminium coating), stacked yellow cable reels and an operator at a stainless-steel bioreactor labelled \"bioflow 5000\".\nScope: the 100-300 m statement refers to Vis-NIR silica fiber cables. The slide gives no cable length for mid-infrared fibers (chalcogenide, polycrystalline or hollow waveguide)."
+    },
+    {
+      "id": "S02-p13-water-in-petroleum",
+      "source_id": "S02",
+      "page": 13,
+      "element_type": "text",
+      "title": "Slide 13: Application: measurement of water content in petroleum",
+      "replaces_element_ids": ["page-13-ocr"],
+      "text": "Slide 13 (transcribed): Application: measurement of water content in petroleum.\nPrinted statement: \"ATR-Probes with ATR-tips from ZrO2 (& Diamond, etc.) sealed in PEEK-shaft and protected by PEEK-tubing can be used in microwave furnaces.\"\nA photograph shows a probe with a light-beige PEEK shaft and a small crystal tip.\nPlot: absorbance (a.u., axis 0.00-0.05) against wavenumber from 4000 to 2000 cm-1 [2.5-5 µm]. The legend lists five samples: pure oil, 0.1% water, 0.5% water, 1.0% water and 2.0% water. Pure oil stays near zero absorbance. The other curves rise in the order of their water content, across a structured broad region between about 4000 and 3200 cm-1 and at a sharp band between 2500 and 2250 cm-1.\nThe slide does not state the spectrometer, the fiber type or length, the probe temperature or pressure ratings, the calibration model, the detection limit or which band was used for quantification."
+    },
+    {
+      "id": "S02-p14-polymer-extrusion",
+      "source_id": "S02",
+      "page": 14,
+      "element_type": "text",
+      "title": "Slide 14: NIR-Reflex & MIR-ATR spectroscopy to control polymer extrusion in-line",
+      "replaces_element_ids": ["page-14-ocr"],
+      "text": "Slide 14 (transcribed): NIR-Reflex & MIR-ATR spectroscopy to control polymer extrusion in-line.\nPrinted heading on the left: \"Control of API-production with PIR-fiber FTIR-spectroscopy in Pharma Industry\", next to a photograph of a wall-mounted analyzer with a fiber cable.\nSpectral plot caption: \"Spectra of API in hot polymer obtained with Diamond cone ATR probe coupled to iC10 FTIR (MTAC).\" The plot shows many overlaid spectra; its axis values are too small to read reliably.\nDiagram titled \"Hot Melt Extruder\": material feeder, screw, barrel with zones, die, die adaptor and chilled roll with kibbler. An NIR unit is connected at the die; a PAT console receives the result, and an arrow labelled \"Feed forward control for waste gate switch\" leads to good product and waste bins.\nPhotograph labelled \"NIR probe\", \"Extruder barrel\" and \"Die\" shows a probe mounted at the die of an extruder.\nThe slide does not state melt temperature, pressure, probe ratings, fouling behaviour, API identity or concentrations, or prediction accuracy."
+    },
+    {
+      "id": "S01-p17-fig7-bioprocess-ranges",
+      "source_id": "S01",
+      "page": 17,
+      "element_type": "text",
+      "title": "Fig. 7. Spectral range for bioprocess monitoring with accessible variables",
+      "replaces_element_ids": [],
+      "text": "Fig. 7 (transcribed diagram, S01 p.17): Spectral range for bioprocess monitoring with accessible variables.\nThe central bar is divided as printed into: UV 10 nm-400 nm; VIS 400 nm-740 nm; NIR 740 nm-1.3 µm; MIR 1.3 µm-15 µm. A \"Raman\" band is drawn above the VIS/NIR boundary and a \"Fluorescence\" band below UV/VIS.\nVariables linked by arrows (bracketed numbers are reference numbers of the figure's original publication, not supplied here):\n- From UV and VIS: BSA, celldebries [114]; toxic substances [115].\n- From Raman: glutamine; glutamat [136]; acetate; phenylalanine [119]; TCD/VCD [138].\n- From NIR: glucose; lactate [110]; glutamine [109]; ammonium [112]; pH [112]; biomass [113].\n- From MIR: glucose [103]; lactate [104]; antibodies [105]; pH [106]; fructose [107]; acetic acid [107]; ethanol [108].\n- From Fluorescence: proteins [134]; vitamins [132]; pyruvate [131]; ATP [131]; NAD(P)H [129]; cell mass [118]; ethanol / metabolic changes [117].\nThe figure lists variables reported as accessible in the literature; it does not give concentration ranges, accuracy or the measurement interface. Its region boundaries (NIR ending at 1.3 µm) differ from the NIR range of 780-2500 nm stated on S01 p.10."
+    },
+    {
+      "id": "S03-p9-table1-plsda",
+      "source_id": "S03",
+      "page": 9,
+      "element_type": "table_row",
+      "title": "Table 1. PLS-DA calibration and validation statistics of tumor detection in Series A and B",
+      "replaces_tables_on_page": true,
+      "text": "S03 Table 1 (transcribed, p.9): Partial least-squares discriminant analysis (PLS-DA) calibration and validation statistics of tumor detection in Series A and B; two latent variables (LVs) were used in all models.\nColumns: Data | DQ2 | TP | FP | TN | FN | %Sn | %Sp | %Ac\nCalibration (training and validation on the full dataset):\nAn41 | 0.932 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.917 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs33 | 0.437 | 19 | 1 | 11 | 2 | 90.5 | 91.7 | 90.9\nBs170 | 0.181 | 62 | 5 | 70 | 33 | 65.3 | 93.3 | 77.6\nBs140 | 0.500 | 64 | 3 | 67 | 6 | 91.4 | 95.7 | 93.6\nFull (leave-one-out) cross-validation:\nAn41 | 0.920 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.902 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs33 | 0.358 | 18 | 1 | 11 | 3 | 85.7 | 91.7 | 87.9\nBs170 | 0.153 | 59 | 7 | 68 | 36 | 62.1 | 90.7 | 74.7\nBs140 | 0.478 | 63 | 3 | 67 | 7 | 90.0 | 95.7 | 92.9\nSegmented cross-validation (segments formed by samples in Series A, by measurement positions in Series B):\nAn41 | 0.574 | 21 | 0 | 20 | 0 | 100.0 | 100.0 | 100.0\nAs41 | 0.488 | 14 | 0 | 20 | 7 | 66.7 | 100.0 | 82.9\nAs33 | 0.051 | 13 | 3 | 9 | 8 | 61.9 | 75.0 | 66.7\nBs170 | 0.068 | 51 | 7 | 68 | 44 | 53.7 | 90.7 | 70.0\nBs140 | 0.416 | 61 | 3 | 67 | 9 | 87.1 | 95.7 | 91.4\nRandom-subset validation (15% subset, 1000 iterations; DQ2, %Sn, %Sp, %Ac only):\nAn41 | 0.916 | 100.0 | 100.0 | 100.0\nAs41 | 0.899 | 100.0 | 100.0 | 100.0\nAs33 | 0.345 | 82.4 | 86.1 | 83.8\nBs170 | 0.149 | 60.2 | 91.0 | 74.8\nBs140 | 0.480 | 89.9 | 95.7 | 92.8\nData set key from the table footnotes: An41 = NIR spectra of Series A; As41 = simulated sensor data in Series A; As33 = sensor measurements in Series A; Bs170 = sensor measurements of full data in Series B; Bs140 = sensor measurements of Series B without sample T151 or positions N144_Cn and T144_Cn.\nScope: in vitro measurements on 14 samples from 7 patients; a proof-of-concept study (S03 p.1, p.14)."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "afs-assistant"
+version = "0.1.0"
+description = "Grounded spectroscopy assessment assistant"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
+    "httpx>=0.27,<1",
+    "pillow>=11,<13",
+    "pydantic>=2.9,<3",
+    "rank-bm25>=0.2.2,<0.3",
+    "python-dotenv>=1,<2",
+    "langchain>=1,<2",
+    "langchain-openai>=1,<2",
+    "langgraph>=1,<2",
+    "langgraph-checkpoint-sqlite>=3.1.2",
+    "anthropic>=1,<2",
+    "langchain-anthropic>=1.7.6",
+]
+
+[project.optional-dependencies]
+ingestion = [
+    "docling>=2.94,<3",
+    "fonttools>=4.67.0",
+    "onnxruntime>=1.31.0",
+    "openpyxl>=3.1.5",
+    "pypdf>=6.20.1",
+    "pypdfium2>=5.14.0",
+    "spacy>=3.8,<4",
+]
+
+[project.scripts]
+afs-assistant = "afs_assistant.cli:main"
+
+[dependency-groups]
+audit = ["pypdf>=6,<7"]
+dev = ["pytest>=8,<10", "pyright>=1.1,<2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires real document processing dependencies", "connectivity: explicitly enabled live provider check"]
+
+[tool.pyright]
+include = ["src", "tests", "scripts"]
+exclude = [".venv", "data", "**/__pycache__"]
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/afs_assistant"]
+
+

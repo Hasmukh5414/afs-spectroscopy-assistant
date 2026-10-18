@@ -1,0 +1,737 @@
+{
+  "question": "Our dairy process handles both a relatively clear whey stream and an opaque\nmilk concentrate. We want a pilot for composition monitoring, using laboratory\nprotein and fat results where those variables are relevant. We can compare\ndifferent measurement interfaces before choosing the installation. What first\nmeasurement concepts and comparison experiment would make sense for these two\nstreams?",
+  "release": "afs-official-v2",
+  "created": "2026-10-18T17:41:51.901152+00:00",
+  "answer": {
+    "parts": [
+      {
+        "kind": "answer",
+        "text": "For the clear whey stream, the inspected material points to NIR transmission. It is described as the preferred NIR method for transparent or semi-transparent liquids such as skim milk, whey or permeate, with a transmission or transflection probe passing light through a defined sample layer [1]. The same material describes the optical pathlength as the key control, usually 1-10 mm, because a path that is too wide loses signal to absorption and one that is too narrow samples a negligible volume [1]. A passage on whey filtration streams describes transmission as superior for high-precision analysis of dilute process streams [2]. Conditional interpretation: this fit depends on the whey staying clear enough at a workable pathlength, which is not confirmed for your stream.",
+        "evidence_ids": [
+          "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4",
+          "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "For the opaque milk concentrate, the inspected material points to NIR reflection. It is described as primarily used for opaque or highly concentrated dairy products, including whole milk concentrates, with one fiber set delivering light and another collecting backscattered light [3]. Reflection is described as sensitive to surface characteristics and fat globule size, and fat and protein quantification may use absorbance conversion with MSC or SNV preprocessing before PLS regression [4]. Conditional interpretation: reflection is the plausible starting point for the concentrate, but its representativeness depends on how the concentrate is sampled at the probe face.",
+        "evidence_ids": [
+          "S01_0e24018935c33bc03c1376231461056d21acc18e",
+          "S01_d070081a226eed5e5b2d1f447a918fc3678f4346"
+        ]
+      },
+      {
+        "kind": "answer",
+        "text": "A transflection probe is described as possibly a combined solution for low-fat and high-fat milk products, with the same NIR spectrometer and light source used for reflection and transmission [5]. The table lists transmission or transflection probes as a NIR geometry for liquid colloidal samples with a 1-10 mm optical path [6]. This supports only a milk-product hypothesis; the inspected material does not establish transflection performance for whey or milk concentrate, so it should be tested rather than assumed.",
+        "evidence_ids": [
+          "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227",
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+        ]
+      },
+      {
+        "kind": "proposal",
+        "text": "Proposed first study: use the same NIR spectrometer and light source, and measure paired whey and concentrate samples from across the production range with transmission, reflection and transflection interfaces. Pair every spectrum with laboratory fat and protein results and sampling times. Fit preprocessing and PLS models on training batches only, then validate on independent held-out batches or days. Compare each interface against the agreed error limits for each stream, and check whether one probe covers both streams before accepting two interfaces.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "question",
+        "text": "Please define the fat and protein target ranges and laboratory reference methods for each stream, including whether fat is relevant in the whey, and state the acceptable error limits and reference uncertainty. These answers determine which interface can meet the requirement and what validation counts as adequate.",
+        "evidence_ids": []
+      },
+      {
+        "kind": "gap",
+        "text": "The inspected sources are general process descriptions. No inspected passage reports fat or protein accuracy for whey or milk concentrate, and the table ratings are qualitative rather than measured performance [6] [7]. Fluorescence, Raman and MIR ATR are mentioned as options for specialized monitoring but are not assessed here [8]. Installation, cleaning and access compatibility are unknown, so the study should start with laboratory or at-line screening.",
+        "evidence_ids": [
+          "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+          "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+          "S01_a351a2c0b6c086f530922b1223c9a5529c7a3778"
+        ]
+      }
+    ],
+    "schema_version": 3,
+    "citations": [
+      {
+        "field": "assessment.candidates[0].limitations[1]",
+        "evidence_ids": [
+          "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6"
+        ]
+      },
+      {
+        "field": "assessment.candidates[1].limitations[0]",
+        "evidence_ids": [
+          "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227"
+        ]
+      }
+    ],
+    "intent": "assessment",
+    "assessment": {
+      "status": "ready_for_review",
+      "summary": "Provisional view: for the clear whey stream, NIR transmission is the conditionally supported starting concept; for the opaque milk concentrate, NIR reflection is the conditionally supported starting concept. A transflection probe is an untested hypothesis for using one interface across both streams. The first study should compare these interfaces on the same paired material against laboratory fat and protein references before any installation decision.",
+      "candidates": [
+        {
+          "name": "NIR transmission for clear whey",
+          "claims": [
+            {
+              "text": "NIR transmission is described as the preferred method for transparent or semi-transparent liquids such as skim milk, whey or permeate.",
+              "evidence_ids": [
+                "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4"
+              ]
+            },
+            {
+              "text": "Optical pathlength is the key control, usually 1-10 mm; too wide loses signal to absorption and too narrow samples a negligible volume.",
+              "evidence_ids": [
+                "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4"
+              ]
+            },
+            {
+              "text": "Transmission is described as superior for high-precision analysis of dilute process streams such as whey filtration.",
+              "evidence_ids": [
+                "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The whey remains clear enough at the chosen pathlength for transmitted light to reach the detector.",
+            "Fat and protein are quantifiable from transmission spectra of this whey at the expected concentrations."
+          ],
+          "limitations": [
+            "The inspected passage on whey filtration does not report accuracy for this customer's whey.",
+            "Transmission fails when milk becomes too thick or fat-rich, so it does not cover the concentrate."
+          ],
+          "evidence_ids": [
+            "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4",
+            "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6",
+            "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+          ],
+          "measurement_concept": "Transmission cell or transmission probe with a defined pathlength, sampling a clear liquid layer; installation is conditional on process compatibility.",
+          "spectral_range": "Nominal NIR method range 780-2500 nm per the method description; not confirmed system coverage."
+        },
+        {
+          "name": "NIR diffuse reflection for opaque milk concentrate",
+          "claims": [
+            {
+              "text": "Inline NIR reflection is primarily used for opaque or highly concentrated dairy products, including whole milk concentrates.",
+              "evidence_ids": [
+                "S01_0e24018935c33bc03c1376231461056d21acc18e"
+              ]
+            },
+            {
+              "text": "Reflection is sensitive to surface characteristics and fat globule size, and models may use MSC or SNV preprocessing before PLS to quantify fat and protein.",
+              "evidence_ids": [
+                "S01_d070081a226eed5e5b2d1f447a918fc3678f4346"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The probe face is representative of the bulk concentrate.",
+            "Preprocessing and PLS models built on training batches transfer to held-out concentrate batches."
+          ],
+          "limitations": [
+            "Reflection can be less representative for clear liquids, so it is unsuitable for the whey stream.",
+            "Results depend on surface characteristics, so probe fouling or deposits may affect readings; this is not established by the inspected sources."
+          ],
+          "evidence_ids": [
+            "S01_0e24018935c33bc03c1376231461056d21acc18e",
+            "S01_d070081a226eed5e5b2d1f447a918fc3678f4346",
+            "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227",
+            "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+            "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+          ],
+          "measurement_concept": "Flush-mounted fiber reflection probe with one fiber set for illumination and another for backscattered light; installation is conditional on process compatibility.",
+          "spectral_range": "Nominal NIR method range 780-2500 nm per the method description; not confirmed system coverage."
+        },
+        {
+          "name": "NIR transflection probe as a single-interface hypothesis",
+          "claims": [
+            {
+              "text": "A transflection probe is described as possibly a combined solution for low-fat and high-fat milk products.",
+              "evidence_ids": [
+                "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227"
+              ]
+            }
+          ],
+          "assumptions": [
+            "The milk-product finding transfers to clear whey and to the milk concentrate.",
+            "A single probe geometry can give a usable path for both streams."
+          ],
+          "limitations": [
+            "The inspected evidence covers milk products only, not whey or milk concentrate specifically.",
+            "Benefit over separate interfaces is a hypothesis that the pilot must test."
+          ],
+          "evidence_ids": [
+            "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227",
+            "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f"
+          ],
+          "measurement_concept": "Transflection probe combining transmission and reflection geometries, if the process permits; for testing only until compatibility is known.",
+          "spectral_range": ""
+        }
+      ],
+      "questions": [
+        {
+          "field": "target",
+          "question": "What are the fat and protein target ranges and laboratory reference methods for the whey and the milk concentrate, including whether fat matters in the whey?",
+          "affects": "Determines whether each stream needs fat and protein models and which interface can meet the requirement."
+        },
+        {
+          "field": "conditions",
+          "question": "What acceptable fat and protein error limits, reference method uncertainty and sample timing can you agree for the pilot?",
+          "affects": "Sets the pass or fail criteria for comparing transmission, reflection and transflection."
+        },
+        {
+          "field": "conditions",
+          "question": "What process variation should the pilot cover, such as temperature, solids, fat and protein fluctuation, bubbles and fouling?",
+          "affects": "Determines the sample set needed for representative training and held-out validation."
+        },
+        {
+          "field": "requirements",
+          "question": "What access, cleaning and installation constraints apply at the whey and concentrate sampling points?",
+          "affects": "Determines whether any interface can be installed later and whether a single probe is practical."
+        }
+      ],
+      "experiment": {
+        "objective": "Decide, for each stream, whether NIR transmission, reflection or a transflection probe gives fat and protein estimates within the agreed limits against laboratory references, and whether one interface can serve both streams.",
+        "steps": [
+          "Collect the agreed information on target ranges, reference methods, error limits, sample timing and process variation before measurements begin.",
+          "Collect representative whey and milk concentrate samples across the production range, recording sampling time and the laboratory fat and protein reference for each.",
+          "Measure each sample with the same NIR spectrometer and light source using a transmission cell, a reflection probe and a transflection probe; test pathlength options within the range the method description gives.",
+          "Fit preprocessing and PLS models on training batches only, applying MSC or SNV to reflection data where appropriate.",
+          "Validate each model on independent held-out batches or days and compare error and bias against the agreed limits for each stream.",
+          "Compare a transflection probe against the separate interfaces on the same material before accepting two interfaces."
+        ],
+        "criteria_to_confirm": [
+          "Each interface meets the agreed fat and protein error limits on held-out batches for its stream, or the result is inconclusive.",
+          "Whether one probe covers both streams with acceptable error; a simpler single interface is preferred if it is adequate and offers no meaningful loss.",
+          "Whether the gain from a second interface justifies added complexity; statistical significance alone is not enough.",
+          "Robustness across the process variation covered by the pilot.",
+          "An inconclusive or no-adequate-candidate outcome is a valid result and should be reported as such."
+        ]
+      },
+      "gaps": [],
+      "requirements": [],
+      "unknowns": []
+    },
+    "citation_status": "present_with_gaps"
+  },
+  "sources": {
+    "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4": {
+      "evidence_id": "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "NIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate.\nThe setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side.\nThe key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume.\nData processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 18"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/291"
+      ],
+      "provenance": [
+        {
+          "page": 18,
+          "bbox": [
+            72.025,
+            749.488,
+            523.7379999999999,
+            619.072
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6": {
+      "evidence_id": "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain.\nWhile transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 18"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/291",
+        "#/texts/292"
+      ],
+      "provenance": [
+        {
+          "page": 18,
+          "bbox": [
+            72.025,
+            749.488,
+            523.7379999999999,
+            619.072
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 18,
+          "bbox": [
+            72.025,
+            601.938,
+            523.73,
+            442.282
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "S01_0e24018935c33bc03c1376231461056d21acc18e": {
+      "evidence_id": "S01_0e24018935c33bc03c1376231461056d21acc18e",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "4.\nInline Milk Analysis.\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT).\nMaintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates.\nThe main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 17"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/283",
+        "#/texts/284",
+        "#/texts/285"
+      ],
+      "provenance": [
+        {
+          "page": 17,
+          "bbox": [
+            72.025,
+            317.547,
+            187.29,
+            308.29466666666667
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 17,
+          "bbox": [
+            72.025,
+            295.22299999999996,
+            523.677,
+            241.72199999999998
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 17,
+          "bbox": [
+            72.025,
+            231.09799999999996,
+            523.3280000000002,
+            86.17700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "S01_d070081a226eed5e5b2d1f447a918fc3678f4346": {
+      "evidence_id": "S01_d070081a226eed5e5b2d1f447a918fc3678f4346",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium.\nBecause the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size.\nData processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF pp. 17–18"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/285",
+        "#/texts/287",
+        "#/texts/288"
+      ],
+      "provenance": [
+        {
+          "page": 17,
+          "bbox": [
+            72.025,
+            231.09799999999996,
+            523.3280000000002,
+            86.17700000000002
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 18,
+          "bbox": [
+            92.33333333333334,
+            813.6666666666666,
+            181.66666666666666,
+            789.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 18,
+          "bbox": [
+            55.666666666666664,
+            814.3333333333334,
+            107.0,
+            786.6666666666666
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227": {
+      "evidence_id": "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids.\nBy maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust.\nIn some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products.\nNIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 18"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/292"
+      ],
+      "provenance": [
+        {
+          "page": 18,
+          "bbox": [
+            72.025,
+            601.938,
+            523.73,
+            442.282
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f": {
+      "evidence_id": "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: transmission or transflection probe\nphysical_phenomenon: transmission\nsample_type: liquid, colloidal\noptical_path_or_depth: 1-10 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A8:I8"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-8"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A8:I8",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "transmission or transflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "1-10 mm",
+        "physical_phenomenon": "transmission",
+        "sample_type": "liquid, colloidal",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553": {
+      "evidence_id": "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "source_id": "AFS_TABLE",
+      "source_version": "a6a83e976b12ebfc784eb69494fe2b1e71da878ae2b1b7c5ee54e701a6e387b6",
+      "title": "AFS Method Comparison Table",
+      "text": "method_no: 2\nmethod: NIR spectroscopy\nmeasurement_technique: diffuse reflection probe\nphysical_phenomenon: diffuse reflection\nsample_type: scattering media, powder\noptical_path_or_depth: 0.5-1 mm\nsensitivity: average\nselectivity: average\ncost: average",
+      "locator": {
+        "kind": "row",
+        "label": "method_comparison!A9:I9"
+      },
+      "kind": "method_comparison",
+      "review_status": "extracted",
+      "qualifications": [
+        "Source: \"Multispectral Laboratory of Optical Analysis Methods\", Table 1, page 6 (file S01).",
+        "Transcribed from the rendered page because PDF text extraction interleaves the columns.",
+        "\"mu\" in the original means micrometres; written here as \"um\".",
+        "Merged cells of the original are expanded, so each row is independent.",
+        "sensitivity / selectivity / cost are the original qualitative ratings (low / average / high), not measured values.",
+        "\"ATR probe*\" carries an asterisk in the original; no footnote is printed on that page.",
+        "Status: transcription for AFS review. Ratings are the source document's, not an AFS product specification."
+      ],
+      "synthetic": false,
+      "element_ids": [
+        "row-9"
+      ],
+      "provenance": [],
+      "heading_path": [],
+      "parent_context_id": null,
+      "element_type": "table_row",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "method_comparison",
+      "cell_range": "A9:I9",
+      "structured_data": {
+        "cost": "average",
+        "measurement_technique": "diffuse reflection probe",
+        "method": "NIR spectroscopy",
+        "method_no": 2,
+        "optical_path_or_depth": "0.5-1 mm",
+        "physical_phenomenon": "diffuse reflection",
+        "sample_type": "scattering media, powder",
+        "selectivity": "average",
+        "sensitivity": "average"
+      },
+      "citation_label": "S01 Table 1 (p.6)",
+      "related_source_id": "S01",
+      "related_page": 6
+    },
+    "S01_a351a2c0b6c086f530922b1223c9a5529c7a3778": {
+      "evidence_id": "S01_a351a2c0b6c086f530922b1223c9a5529c7a3778",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "While NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss.\nThese methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 18"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/293"
+      ],
+      "provenance": [
+        {
+          "page": 18,
+          "bbox": [
+            72.025,
+            429.003,
+            526.47,
+            375.532
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "4. Inline Milk Analysis."
+      ],
+      "parent_context_id": "S01_ctx_e9acc714006eab0b032b643a7c745e9f",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "4. Inline Milk Analysis.\n\nThe use of Near-Infrared (NIR) spectroscopy for the inline monitoring of milk is a cornerstone of modern dairy \"Process Analytical Technology\" (PAT). Maintaining both NIR Reflection and NIR Transmission techniques in a lab environment provides a comprehensive analytical suite capable of handling the diverse physical properties of dairy products.\n\nNIR Reflection: Inline NIR Reflection is primarily used for opaque or highly concentrated dairy products, such as yogurt, butter, or whole milk concentrates. The main equipment includes a fiber optic probe where one set of fibers delivers light to the sample and the other collects the \"backscattered\" light. Experimentally, the probe is flush-mounted into a pipe or vat to interact directly with the flowing medium. Because the light does not penetrate deeply, the method is sensitive to the surface characteristics and fat globule size. Data processing may involve converting the reflectance values to absorbance and applying Multiplicative Scatter Correction (MSC) or Standard Normal Variate (SNV) transformations to remove physical interference caused by the scattering nature of the milk particles before using Partial Least Squares (PLS) regression to quantify fat and protein.\n\nPHOTONICS\n\nMR\n\nNIR Transmission: NIR Transmission is the preferred method for transparent or semi-transparent liquids, such as skim milk, whey, or permeate. The setup typically consists of a transmission / transflection probe, where light passes entirely through a defined layer of the sample to a detector on the opposite side. The key experimental action is the precise control of the optical pathlength (usually 1 - 10 mm); if the pathlength is too wide, the signal is lost to absorption; if too narrow, the sample represents a negligible volume. Data processing focuses on the Beer-Lambert law, where the measured transmittance is converted to Absorbance. This technique generally offers higher accuracy for low-concentration components because the light interacts with the entire volume of the sampled cross-section, providing a more representative chemical signature.\n\nThe Advantage of Dual-Technique Availability: having both fiber optic techniques available in a lab rather than relying on one provides the flexibility needed to monitor the entire production chain. While transmission is superior for the high-precision analysis of dilute process streams (like whey filtration), it fails when the milk becomes too \"thick\" or fat-rich, as the light cannot penetrate the sample. Conversely, reflection can work well in highly scattering environments but can be less representative for clear liquids. By maintaining both, a lab can calibrate models for every stage of production - from raw milk intake to final evaporation - ensuring that no matter how the physical state of the milk changes during processing, the inline monitoring remains accurate and robust. In some cases, a Transflection probe can already be a combined solution working well for low-fat and high-fat containing milk products. NIR Spectrometer and NIR light source remain the same for both reflection and transmission techniques.\n\nWhile NIR is the workhorse of the dairy industry, advanced labs often incorporate Fluorescence, Raman, and Mid-Infrared (MIR) ATR fiber optic techniques to capture specific chemical or structural information that NIR might miss. These methods provide a higher level of \"molecular specificity,\" making them useful for specialized monitoring in milk analysis.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nFig. 8. Multispectral lab for milk analysis. Image courtesy of art photonics GmbH.\n\nPHOTONICS\n\nMR",
+      "parent_truncated": false
+    },
+    "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f": {
+      "evidence_id": "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f",
+      "source_id": "S01",
+      "source_version": "7026efe7266877b50238d9a9c91e93202242670ae9c776856efe93bb550a8935",
+      "title": "Multispectral Laboratory",
+      "text": "5.2.\nNear-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes.\nNIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc.,\nfound in many organic and inorganic compounds.",
+      "locator": {
+        "kind": "page",
+        "label": "PDF p. 10"
+      },
+      "kind": "application",
+      "review_status": "extracted",
+      "qualifications": [],
+      "synthetic": false,
+      "element_ids": [
+        "#/texts/128",
+        "#/texts/129"
+      ],
+      "provenance": [
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            441.327,
+            522.2129999999999,
+            417.32466666666664
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        },
+        {
+          "page": 10,
+          "bbox": [
+            72.025,
+            397.503,
+            521.7960000000005,
+            197.452
+          ],
+          "coordinate_origin": "BOTTOMLEFT"
+        }
+      ],
+      "heading_path": [
+        "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)"
+      ],
+      "parent_context_id": "S01_ctx_0919228c511a04faa6cfd2dd74c77c5e",
+      "element_type": "text",
+      "image": null,
+      "issue_ids": [],
+      "oversized": false,
+      "worksheet": "",
+      "cell_range": "",
+      "structured_data": {},
+      "citation_label": "",
+      "related_source_id": "",
+      "related_page": null,
+      "parent_text": "5.2. Near-IR Spectrometry (includes FTIR, NIR-IR, or diffraction grating/slit spectrometer, Diffuse Reflection fiber probe, or Transmission fiber probe)\n\nNear-IR vibrational spectroscopy (NIR) is the most common online analysis method performed using fiber optic probes. NIR spectra (780-2500 nm) contain predominantly overtones and component bands of fundamental vibrations of molecules and atomic groups, such as -OH, -NH2=NH, -CH3, =CH2, ≥CH, etc., found in many organic and inorganic compounds. Unlike mid- IR spectroscopy, measurements in the NIR region are facilitated by a number of factors: the transparency of plain and quartz glass (which allows the use of standard optics and probes), low molar absorption coefficients, and high light scattering by solid and dispersed samples, which enables measurements using diffuse reflectance, including measurements without direct contact with the sample, at a distance. The broad absorption bands observed in this region overlap, suggesting the use of chemometrics for quantitative and qualitative analysis of spectral data. In terms of instrumentation, the kit can include both FTIR spectrometers (based on a Michelson interferometer), which provide high accuracy and resolution, and more affordable high-speed analyzers based on diode arrays (DADs). DDA detectors are arrays of photodiodes that allow instantaneous recording of light intensity at all wavelengths simultaneously, which is critical for monitoring fast processes.\n\nPHOTONICS\n\nMiR?\n\n[Uncaptioned image; pixels not interpreted]\n\n[Uncaptioned image; pixels not interpreted]\n\nFig.2.1 NIR Transflexion fiber probe Fig.2.2 Mid-IR Transflexion fiber probe Images courtesy of art photonics GmbH.",
+      "parent_truncated": false
+    }
+  },
+  "generation": {
+    "stage": "completed",
+    "model_calls": 4,
+    "tool_calls": 2,
+    "evidence_ids": [
+      "S01_23cd674987a30cc9ed5ec28b5148c77738b583b4",
+      "S01_9af8fb63a1c1f28384f179f4fa2f3ba1a876e9f6",
+      "S01_0e24018935c33bc03c1376231461056d21acc18e",
+      "S01_d070081a226eed5e5b2d1f447a918fc3678f4346",
+      "S01_fec6c153f1d434da73ec404c7e5bbcb8d4dc8227",
+      "AFS_TABLE_60eb87867f97456acc689c15671601d8cd546f8f",
+      "AFS_TABLE_d44f4f3235a57d294a751edbf4db26cbaed2d553",
+      "S01_a351a2c0b6c086f530922b1223c9a5529c7a3778",
+      "S01_4ff43217a6be032cdacde5a349fc7f889c02bd6f"
+    ],
+    "timings_seconds": {
+      "routing": 1.765,
+      "investigation": 8.61,
+      "answer_and_validation": 42.734,
+      "total": 53.109
+    },
+    "model": "claude-haiku-5-5",
+    "embedding_model": "qwen3-embedding:0.6b",
+    "vision_model": "claude-haiku-5-5",
+    "prompt_fingerprint": "5eb95aeed292e816a8b01832560f474b01458ec5bec4ab7713b1e9895c40fd5a"
+  },
+  "organizer_input": {
+    "id": "H02",
+    "title": "Composition monitoring across two dairy streams",
+    "filename": "customer_scenarios_for_final_evaluation.txt",
+    "file_sha256": "53903aea6944f0708e3febe060777bf7f3c318dda4ead1372cc58ac63e500073",
+    "question_sha256": "51d1a137a676082957c0882bdb5a9dab45ba56144002e4923c4094d26c6ec8f2"
+  }
+}
